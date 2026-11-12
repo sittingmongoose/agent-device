@@ -1,0 +1,189 @@
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m b/apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m
+index 6017f7388..2c05675de 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m
+@@ -74,6 +74,9 @@ @interface AgentDeviceRunnerFixtureViewController () <UNUserNotificationCenterDe
+ @property(nonatomic, assign) BOOL alertFixtureStarted;
+ @property(nonatomic, strong) NSTimer *alertActivationBusyBackstop;
+ @property(nonatomic, strong) NSTimer *alertBannerRepost;
++@property(nonatomic, weak) UITextField *keyboardBusyField;
++@property(nonatomic, strong) UILabel *keyboardBusyAnswer;
++@property(nonatomic, strong) NSTimer *keyboardBusyBackstop;
+ @end
+ 
+ // A one-time-code field that announces how many digits it holds instead of the digits, the way
+@@ -244,6 +247,57 @@ - (void)stopAlertActivationBusy {
+   self.alertActivationBusyBackstop = nil;
+ }
+ 
++// The keyboard counterpart of the busy alert: the field starts the same never-ending UIView animation
++// when it takes focus, so XCTest sees work in flight for as long as the keyboard is up. Its Done
++// accessory and its return key record whether they landed while the app was still busy. The backstop
++// passed after `--agent-device-keyboard-busy` ends the busy state, so a command that waits for the app
++// to idle before it taps still finishes, and records "after busy" instead of outlasting the test.
++static NSTimeInterval AgentDeviceKeyboardBusyWindow(void) {
++  NSArray<NSString *> *arguments = NSProcessInfo.processInfo.arguments;
++  NSUInteger flag = [arguments indexOfObject:@"--agent-device-keyboard-busy"];
++  return flag + 1 < arguments.count ? arguments[flag + 1].doubleValue : 0;
++}
++
++- (void)startKeyboardBusy {
++  if (self.keyboardBusyBackstop != nil) {
++    return;
++  }
++  self.keyboardBusyBackstop = [NSTimer scheduledTimerWithTimeInterval:AgentDeviceKeyboardBusyWindow()
++                                                               target:self
++                                                             selector:@selector(stopKeyboardBusy)
++                                                             userInfo:nil
++                                                              repeats:NO];
++  [UIView animateWithDuration:0.4
++                          delay:0
++                        options:(UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse)
++                     animations:^{
++                       self.keyboardBusyAnswer.transform = CGAffineTransformMakeTranslation(0, 8);
++                     }
++                     completion:nil];
++}
++
++- (void)stopKeyboardBusy {
++  [self.keyboardBusyAnswer.layer removeAllAnimations];
++  self.keyboardBusyAnswer.transform = CGAffineTransformIdentity;
++  [self.keyboardBusyBackstop invalidate];
++  self.keyboardBusyBackstop = nil;
++}
++
++- (void)recordKeyboardBusyAnswer:(NSString *)control {
++  self.keyboardBusyAnswer.text = [NSString
++      stringWithFormat:@"%@ %@", control, self.keyboardBusyBackstop != nil ? @"while busy" : @"after busy"];
++  [self stopKeyboardBusy];
++  [self.keyboardBusyField resignFirstResponder];
++}
++
++- (void)keyboardBusyDonePressed {
++  [self recordKeyboardBusyAnswer:@"Done"];
++}
++
++- (void)keyboardBusyReturnPressed {
++  [self recordKeyboardBusyAnswer:@"Return"];
++}
++
+ // A banner from this app, shown over its own alert and re-posted before the previous one expires so
+ // one is on screen for as long as the first alert is unanswered. XCTest treats such a banner as an
+ // interruption of every event aimed at the app (#2546's late tap, from the banner side).
+@@ -633,6 +687,43 @@ - (void)viewDidLoad {
+     self.alertActivationBusyAnswer = busyAnswer;
+   }
+ 
++  if ([NSProcessInfo.processInfo.arguments containsObject:@"--agent-device-keyboard-busy"]) {
++    UITextField *field = [[UITextField alloc] init];
++    field.accessibilityIdentifier = @"agent-device-keyboard-busy-input";
++    field.placeholder = @"Busy while editing";
++    field.borderStyle = UITextBorderStyleRoundedRect;
++    UIToolbar *accessory = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
++    accessory.items = @[
++      [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
++      [[UIBarButtonItem alloc] initWithTitle:@"Done"
++                                       style:UIBarButtonItemStyleDone
++                                      target:self
++                                      action:@selector(keyboardBusyDonePressed)],
++    ];
++    field.inputAccessoryView = accessory;
++    [field addTarget:self action:@selector(startKeyboardBusy) forControlEvents:UIControlEventEditingDidBegin];
++    [field addTarget:self
++                  action:@selector(keyboardBusyReturnPressed)
++        forControlEvents:UIControlEventEditingDidEndOnExit];
++    field.translatesAutoresizingMaskIntoConstraints = NO;
++    [self.view addSubview:field];
++    UILabel *answer = [[UILabel alloc] init];
++    answer.text = @"Unanswered";
++    answer.accessibilityIdentifier = @"agent-device-keyboard-busy-answer";
++    answer.translatesAutoresizingMaskIntoConstraints = NO;
++    [self.view addSubview:answer];
++    [NSLayoutConstraint activateConstraints:@[
++      [field.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
++      [field.topAnchor constraintEqualToAnchor:label.bottomAnchor constant:24],
++      [field.widthAnchor constraintEqualToConstant:240],
++      [field.heightAnchor constraintEqualToConstant:44],
++      [answer.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
++      [answer.topAnchor constraintEqualToAnchor:field.bottomAnchor constant:12],
++    ]];
++    self.keyboardBusyField = field;
++    self.keyboardBusyAnswer = answer;
++  }
++
+   if ([NSProcessInfo.processInfo.arguments containsObject:@"--agent-device-native-states"]) {
+     for (NSUInteger index = 0; index < 3; index++) {
+       UITextField *field = [[UITextField alloc] initWithFrame:CGRectMake(40, 120 + index * 60, 260, 44)];
+diff --git a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+KeyboardTests.swift b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+KeyboardTests.swift
+index 06c3aacf0..ecd62afcc 100644
+--- a/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+KeyboardTests.swift
++++ b/apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+KeyboardTests.swift
+@@ -327,6 +327,68 @@ extension RunnerTests {
+   private func textEntryInputCount() -> Int {
+     app.textFields.count + app.secureTextFields.count + app.searchFields.count + app.textViews.count
+   }
++
++  // `keyboard dismiss` and `keyboard enter` tap a keyboard control. An app that never stops animating
++  // made that tap wait for XCTest's idle timeout, past the runner's main-thread watchdog, so the command
++  // failed with "main thread execution timed out" and the runner refused the next commands. The fixture
++  // keeps an animation in flight while its field has focus, until its backstop, and records whether
++  // each control landed while the app was still busy.
++  static let keyboardBusyBackstop: TimeInterval = 20
++
++  @MainActor
++  func testKeyboardDismissTapsItsDismissKeyWhileTheAppIsBusy() throws {
++    try withBusyKeyboardField {
++      let command = try runnerCommandFixture(#"{"command":"keyboardDismiss","commandId":"dismiss-busy"}"#)
++      let response = try execute(command: command)
++
++      XCTAssertTrue(response.ok, String(describing: response.error))
++      let answer = app.staticTexts["agent-device-keyboard-busy-answer"].label
++      XCTAssertEqual(answer, "Done while busy")
++      NSLog("AGENT_DEVICE_KEYBOARD_BUSY command=dismiss response.ok=%@ answer=%@", response.ok ? "true" : "false", answer)
++    }
++  }
++
++  @MainActor
++  func testKeyboardEnterPressesReturnWhileTheAppIsBusy() throws {
++    try withBusyKeyboardField {
++      let command = try runnerCommandFixture(#"{"command":"keyboardReturn","commandId":"return-busy"}"#)
++      let response = try execute(command: command)
++
++      XCTAssertTrue(response.ok, String(describing: response.error))
++      XCTAssertEqual(response.data?.wasVisible, true)
++      XCTAssertEqual(response.data?.visible, false)
++      let answer = app.staticTexts["agent-device-keyboard-busy-answer"].label
++      XCTAssertEqual(answer, "Return while busy")
++      NSLog("AGENT_DEVICE_KEYBOARD_BUSY command=enter response.ok=%@ visible=%@ answer=%@", response.ok ? "true" : "false", String(describing: response.data?.visible), answer)
++    }
++  }
++
++  @MainActor
++  private func withBusyKeyboardField(_ body: () throws -> Void) throws {
++    app.launchArguments = ["--agent-device-keyboard-busy", String(Self.keyboardBusyBackstop)]
++    app.launch()
++    defer {
++      invalidateCachedTarget(reason: "unit_test_cleanup")
++      app.terminate()
++    }
++    let field = app.textFields["agent-device-keyboard-busy-input"]
++    XCTAssertTrue(field.waitForFixtureExistence(timeout: appExistenceTimeout))
++    mainOwned.app = app
++    mainOwned.bundleId = "com.callstack.agentdevice.runner"
++    mainOwned.processIdentifier = try XCTUnwrap(Self.processIdentifier(of: app))
++    // Focus starts the busy animation, so this tap must not wait for the app to idle either.
++    withBoundedInteractionIdleTimeoutIfSupported(app, waits: .bothSkipped) { field.tap() }
++    let keyboardDeadline = Date().addingTimeInterval(5)
++    while !isKeyboardVisible(app: app) && Date() < keyboardDeadline {
++      sleepFor(0.2)
++    }
++    XCTAssertTrue(
++      isKeyboardVisible(app: app),
++      "Enable the simulator software keyboard before running the busy keyboard tests; see apple/runner/README.md"
++    )
++    XCTAssertEqual(app.staticTexts["agent-device-keyboard-busy-answer"].label, "Unanswered")
++    try body()
++  }
+ #endif
+ }
+ #endif

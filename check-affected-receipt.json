@@ -1,0 +1,259 @@
+{
+  "version": 1,
+  "cwd": "<checkout>",
+  "startedAt": "2026-11-12T04:52:50.013Z",
+  "status": "passed",
+  "exitCode": 0,
+  "refs": {
+    "base": "upstream/main",
+    "head": "HEAD",
+    "resolvedBase": "2deb909ec88bbbde615ec7c8f3895ef222d8ab3d",
+    "resolvedHead": "1b4c2e74420b12f3a1a050036e344256e7a9362e",
+    "mergeBase": "2deb909ec88bbbde615ec7c8f3895ef222d8ab3d"
+  },
+  "checkoutChanged": false,
+  "exactCommit": true,
+  "results": [
+    {
+      "id": "native-dupes",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "check:native-dupes"
+      ],
+      "logPath": "<checkout>/.tmp/validation/run-fsDlXz/0.log",
+      "exitCode": 0,
+      "durationMs": 1589,
+      "testReportPaths": [],
+      "tests": []
+    },
+    {
+      "id": "swift-runner-ios",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}), Conformance Differential / iOS Conformance Differential, Perf Nightly / iOS Command Perf, XCTest Nightly / iOS Runner Full XCTest Suite (${{ matrix.leg.name }}))"
+    },
+    {
+      "id": "swift-runner-macos",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}))"
+    },
+    {
+      "id": "xctest-selection",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "check:xctest-selection"
+      ],
+      "logPath": "<checkout>/.tmp/validation/run-fsDlXz/3.log",
+      "exitCode": 0,
+      "durationMs": 1799,
+      "testReportPaths": [],
+      "tests": []
+    },
+    {
+      "id": "packaged-runner-swift",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "check:packaged-runner-swift"
+      ],
+      "logPath": "<checkout>/.tmp/validation/run-fsDlXz/4.log",
+      "exitCode": 0,
+      "durationMs": 1658,
+      "testReportPaths": [],
+      "tests": []
+    },
+    {
+      "id": "replay-ios",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)"
+    },
+    {
+      "id": "replay-ios-device",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)"
+    },
+    {
+      "id": "replay-macos",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}))"
+    }
+  ],
+  "initial": {
+    "head": "1b4c2e74420b12f3a1a050036e344256e7a9362e",
+    "status": "",
+    "fingerprint": "bf9806e766d0d4e87771a3a880d1b873f03b14e019a76e873165f36216070f12"
+  },
+  "changedFiles": [
+    "apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m",
+    "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+CommandExecution.swift",
+    "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+KeyboardTests.swift",
+    "apple/runner/README.md"
+  ],
+  "plan": {
+    "failOpen": false,
+    "checks": [
+      "native-dupes",
+      "swift-runner-ios",
+      "swift-runner-macos",
+      "xctest-selection",
+      "packaged-runner-swift",
+      "replay-ios",
+      "replay-ios-device",
+      "replay-macos"
+    ],
+    "reasons": [
+      {
+        "check": "swift-runner-ios",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m",
+        "rule": "own:swift",
+        "detail": "Swift runner sources require the iOS XCUITest build"
+      },
+      {
+        "check": "swift-runner-macos",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m",
+        "rule": "own:swift",
+        "detail": "Swift runner sources require the macOS XCUITest build"
+      },
+      {
+        "check": "packaged-runner-swift",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m",
+        "rule": "own:packaged-runner-swift",
+        "detail": "packaged runner Swift must still parse and keep the checkout line numbering"
+      },
+      {
+        "check": "native-dupes",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m",
+        "rule": "own:native-dupes",
+        "detail": "jscpd compares native code against the clone baseline"
+      },
+      {
+        "check": "replay-ios",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "replay-ios-device",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "replay-macos",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "swift-runner-ios",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+CommandExecution.swift",
+        "rule": "own:swift",
+        "detail": "Swift runner sources require the iOS XCUITest build"
+      },
+      {
+        "check": "swift-runner-macos",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+CommandExecution.swift",
+        "rule": "own:swift",
+        "detail": "Swift runner sources require the macOS XCUITest build"
+      },
+      {
+        "check": "xctest-selection",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+CommandExecution.swift",
+        "rule": "own:xctest-selection",
+        "detail": "runner test methods must stay selected in CI and stripped from the npm source bundle"
+      },
+      {
+        "check": "packaged-runner-swift",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+CommandExecution.swift",
+        "rule": "own:packaged-runner-swift",
+        "detail": "packaged runner Swift must still parse and keep the checkout line numbering"
+      },
+      {
+        "check": "native-dupes",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+CommandExecution.swift",
+        "rule": "own:native-dupes",
+        "detail": "jscpd compares native code against the clone baseline"
+      },
+      {
+        "check": "replay-ios",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+CommandExecution.swift",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "replay-ios-device",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+CommandExecution.swift",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "replay-macos",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests+CommandExecution.swift",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "swift-runner-ios",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+KeyboardTests.swift",
+        "rule": "own:swift",
+        "detail": "Swift runner sources require the iOS XCUITest build"
+      },
+      {
+        "check": "swift-runner-macos",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+KeyboardTests.swift",
+        "rule": "own:swift",
+        "detail": "Swift runner sources require the macOS XCUITest build"
+      },
+      {
+        "check": "xctest-selection",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+KeyboardTests.swift",
+        "rule": "own:xctest-selection",
+        "detail": "runner test methods must stay selected in CI and stripped from the npm source bundle"
+      },
+      {
+        "check": "packaged-runner-swift",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+KeyboardTests.swift",
+        "rule": "own:packaged-runner-swift",
+        "detail": "packaged runner Swift must still parse and keep the checkout line numbering"
+      },
+      {
+        "check": "native-dupes",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+KeyboardTests.swift",
+        "rule": "own:native-dupes",
+        "detail": "jscpd compares native code against the clone baseline"
+      },
+      {
+        "check": "replay-ios",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+KeyboardTests.swift",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "replay-ios-device",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+KeyboardTests.swift",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "replay-macos",
+        "path": "apple/runner/AgentDeviceRunner/AgentDeviceRunnerUITests/UnitTests/RunnerTests+KeyboardTests.swift",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      }
+    ],
+    "failOpenReasons": [],
+    "docsOnlyPaths": [
+      "apple/runner/README.md"
+    ]
+  },
+  "final": {
+    "head": "1b4c2e74420b12f3a1a050036e344256e7a9362e",
+    "status": "",
+    "fingerprint": "bf9806e766d0d4e87771a3a880d1b873f03b14e019a76e873165f36216070f12"
+  },
+  "finishedAt": "2026-11-12T04:52:56.351Z"
+}

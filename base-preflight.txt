@@ -1,0 +1,33 @@
+Thu Nov 12 04:57:29 UTC 2026
+23:57  up 3 days, 12:38, 1 user, load averages: 469.12 280.86 127.43
+Mach Virtual Memory Statistics: (page size of 16384 bytes)
+Pages free:                                     5532.
+Pages active:                                 240736.
+Pages inactive:                               234169.
+Pages speculative:                              5820.
+Pages throttled:                                   0.
+Pages wired down:                             250750.
+Pages purgeable:                                1200.
+"Translation faults":                    12685119165.
+Pages copy-on-write:                      2287673487.
+Pages zero filled:                        3538832843.
+Pages reactivated:                        1004851705.
+Pages purged:                              121960172.
+File-backed pages:                            160859.
+Anonymous pages:                              319866.
+Pages stored in compressor:                   637751.
+Pages occupied by compressor:                 275177.
+Decompressions:                            820834841.
+Compressions:                             1080900339.
+Pageins:                                   258564332.
+Pageouts:                                    1279339.
+Swapins:                                    14568368.
+Swapouts:                                   32228597.
+
+System-wide memory free percentage: 47%
+Xcode 27.3
+Build version 27C5020n
+ProductName:		macOS
+ProductVersion:		27.3
+BuildVersion:		26C5035r
+v26.13.0

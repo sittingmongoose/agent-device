@@ -1,0 +1,62 @@
+{
+  "devices" : [
+    {
+      "architecture" : "arm64",
+      "deviceId" : "CCAA9D4C-88CF-4F12-9090-A1D900C15B34",
+      "deviceName" : "pr4454-round2",
+      "modelName" : "iPhone 17 Pro",
+      "osBuildNumber" : "24C5037i",
+      "osVersion" : "27.3",
+      "platform" : "iOS Simulator"
+    }
+  ],
+  "testNodes" : [
+    {
+      "children" : [
+        {
+          "children" : [
+            {
+              "children" : [
+                {
+                  "duration" : "31s",
+                  "durationInSeconds" : 31.176443934440613,
+                  "name" : "testKeyboardDismissTapsItsDismissKeyWhileTheAppIsBusy()",
+                  "nodeIdentifier" : "RunnerTests/testKeyboardDismissTapsItsDismissKeyWhileTheAppIsBusy()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests/testKeyboardDismissTapsItsDismissKeyWhileTheAppIsBusy",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                },
+                {
+                  "duration" : "24s",
+                  "durationInSeconds" : 24.772029042243958,
+                  "name" : "testKeyboardEnterPressesReturnWhileTheAppIsBusy()",
+                  "nodeIdentifier" : "RunnerTests/testKeyboardEnterPressesReturnWhileTheAppIsBusy()",
+                  "nodeIdentifierURL" : "test://com.apple.xcode/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests/testKeyboardEnterPressesReturnWhileTheAppIsBusy",
+                  "nodeType" : "Test Case",
+                  "result" : "Passed"
+                }
+              ],
+              "name" : "RunnerTests",
+              "nodeIdentifierURL" : "test://com.apple.xcode/AgentDeviceRunner/AgentDeviceRunnerUITests/RunnerTests",
+              "nodeType" : "Test Suite",
+              "result" : "Passed"
+            }
+          ],
+          "name" : "AgentDeviceRunnerUITests",
+          "nodeIdentifierURL" : "test://com.apple.xcode/AgentDeviceRunner/AgentDeviceRunnerUITests",
+          "nodeType" : "UI test bundle",
+          "result" : "Passed"
+        }
+      ],
+      "name" : "AgentDeviceRunnerUITests",
+      "nodeType" : "Test Plan",
+      "result" : "Passed"
+    }
+  ],
+  "testPlanConfigurations" : [
+    {
+      "configurationId" : "1",
+      "configurationName" : "Configuration 1"
+    }
+  ]
+}
