@@ -1,0 +1,244 @@
+--- long-job pr4440-r2-routing-focused attempt 1 started 2026-11-12T16:17:39Z on ubuntuserver: env PATH=<VM_HOME>/.local/share/node-v26.13.0-linux-x64/bin:<VM_HOME>/.npm/_npx/acaf29b40d536b0e/node_modules/.bin:<VM_HOME>/.local/bin:/usr/bin:/bin AGENT_DEVICE_VITEST_MAX_WORKERS=4 bash -euc 'pnpm format
+pnpm exec vitest run --project unit-core packages/platform-apple/src/foldable packages/platform-apple/src/core/__tests__/display-inventory.test.ts
+pnpm typecheck' ---
+$ node ./node_modules/oxfmt/bin/oxfmt --write
+Finished in 3120ms on 5288 files using 56 threads.
+
+ RUN  v5.0.4 <CHECKOUT>
+
+··································································································-···-························x····xxxx·xxxxxx··xx·xxxxxx··························x
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 20 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > a simulator is probed for its panel count once
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:73:1
+     71| }
+     72|
+     73| test('a simulator is probed for its panel count once', async () => {
+       | ^
+     74|   const sim = fakeDuo(simulator(), { lit: 'outer', picker: 'portrait' …
+     75|   await rotateDuo(sim, 'landscape-left');
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/20]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > confirms outer landscape-left from the lit panel without CoreDevice
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > confirms outer landscape-right from the lit panel without CoreDevice
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > confirms inner portrait from the lit panel without CoreDevice
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > confirms inner landscape-left from the lit panel without CoreDevice
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:298:14
+    296|     ['inner', 'landscape-left', ['portrait-upside-down']],
+    297|     ['inner', 'landscape-right', []],
+    298|   ] as const)(
+       |              ^
+    299|     'confirms %s %s from the lit panel without CoreDevice',
+    300|     async (lit, target, dispatched) => {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/20]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > a foldable rotates on the first command, confirmed by the panel table
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:310:3
+    308|   );
+    309|
+    310|   test('a foldable rotates on the first command, confirmed by the pane…
+       |   ^
+    311|     const scoped = simulator({ simulatorSetPath });
+    312|     // The inner panel lights at rot90 while the picker sits at portra…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/20]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > inner landscape-left dispatches the upside-down picker value
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:323:3
+    321|   });
+    322|
+    323|   test('inner landscape-left dispatches the upside-down picker value',…
+       |   ^
+    324|     const scoped = simulator({ simulatorSetPath });
+    325|     const sim = fakeDuo(scoped, {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/20]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > the outer panel reads the picker value itself, so its first dispatch is the target
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:338:3
+    336|   });
+    337|
+    338|   test('the outer panel reads the picker value itself, so its first di…
+       |   ^
+    339|     const scoped = simulator({ simulatorSetPath });
+    340|     const sim = fakeDuo(scoped, { lit: 'outer', picker: 'portrait' });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/20]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > an unexpected panel response cannot calibrate another picker value
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:350:3
+    348|   });
+    349|
+    350|   test('an unexpected panel response cannot calibrate another picker v…
+       |   ^
+    351|     const scoped = simulator({ simulatorSetPath });
+    352|     const sim = fakeDuo(scoped, {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/20]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > the picker survives a fold in both directions and each panel adds its own offset
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:368:3
+    366|   });
+    367|
+    368|   test('the picker survives a fold in both directions and each panel a…
+       |   ^
+    369|     const scoped = simulator({ simulatorSetPath });
+    370|     // Measured sequence: the inner panel at rot0 with the picker at l…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/20]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > a fold that leaves the picker where the outer panel cannot follow still lands in one dispatch
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:387:3
+    385|   });
+    386|
+    387|   test('a fold that leaves the picker where the outer panel cannot fol…
+       |   ^
+    388|     const scoped = simulator({ simulatorSetPath });
+    389|     // Measured: the inner panel at landscape-left needs the picker at…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/20]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > a table that never names a single lit panel dispatches nothing and is refused
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:434:3
+    432|   });
+    433|
+    434|   test('a table that never names a single lit panel dispatches nothing…
+       |   ^
+    435|     const scoped = simulator({ simulatorSetPath });
+    436|     const sim = fakeDuo(scoped, { lit: 'outer', picker: 'portrait', bo…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/20]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > an undecided final read does not report an earlier reading as the current one
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:450:3
+    448|   });
+    449|
+    450|   test('an undecided final read does not report an earlier reading as …
+       |   ^
+    451|     const scoped = simulator({ simulatorSetPath });
+    452|     // The routing probe and two decided rotation reads, then both pan…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/20]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > an incomplete panel table never confirms or dispatches (the parsed panel already shows the target)
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > an incomplete panel table never confirms or dispatches (the parsed panel shows another rotation)
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:483:14
+    481|     ['the parsed panel already shows the target', 'landscape-left'],
+    482|     ['the parsed panel shows another rotation', 'landscape-right'],
+    483|   ] as const)(
+       |              ^
+    484|     'an incomplete panel table never confirms or dispatches (%s)',
+    485|     async (_case, target) => {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/20]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > a panel of unknown power beside the lit one never confirms or dispatches (the lit panel already shows the target)
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > a panel of unknown power beside the lit one never confirms or dispatches (the lit panel shows another rotation)
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:509:14
+    507|     ['the lit panel already shows the target', 'landscape-left'],
+    508|     ['the lit panel shows another rotation', 'landscape-right'],
+    509|   ] as const)(
+       |              ^
+    510|     'a panel of unknown power beside the lit one never confirms or dis…
+    511|     async (_case, target) => {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/20]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > delayed panel reads wait without resending the picker value
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:532:3
+    530|   );
+    531|
+    532|   test('delayed panel reads wait without resending the picker value', …
+       |   ^
+    533|     const scoped = simulator({ simulatorSetPath });
+    534|     // The first two panel reads after each picker event still show th…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/20]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > a rotation the lit panel never shows is refused as unverified
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:545:3
+    543|   });
+    544|
+    545|   test('a rotation the lit panel never shows is refused as unverified'…
+       |   ^
+    546|     const scoped = simulator({ simulatorSetPath });
+    547|     const sim = fakeDuo(scoped, {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/20]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > a rotation is not routed by a pending panel-table retry
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:593:1
+    591|
+    592| /** A rotation reads the panel table itself: the surface probe's retry…
+    593| test('a rotation is not routed by a pending panel-table retry', async …
+       | ^
+    594|   const device = simulator();
+    595|   let tableFailures = 0;
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[15/20]⎯
+
+
+ Test Files  1 failed | 6 passed | 1 skipped (8)
+      Tests  20 failed | 159 passed | 2 skipped (181)
+   Start at  16:17:47
+   Duration  102.74s (tests 94%, transform 4%, import 2%)
+
+
+Slow-test gate: 20 test(s) exceeded 2x the wall-clock budget.
+Tests must not wait real time — inject the timeout/poll budget or assert the budget is
+wired instead of waiting it out (docs/agents/testing.md). If the runtime cost is genuinely
+irreducible, document the reason in the owning test or move it out of the unit lane.
+  5.02s (budget 2.5s)  packages/platform-apple/src/foldable/orientation.test.ts :: a simulator is probed for its panel count once
+  5.01s (budget 2.5s)  packages/platform-apple/src/foldable/orientation.test.ts :: foldable rotation, set undefined an unexpected panel response cannot calibrate another picker value
+  5.01s (budget 2.5s)  packages/platform-apple/src/foldable/orientation.test.ts :: foldable rotation, set undefined a rotation the lit panel never shows is refused as unverified
+  5.00s (budget 2.5s)  packages/platform-apple/src/foldable/orientation.test.ts :: foldable rotation, set undefined inner landscape-left dispatches the upside-down picker value
+  5.00s (budget 2.5s)  packages/platform-apple/src/foldable/orientation.test.ts :: foldable rotation, set undefined delayed panel reads wait without resending the picker value
+  5.00s (budget 2.5s)  packages/platform-apple/src/foldable/orientation.test.ts :: foldable rotation, set undefined an undecided final read does not report an earlier reading as the current one
+  5.00s (budget 2.5s)  packages/platform-apple/src/foldable/orientation.test.ts :: foldable rotation, set undefined confirms inner landscape-left from the lit panel without CoreDevice
+  5.00s (budget 2.5s)  packages/platform-apple/src/foldable/orientation.test.ts :: foldable rotation, set undefined a panel of unknown power beside the lit one never confirms or dispatches (the lit panel shows another rotation)
+  5.00s (budget 2.5s)  packages/platform-apple/src/foldable/orientation.test.ts :: foldable rotation, set undefined a panel of unknown power beside the lit one never confirms or dispatches (the lit panel already shows the target)
+  5.00s (budget 2.5s)  packages/platform-apple/src/foldable/orientation.test.ts :: foldable rotation, set undefined confirms outer landscape-left from the lit panel without CoreDevice
+  5.00s (budget 2.5s)  packages/platform-apple/src/foldable/orientation.test.ts :: foldable rotation, set undefined a fold that leaves the picker where the outer panel cannot follow still lands in one dispatch
+  5.00s (budget 2.5s)  packages/platform-apple/src/foldable/orientation.test.ts :: foldable rotation, set undefined the picker survives a fold in both directions and each panel adds its own offset
+  5.00s (budget 2.5s)  packages/platform-apple/src/foldable/orientation.test.ts :: foldable rotation, set undefined confirms outer landscape-right from the lit panel without CoreDevice
+  5.00s (budget 2.5s)  packages/platform-apple/src/foldable/orientation.test.ts :: foldable rotation, set undefined an incomplete panel table never confirms or dispatches (the parsed panel already shows the target)
+  5.00s (budget 2.5s)  packages/platform-apple/src/foldable/orientation.test.ts :: foldable rotation, set undefined confirms inner portrait from the lit panel without CoreDevice
+  5.00s (budget 2.5s)  packages/platform-apple/src/foldable/orientation.test.ts :: foldable rotation, set undefined a foldable rotates on the first command, confirmed by the panel table
+  5.00s (budget 2.5s)  packages/platform-apple/src/foldable/orientation.test.ts :: a rotation is not routed by a pending panel-table retry
+  5.00s (budget 2.5s)  packages/platform-apple/src/foldable/orientation.test.ts :: foldable rotation, set undefined the outer panel reads the picker value itself, so its first dispatch is the target
+  5.00s (budget 2.5s)  packages/platform-apple/src/foldable/orientation.test.ts :: foldable rotation, set undefined an incomplete panel table never confirms or dispatches (the parsed panel shows another rotation)
+  5.00s (budget 2.5s)  packages/platform-apple/src/foldable/orientation.test.ts :: foldable rotation, set undefined a table that never names a single lit panel dispatches nothing and is refused
+--- long-job pr4440-r2-routing-focused attempt 1 ended 2026-11-12T16:19:30Z: exit 1 ---

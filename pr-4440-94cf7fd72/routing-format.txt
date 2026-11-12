@@ -1,0 +1,2 @@
+$ node ./node_modules/oxfmt/bin/oxfmt --write
+Finished in 2481ms on 5288 files using 52 threads.

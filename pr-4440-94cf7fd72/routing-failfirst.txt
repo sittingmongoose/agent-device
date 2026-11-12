@@ -1,0 +1,57 @@
+--- long-job pr4440-r2-routing-failfirst attempt 1 started 2026-11-12T16:16:44Z on ubuntuserver: env PATH=<VM_HOME>/.local/share/node-v26.13.0-linux-x64/bin:<VM_HOME>/.npm/_npx/acaf29b40d536b0e/node_modules/.bin:<VM_HOME>/.local/bin:/usr/bin:/bin pnpm exec vitest run --project unit-core packages/platform-apple/src/foldable/orientation.test.ts -t 'a single-panel simulator keeps|a cold default Duo' ---
+
+ RUN  v5.0.4 <CHECKOUT>
+
+-xx---------------------------------------------------
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > a single-panel simulator keeps the runner rotation
+AssertionError: expected [ [ 'panels' ] ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   [
++     "panels",
++   ],
++ ]
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:86:23
+     84|   const sim = fakeSimulator(device, SINGLE_PANEL_DISPLAYS);
+     85|   await expect(sim.rotate('landscape-left')).resolves.toEqual({ orient…
+     86|   expect(sim.helpers).toEqual([]);
+       |                       ^
+     87|   expect(ensureFoldHelperBinary).not.toHaveBeenCalled();
+     88|   expect(mockRunner).toHaveBeenCalledWith(
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > a cold default Duo classifies without preparing the guest helper
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:107:99
+    105|     },
+    106|   });
+    107|   await expect(withAppleToolProvider(provider, () => isAppleFoldableSi…
+       |                                                                                                   ^
+    108|     .resolves.toBe(true);
+    109|   expect(calls).toHaveLength(1);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 52 skipped (54)
+   Start at  16:16:48
+   Duration  3.24s (transform 67%, import 30%, tests 2%, setup 1%)
+
+--- long-job pr4440-r2-routing-failfirst attempt 1 ended 2026-11-12T16:16:51Z: exit 1 ---

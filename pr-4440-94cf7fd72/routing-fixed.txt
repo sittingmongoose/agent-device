@@ -1,0 +1,17 @@
+--- long-job pr4440-r2-routing-fixed attempt 1 started 2026-11-12T16:21:29Z on ubuntuserver: env PATH=<VM_HOME>/.local/share/node-v26.13.0-linux-x64/bin:<VM_HOME>/.npm/_npx/acaf29b40d536b0e/node_modules/.bin:<VM_HOME>/.local/bin:/usr/bin:/bin AGENT_DEVICE_VITEST_MAX_WORKERS=4 bash -euc 'pnpm format
+pnpm exec vitest run --project unit-core packages/platform-apple/src/foldable packages/platform-apple/src/core/__tests__/display-inventory.test.ts
+pnpm typecheck' ---
+$ node ./node_modules/oxfmt/bin/oxfmt --write
+Finished in 2937ms on 5288 files using 52 threads.
+
+ RUN  v5.0.4 <CHECKOUT>
+
+···································································································-··················································································-
+
+ Test Files  7 passed | 1 skipped (8)
+      Tests  181 passed | 2 skipped (183)
+   Start at  16:21:36
+   Duration  3.17s (transform 45%, import 22%, setup 18%, tests 14%, worker 1%)
+
+$ tsc -b tsconfig.typecheck.json examples/sdk/tsconfig.json
+--- long-job pr4440-r2-routing-fixed attempt 1 ended 2026-11-12T16:21:59Z: exit 0 ---
