@@ -1,0 +1,154 @@
+[receipt] <CHECKOUT>/.tmp/validation/run-u5eipd/receipt.json
+Selected 23 checks.
+[skip] coverage — GitHub-authoritative (jobs: Coverage)
+[skip] web-smoke — GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}), Integration Tests, Lint, Typecheck & Package, Perf Nightly / Android Command Perf, Perf Nightly / iOS Command Perf)
+[skip] replay-ios — parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)
+[skip] replay-ios-device — parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)
+[skip] replay-macos — GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}))
+[skip] replay-linux — GitHub-authoritative (jobs: Linux / Smoke Tests)
+[skip] linux-command-evidence — GitHub-authoritative (jobs: Linux / Smoke Tests)
+[skip] replay-android — parked, workflow_dispatch only (Replay Manual / Android Full Emulator Suite)
+[run] format; log=<CHECKOUT>/.tmp/validation/run-u5eipd/0.log
+[passed] format; exit=0
+[run] lint; log=<CHECKOUT>/.tmp/validation/run-u5eipd/1.log
+[passed] lint; exit=0
+[run] typecheck; log=<CHECKOUT>/.tmp/validation/run-u5eipd/2.log
+[passed] typecheck; exit=0
+[run] layering; log=<CHECKOUT>/.tmp/validation/run-u5eipd/3.log
+[running] layering 15s
+[running] layering 30s
+[running] layering 45s
+[running] layering 60s
+[running] layering 75s
+[running] layering 90s
+[running] layering 105s
+[passed] layering; exit=0
+[run] fallow; log=<CHECKOUT>/.tmp/validation/run-u5eipd/4.log
+[passed] fallow; exit=0
+[run] native-dupes; log=<CHECKOUT>/.tmp/validation/run-u5eipd/5.log
+[passed] native-dupes; exit=0
+[run] build; log=<CHECKOUT>/.tmp/validation/run-u5eipd/6.log
+[running] build 15s
+[passed] build; exit=0
+[run] vitest-related; log=<CHECKOUT>/.tmp/validation/run-u5eipd/7.log
+[running] vitest-related 15s
+[running] vitest-related 30s
+[running] vitest-related 45s
+[running] vitest-related 60s
+[running] vitest-related 75s
+[running] vitest-related 90s
+[running] vitest-related 105s
+[running] vitest-related 120s
+[running] vitest-related 135s
+[running] vitest-related 150s
+[passed] vitest-related; exit=0
+[run] unit; log=<CHECKOUT>/.tmp/validation/run-u5eipd/8.log
+[running] unit 15s
+[running] unit 30s
+[running] unit 45s
+[running] unit 60s
+[running] unit 75s
+[running] unit 90s
+[running] unit 105s
+[running] unit 120s
+[running] unit 135s
+[running] unit 150s
+[running] unit 165s
+[running] unit 180s
+[running] unit 195s
+[running] unit 210s
+[running] unit 225s
+[running] unit 240s
+[running] unit 255s
+[running] unit 270s
+[running] unit 285s
+[running] unit 300s
+[running] unit 315s
+[running] unit 330s
+[running] unit 345s
+[running] unit 360s
+[running] unit 375s
+[running] unit 390s
+[running] unit 405s
+[running] unit 420s
+[running] unit 435s
+[running] unit 450s
+[running] unit 465s
+[running] unit 480s
+[running] unit 495s
+[running] unit 510s
+[running] unit 525s
+[running] unit 540s
+[running] unit 555s
+[running] unit 570s
+[running] unit 585s
+[running] unit 600s
+[running] unit 615s
+[running] unit 630s
+[running] unit 645s
+[running] unit 660s
+[running] unit 675s
+[running] unit 690s
+[running] unit 705s
+[running] unit 720s
+[running] unit 735s
+[running] unit 750s
+[running] unit 765s
+[running] unit 780s
+[running] unit 795s
+[running] unit 810s
+[running] unit 825s
+[running] unit 840s
+[running] unit 855s
+[running] unit 870s
+[running] unit 885s
+[running] unit 900s
+[running] unit 915s
+[running] unit 930s
+[running] unit 945s
+[running] unit 960s
+[running] unit 975s
+[running] unit 990s
+[running] unit 1005s
+[running] unit 1020s
+[running] unit 1035s
+[running] unit 1050s
+[failed] unit; exit=1
+✖ web shutdown cleanup reaps the exact daemon that survived graceful shutdown (624.742773ms)
+﹣ live web platform e2e smoke (1.430702ms) # Set AGENT_DEVICE_WEB_E2E=1 to run the managed web backend smoke.
+﹣ live web coordinate fill selects in the page and refuses what it cannot confirm (0.194528ms) # Set AGENT_DEVICE_WEB_E2E=1 to run the managed web backend smoke.
+﹣ live web platform e2e daemon-shutdown browser cleanup (0.189571ms) # Set AGENT_DEVICE_WEB_E2E=1 to run the managed web backend smoke.
+ℹ tests 82
+ℹ suites 0
+ℹ pass 75
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 6
+ℹ todo 0
+ℹ duration_ms 10558.536634
+
+✖ failing tests:
+
+test at test/integration/smoke-web-platform.test.ts:48:1
+✖ web shutdown cleanup reaps the exact daemon that survived graceful shutdown (624.742773ms)
+  AssertionError [ERR_ASSERTION]: expected cleanup to escalate after the child ignored SIGTERM
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file://<CHECKOUT>/test/integration/smoke-web-platform.test.ts:103:10)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+[ELIFECYCLE] Command failed with exit code 1.
+[ELIFECYCLE] Command failed with exit code 1.
+
+
+check:affected: unit failed.
+[failed] exactCommit=true; receipt=<CHECKOUT>/.tmp/validation/run-u5eipd/receipt.json

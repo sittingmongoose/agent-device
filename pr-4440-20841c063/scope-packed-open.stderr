@@ -1,0 +1,1 @@
+T3 Code's device connection at 127.0.0.1:18885 is not reachable from this shell (connect ECONNREFUSED). Call device_open again to reconnect; if that succeeds and this repeats, this shell runs in a network sandbox, so run the command with network access, outside the sandbox.

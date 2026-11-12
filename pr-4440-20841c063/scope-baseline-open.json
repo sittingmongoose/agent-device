@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "session": "t3-23288a",
+    "sessionStateDir": "<MAC_HOME>/.simlock/agent-device/sessions/gw.adbb83dc-4c83-4bbd-a296-56af5a09e9d0.<SESSION_ALIAS>.6b6553685156178683736caf8f7d3b62_t3-23288a",
+    "runnerLogPath": "<MAC_HOME>/.simlock/agent-device/sessions/gw.adbb83dc-4c83-4bbd-a296-56af5a09e9d0.<SESSION_ALIAS>.6b6553685156178683736caf8f7d3b62_t3-23288a/runner.log",
+    "requestLogPath": "<MAC_HOME>/.simlock/agent-device/sessions/gw.adbb83dc-4c83-4bbd-a296-56af5a09e9d0.<SESSION_ALIAS>.6b6553685156178683736caf8f7d3b62_t3-23288a/requests/c7987b17c906ce3d.ndjson",
+    "eventLogPath": "<MAC_HOME>/.simlock/agent-device/sessions/gw.adbb83dc-4c83-4bbd-a296-56af5a09e9d0.<SESSION_ALIAS>.6b6553685156178683736caf8f7d3b62_t3-23288a/events.ndjson",
+    "appName": "com.apple.mobilesafari",
+    "appBundleId": "com.apple.mobilesafari",
+    "selection": {
+      "reason": "existing-session",
+      "source": "session",
+      "candidateCount": 1,
+      "bootOccurred": false
+    },
+    "startup": {
+      "durationMs": 14600,
+      "measuredAt": "2026-11-12T13:30:59.248Z",
+      "method": "open-command-roundtrip",
+      "appTarget": "com.apple.mobilesafari",
+      "appBundleId": "com.apple.mobilesafari"
+    },
+    "platform": "ios",
+    "target": "mobile",
+    "device": "simlock-11366daa-d0f7-43d9-90f1-a4aa881aaec5",
+    "id": "F910312A-7580-4B66-A806-A4888BFB28DE",
+    "device_udid": "F910312A-7580-4B66-A806-A4888BFB28DE",
+    "ios_simulator_device_set": "<MAC_HOME>/.simlock/devices/ios",
+    "message": "Opened: com.apple.mobilesafari"
+  }
+}

@@ -1,0 +1,9 @@
+--- long-job pr4440-r2-head61 attempt 1 started 2026-11-12T15:13:01Z on ubuntuserver: env PATH=/tmp/pr4440-r2-tools/bin:<VM_HOME>/.local/share/node-v26.13.0-linux-x64/bin:<VM_HOME>/.npm/_npx/acaf29b40d536b0e/node_modules/.bin:<VM_HOME>/.local/bin:/usr/bin:/bin AGENT_DEVICE_VITEST_MAX_WORKERS=2 bash -euc 'pnpm build > <EVIDENCE>/round2-evidence/head61-build.txt 2>&1
+node scripts/package-apple-runner-source.mjs >> <EVIDENCE>/round2-evidence/head61-build.txt 2>&1
+npm pack --ignore-scripts --json --pack-destination <EVIDENCE>/round2-evidence > <EVIDENCE>/round2-evidence/head61-pack.json
+mv <EVIDENCE>/round2-evidence/agent-device-0.21.37-dev.tgz <EVIDENCE>/round2-evidence/final-61c5a43fe.tgz
+cmp <EVIDENCE>/round2-evidence/final-61c5a43fe.tgz <EVIDENCE>/round2-evidence/final-b5116d2b9.tgz
+sha256sum <EVIDENCE>/round2-evidence/final-61c5a43fe.tgz <EVIDENCE>/round2-evidence/final-b5116d2b9.tgz > <EVIDENCE>/round2-evidence/packed-head-sha256.txt
+pnpm --silent check:affected --base upstream/main --head 61c5a43fe2a2cc6d1d5e84a9cf102861c0cf0ed0 --run --json > <EVIDENCE>/round2-evidence/check-affected-final.json 2> <EVIDENCE>/round2-evidence/check-affected-final.stderr' ---
+<EVIDENCE>/round2-evidence/final-61c5a43fe.tgz <EVIDENCE>/round2-evidence/final-b5116d2b9.tgz differ: byte 99769, line 438
+--- long-job pr4440-r2-head61 attempt 1 ended 2026-11-12T15:13:26Z: exit 1 ---

@@ -1,0 +1,6 @@
+--- long-job pr4440-r2-head208 attempt 1 started 2026-11-12T15:51:11Z on ubuntuserver: env PATH=<VM_HOME>/.local/share/node-v26.13.0-linux-x64/bin:<VM_HOME>/.npm/_npx/acaf29b40d536b0e/node_modules/.bin:<VM_HOME>/.local/bin:/usr/bin:/bin AGENT_DEVICE_VITEST_MAX_WORKERS=4 bash -euc 'npm pack --ignore-scripts --json --pack-destination <EVIDENCE>/round2-evidence > <EVIDENCE>/round2-evidence/head208-pack.json
+mv <EVIDENCE>/round2-evidence/agent-device-0.21.37-dev.tgz <EVIDENCE>/round2-evidence/final-20841c063.tgz
+cmp <EVIDENCE>/round2-evidence/final-20841c063.tgz <EVIDENCE>/round2-evidence/final-b5116d2b9.tgz
+sha256sum <EVIDENCE>/round2-evidence/final-20841c063.tgz <EVIDENCE>/round2-evidence/final-b5116d2b9.tgz > <EVIDENCE>/round2-evidence/packed-head-sha256.txt
+pnpm --silent check:affected --base upstream/main --head 20841c06340e7b1483b0286dd3a7a45ed9053e77 --run --json > <EVIDENCE>/round2-evidence/check-affected-final.json 2> <EVIDENCE>/round2-evidence/check-affected-final.stderr' ---
+--- long-job pr4440-r2-head208 attempt 1 ended 2026-11-12T15:51:43Z: stopped ---

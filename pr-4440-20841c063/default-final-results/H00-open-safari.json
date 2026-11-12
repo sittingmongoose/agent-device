@@ -1,0 +1,122 @@
+{
+  "args": [
+    "open",
+    "com.apple.mobilesafari"
+  ],
+  "exitCode": 0,
+  "startedAt": "2026-11-12T13:50:39.739Z",
+  "finishedAt": "2026-11-12T13:50:45.176Z",
+  "wallClockMs": 5436.602542,
+  "stdout": "<unrelated setup output omitted>",
+  "stderr": "[agent-device][diag] {\"ts\":\"2026-11-12T13:50:40.023Z\",\"level\":\"info\",\"phase\":\"daemon_startup\",\"session\":\"pr4440-proof\",\"requestId\":\"767588bc5aed039f\",\"command\":\"open\",\"durationMs\":4,\"data\":{\"requestId\":\"767588bc5aed039f\",\"session\":\"pr4440-proof\"}}\n[agent-device][diag] {\"ts\":\"2026-11-12T13:50:40.025Z\",\"level\":\"info\",\"phase\":\"daemon_request_prepare\",\"session\":\"pr4440-proof\",\"requestId\":\"767588bc5aed039f\",\"command\":\"open\",\"data\":{\"requestId\":\"767588bc5aed039f\",\"command\":\"open\",\"session\":\"pr4440-proof\"}}\n[agent-device][diag] {\"ts\":\"2026-11-12T13:50:45.157Z\",\"level\":\"info\",\"phase\":\"daemon_request\",\"session\":\"pr4440-proof\",\"requestId\":\"767588bc5aed039f\",\"command\":\"open\",\"durationMs\":5132,\"data\":{\"requestId\":\"767588bc5aed039f\",\"command\":\"open\"}}\n",
+  "payload": {
+    "success": true,
+    "data": {
+      "session": "pr4440-proof",
+      "sessionStateDir": "/private/tmp/pr4440-r2/default-final/state/sessions/pr4440-proof",
+      "runnerLogPath": "/private/tmp/pr4440-r2/default-final/state/sessions/pr4440-proof/runner.log",
+      "requestLogPath": "/private/tmp/pr4440-r2/default-final/state/sessions/pr4440-proof/requests/767588bc5aed039f.ndjson",
+      "eventLogPath": "/private/tmp/pr4440-r2/default-final/state/sessions/pr4440-proof/events.ndjson",
+      "appName": "com.apple.mobilesafari",
+      "appBundleId": "com.apple.mobilesafari",
+      "selection": {
+        "reason": "explicit-selector",
+        "source": "local",
+        "candidateCount": 1,
+        "bootOccurred": false
+      },
+      "startup": {
+        "durationMs": 4887,
+        "measuredAt": "2026-11-12T13:50:45.151Z",
+        "method": "open-command-roundtrip",
+        "appTarget": "com.apple.mobilesafari",
+        "appBundleId": "com.apple.mobilesafari"
+      },
+      "platform": "ios",
+      "target": "mobile",
+      "device": "pr4440-r2-owned",
+      "id": "6164BADC-D2E1-4455-A4DB-D9D2C73C1228",
+      "device_udid": "6164BADC-D2E1-4455-A4DB-D9D2C73C1228",
+      "ios_simulator_device_set": null,
+      "message": "Opened: com.apple.mobilesafari"
+    }
+  },
+  "ok": true,
+  "calls": [
+    {
+      "startedAt": "2026-11-12T13:50:40.065046+00:00",
+      "finishedAt": "2026-11-12T13:50:40.185551+00:00",
+      "durationMs": 120,
+      "args": [
+        "simctl",
+        "list",
+        "-j"
+      ],
+      "exitCode": 0,
+      "stdout": "<unrelated setup output omitted>",
+      "stderr": ""
+    },
+    {
+      "startedAt": "2026-11-12T13:50:40.341256+00:00",
+      "finishedAt": "2026-11-12T13:50:40.774257+00:00",
+      "durationMs": 433,
+      "args": [
+        "simctl",
+        "spawn",
+        "6164BADC-D2E1-4455-A4DB-D9D2C73C1228",
+        "defaults",
+        "write",
+        "com.apple.Accessibility",
+        "ApplicationAccessibilityEnabled",
+        "-bool",
+        "YES"
+      ],
+      "exitCode": 0,
+      "stdout": "<unrelated setup output omitted>",
+      "stderr": ""
+    },
+    {
+      "startedAt": "2026-11-12T13:50:40.896557+00:00",
+      "finishedAt": "2026-11-12T13:50:42.060695+00:00",
+      "durationMs": 1164,
+      "args": [
+        "simctl",
+        "launch",
+        "6164BADC-D2E1-4455-A4DB-D9D2C73C1228",
+        "com.apple.mobilesafari"
+      ],
+      "exitCode": 0,
+      "stdout": "<unrelated setup output omitted>",
+      "stderr": ""
+    },
+    {
+      "startedAt": "2026-11-12T13:50:42.199953+00:00",
+      "finishedAt": "2026-11-12T13:50:42.478422+00:00",
+      "durationMs": 278,
+      "args": [
+        "simctl",
+        "list",
+        "devices",
+        "-j"
+      ],
+      "exitCode": 0,
+      "stdout": "<unrelated setup output omitted>",
+      "stderr": ""
+    },
+    {
+      "startedAt": "2026-11-12T13:50:42.213360+00:00",
+      "finishedAt": "2026-11-12T13:50:42.650547+00:00",
+      "durationMs": 436,
+      "args": [
+        "simctl",
+        "spawn",
+        "6164BADC-D2E1-4455-A4DB-D9D2C73C1228",
+        "launchctl",
+        "list"
+      ],
+      "exitCode": 0,
+      "stdout": "<unrelated setup output omitted>",
+      "stderr": ""
+    }
+  ]
+}

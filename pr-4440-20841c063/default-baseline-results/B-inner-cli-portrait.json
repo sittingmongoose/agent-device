@@ -1,0 +1,17 @@
+{
+  "exitCode": 0,
+  "startedAt": "2026-11-12T13:38:18.262Z",
+  "finishedAt": "2026-11-12T13:38:19.824Z",
+  "wallClockMs": 1562.4972500000003,
+  "stdout": "{\n  \"success\": true,\n  \"data\": {\n    \"action\": \"orientation\",\n    \"orientation\": \"portrait\",\n    \"message\": \"Rotated to portrait\"\n  }\n}\n",
+  "stderr": "[agent-device][diag] {\"ts\":\"2026-11-12T13:38:18.530Z\",\"level\":\"info\",\"phase\":\"daemon_startup\",\"session\":\"pr4440-baseline\",\"requestId\":\"5ce6721dde97770b\",\"command\":\"orientation\",\"durationMs\":4,\"data\":{\"requestId\":\"5ce6721dde97770b\",\"session\":\"pr4440-baseline\"}}\n[agent-device][diag] {\"ts\":\"2026-11-12T13:38:18.536Z\",\"level\":\"info\",\"phase\":\"daemon_request_prepare\",\"session\":\"pr4440-baseline\",\"requestId\":\"5ce6721dde97770b\",\"command\":\"orientation\",\"data\":{\"requestId\":\"5ce6721dde97770b\",\"command\":\"orientation\",\"session\":\"pr4440-baseline\"}}\n[agent-device][diag] {\"ts\":\"2026-11-12T13:38:19.814Z\",\"level\":\"info\",\"phase\":\"daemon_request\",\"session\":\"pr4440-baseline\",\"requestId\":\"5ce6721dde97770b\",\"command\":\"orientation\",\"durationMs\":1278,\"data\":{\"requestId\":\"5ce6721dde97770b\",\"command\":\"orientation\"}}\n",
+  "payload": {
+    "success": true,
+    "data": {
+      "action": "orientation",
+      "orientation": "portrait",
+      "message": "Rotated to portrait"
+    }
+  },
+  "ok": true
+}

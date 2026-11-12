@@ -1,0 +1,33 @@
+
+ RUN  v5.0.4 <CHECKOUT>
+
+--------------------------------------------·x--------
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/core/__tests__/display-inventory.test.ts > scoped simulator panel table > reads with the supplied fold helper in the default set
+AssertionError: Expected values to be strictly equal:
++ actual - expected
+
++ undefined
+- 'LCD-1'
+
+
+simple
+
+ ❯ packages/platform-apple/src/core/__tests__/display-inventory.test.ts:770:12
+    768|     const inventory = await queryAppleDisplayInventory(device, { foldH…
+    769|
+    770|     assert.equal(inventory.activeDisplay?.name, 'LCD-1');
+       |            ^
+    771|     assert.equal(readPanelPayload.mock.calls.length, 1);
+    772|     assert.equal(vi.mocked(ensureFoldHelperBinary).mock.calls.length, …
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed | 52 skipped (54)
+   Start at  12:26:13
+   Duration  2.22s (transform 69%, import 27%, tests 3%, setup 2%)
+

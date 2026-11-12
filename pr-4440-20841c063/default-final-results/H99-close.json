@@ -1,0 +1,20 @@
+{
+  "args": [
+    "close"
+  ],
+  "exitCode": 0,
+  "startedAt": "2026-11-12T13:51:28.903Z",
+  "finishedAt": "2026-11-12T13:51:28.993Z",
+  "wallClockMs": 90.57754199999908,
+  "stdout": "<unrelated setup output omitted>",
+  "stderr": "[agent-device][diag] {\"ts\":\"2026-11-12T13:51:28.981Z\",\"level\":\"info\",\"phase\":\"daemon_startup\",\"session\":\"pr4440-proof\",\"requestId\":\"5c9b6044725ae6e2\",\"command\":\"close\",\"durationMs\":3,\"data\":{\"requestId\":\"5c9b6044725ae6e2\",\"session\":\"pr4440-proof\"}}\n[agent-device][diag] {\"ts\":\"2026-11-12T13:51:28.983Z\",\"level\":\"info\",\"phase\":\"daemon_request_prepare\",\"session\":\"pr4440-proof\",\"requestId\":\"5c9b6044725ae6e2\",\"command\":\"close\",\"data\":{\"requestId\":\"5c9b6044725ae6e2\",\"command\":\"close\",\"session\":\"pr4440-proof\"}}\n[agent-device][diag] {\"ts\":\"2026-11-12T13:51:28.988Z\",\"level\":\"info\",\"phase\":\"daemon_request\",\"session\":\"pr4440-proof\",\"requestId\":\"5c9b6044725ae6e2\",\"command\":\"close\",\"durationMs\":5,\"data\":{\"requestId\":\"5c9b6044725ae6e2\",\"command\":\"close\"}}\n",
+  "payload": {
+    "success": true,
+    "data": {
+      "session": "pr4440-proof",
+      "message": "Closed: pr4440-proof"
+    }
+  },
+  "ok": true,
+  "calls": []
+}

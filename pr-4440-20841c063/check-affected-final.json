@@ -1,0 +1,1351 @@
+{
+  "version": 1,
+  "cwd": "<CHECKOUT>",
+  "startedAt": "2026-11-12T15:51:45.833Z",
+  "status": "failed",
+  "exitCode": 1,
+  "refs": {
+    "base": "upstream/main",
+    "head": "20841c06340e7b1483b0286dd3a7a45ed9053e77",
+    "resolvedBase": "9cbbae2c857d5ce2915b0fe3f8953999c967d2c8",
+    "resolvedHead": "20841c06340e7b1483b0286dd3a7a45ed9053e77",
+    "mergeBase": "a8774f3632eb432a1dadbde8627da30586f9ee39"
+  },
+  "checkoutChanged": false,
+  "exactCommit": true,
+  "results": [
+    {
+      "id": "format",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "format:check"
+      ],
+      "logPath": "<CHECKOUT>/.tmp/validation/run-BIpzyI/0.log",
+      "exitCode": 0,
+      "durationMs": 5074,
+      "testReportPaths": [],
+      "tests": []
+    },
+    {
+      "id": "lint",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "lint"
+      ],
+      "logPath": "<CHECKOUT>/.tmp/validation/run-BIpzyI/1.log",
+      "exitCode": 0,
+      "durationMs": 10479,
+      "testReportPaths": [],
+      "tests": []
+    },
+    {
+      "id": "typecheck",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "typecheck"
+      ],
+      "logPath": "<CHECKOUT>/.tmp/validation/run-BIpzyI/2.log",
+      "exitCode": 0,
+      "durationMs": 1582,
+      "testReportPaths": [],
+      "tests": []
+    },
+    {
+      "id": "layering",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "check:layering"
+      ],
+      "logPath": "<CHECKOUT>/.tmp/validation/run-BIpzyI/3.log",
+      "exitCode": 0,
+      "durationMs": 118423,
+      "testReportPaths": [],
+      "tests": []
+    },
+    {
+      "id": "fallow",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "check:fallow",
+        "--base",
+        "9cbbae2c857d5ce2915b0fe3f8953999c967d2c8"
+      ],
+      "logPath": "<CHECKOUT>/.tmp/validation/run-BIpzyI/4.log",
+      "exitCode": 0,
+      "durationMs": 10054,
+      "testReportPaths": [],
+      "tests": []
+    },
+    {
+      "id": "native-dupes",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "check:native-dupes"
+      ],
+      "logPath": "<CHECKOUT>/.tmp/validation/run-BIpzyI/5.log",
+      "exitCode": 0,
+      "durationMs": 1458,
+      "testReportPaths": [],
+      "tests": []
+    },
+    {
+      "id": "build",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "run",
+        "build"
+      ],
+      "logPath": "<CHECKOUT>/.tmp/validation/run-BIpzyI/6.log",
+      "exitCode": 0,
+      "durationMs": 21557,
+      "testReportPaths": [],
+      "tests": []
+    },
+    {
+      "id": "vitest-related",
+      "status": "passed",
+      "command": [
+        "pnpm",
+        "exec",
+        "vitest",
+        "related",
+        "--run",
+        "--passWithNoTests",
+        "--project=!unit-core",
+        "--project=!apple-runner",
+        "--project=!fuzz-worker",
+        ".changeset/foldable-scoped-rotation.md",
+        "apple/fold-helper/Fold.m",
+        "docs/adr/0025-foldable-apple-panels.md",
+        "docs/agents/device-foldable.md",
+        "packages/command-surface/src/system/index.ts",
+        "packages/platform-apple/src/core/__tests__/display-inventory.test.ts",
+        "packages/platform-apple/src/core/config.ts",
+        "packages/platform-apple/src/core/device-orientation.ts",
+        "packages/platform-apple/src/core/display-inventory.ts",
+        "packages/platform-apple/src/foldable/fold-helper.test.ts",
+        "packages/platform-apple/src/foldable/fold-helper.ts",
+        "packages/platform-apple/src/foldable/orientation.test.ts",
+        "packages/platform-apple/src/foldable/orientation.ts",
+        "packages/platform-apple/src/foldable/pose.ts",
+        "packages/platform-apple/src/foldable/runner-panel.test.ts",
+        "src/commands/schema/cli-help-foldable.ts",
+        "test/integration/provider-scenarios/ios-fold.test.ts",
+        "website/docs/docs/commands.md"
+      ],
+      "logPath": "<CHECKOUT>/.tmp/validation/run-BIpzyI/7.log",
+      "exitCode": 0,
+      "durationMs": 85105,
+      "testReportPaths": [
+        "<CHECKOUT>/.tmp/validation/run-BIpzyI/7.tests.4018146.json"
+      ],
+      "tests": [
+        {
+          "passed": 352,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "unit",
+      "status": "failed",
+      "command": [
+        "pnpm",
+        "run",
+        "check:unit"
+      ],
+      "logPath": "<CHECKOUT>/.tmp/validation/run-BIpzyI/8.log",
+      "exitCode": 1,
+      "durationMs": 531199,
+      "testReportPaths": [
+        "<CHECKOUT>/.tmp/validation/run-BIpzyI/8.tests.4058789.json"
+      ],
+      "tests": [
+        {
+          "passed": 19025,
+          "failed": 0,
+          "skipped": 70,
+          "pending": 0,
+          "failedModules": 0,
+          "unhandledErrors": 0,
+          "failures": [],
+          "omittedFailures": 0
+        }
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Coverage)"
+    },
+    {
+      "id": "provider-integration",
+      "status": "not-run"
+    },
+    {
+      "id": "web-smoke",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}), Integration Tests, Lint, Typecheck & Package, Perf Nightly / Android Command Perf, Perf Nightly / iOS Command Perf)"
+    },
+    {
+      "id": "command-docs",
+      "status": "not-run"
+    },
+    {
+      "id": "adr-citations",
+      "status": "not-run"
+    },
+    {
+      "id": "docs-links",
+      "status": "not-run"
+    },
+    {
+      "id": "docs-prose",
+      "status": "not-run"
+    },
+    {
+      "id": "agent-guidance",
+      "status": "not-run"
+    },
+    {
+      "id": "replay-ios",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)"
+    },
+    {
+      "id": "replay-ios-device",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / iOS Replay Suite)"
+    },
+    {
+      "id": "replay-macos",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Apple / Smoke Tests (${{ matrix.platform }}))"
+    },
+    {
+      "id": "replay-linux",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Linux / Smoke Tests)"
+    },
+    {
+      "id": "linux-command-evidence",
+      "status": "skipped",
+      "reason": "GitHub-authoritative (jobs: Linux / Smoke Tests)"
+    },
+    {
+      "id": "replay-android",
+      "status": "skipped",
+      "reason": "parked, workflow_dispatch only (Replay Manual / Android Full Emulator Suite)"
+    }
+  ],
+  "initial": {
+    "head": "20841c06340e7b1483b0286dd3a7a45ed9053e77",
+    "status": "",
+    "fingerprint": "4795f321ded4f37e3513e0b1453bb82bd9e9f6812c19646f57163bf9967b22ca"
+  },
+  "changedFiles": [
+    ".changeset/foldable-scoped-rotation.md",
+    "apple/fold-helper/Fold.m",
+    "docs/adr/0025-foldable-apple-panels.md",
+    "docs/agents/device-foldable.md",
+    "packages/command-surface/src/system/index.ts",
+    "packages/platform-apple/src/core/__tests__/display-inventory.test.ts",
+    "packages/platform-apple/src/core/config.ts",
+    "packages/platform-apple/src/core/device-orientation.ts",
+    "packages/platform-apple/src/core/display-inventory.ts",
+    "packages/platform-apple/src/foldable/fold-helper.test.ts",
+    "packages/platform-apple/src/foldable/fold-helper.ts",
+    "packages/platform-apple/src/foldable/orientation.test.ts",
+    "packages/platform-apple/src/foldable/orientation.ts",
+    "packages/platform-apple/src/foldable/pose.ts",
+    "packages/platform-apple/src/foldable/runner-panel.test.ts",
+    "src/commands/schema/cli-help-foldable.ts",
+    "test/integration/provider-scenarios/ios-fold.test.ts",
+    "website/docs/docs/commands.md"
+  ],
+  "plan": {
+    "failOpen": false,
+    "checks": [
+      "format",
+      "lint",
+      "typecheck",
+      "layering",
+      "fallow",
+      "native-dupes",
+      "build",
+      "vitest-related",
+      "unit",
+      "coverage",
+      "provider-integration",
+      "web-smoke",
+      "command-docs",
+      "adr-citations",
+      "docs-links",
+      "docs-prose",
+      "agent-guidance",
+      "replay-ios",
+      "replay-ios-device",
+      "replay-macos",
+      "replay-linux",
+      "linux-command-evidence",
+      "replay-android"
+    ],
+    "reasons": [
+      {
+        "check": "native-dupes",
+        "path": "apple/fold-helper/Fold.m",
+        "rule": "own:native-dupes",
+        "detail": "jscpd compares native code against the clone baseline"
+      },
+      {
+        "check": "replay-ios",
+        "path": "apple/fold-helper/Fold.m",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "replay-ios-device",
+        "path": "apple/fold-helper/Fold.m",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "replay-macos",
+        "path": "apple/fold-helper/Fold.m",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "adr-citations",
+        "path": "docs/adr/0025-foldable-apple-panels.md",
+        "rule": "own:adr-citations",
+        "detail": "every repository file an ADR cites must exist"
+      },
+      {
+        "check": "agent-guidance",
+        "path": "docs/agents/device-foldable.md",
+        "rule": "own:agent-guidance",
+        "detail": "agent guidance is held to glossary, routing, and context-budget contracts"
+      },
+      {
+        "check": "format",
+        "path": "packages/command-surface/src/system/index.ts",
+        "rule": "gate:format",
+        "detail": "oxfmt covers packages/"
+      },
+      {
+        "check": "lint",
+        "path": "packages/command-surface/src/system/index.ts",
+        "rule": "gate:lint",
+        "detail": "oxlint covers packages/"
+      },
+      {
+        "check": "typecheck",
+        "path": "packages/command-surface/src/system/index.ts",
+        "rule": "gate:typecheck",
+        "detail": "tsc includes packages/"
+      },
+      {
+        "check": "fallow",
+        "path": "packages/command-surface/src/system/index.ts",
+        "rule": "gate:fallow",
+        "detail": "fallow audits changed TypeScript for dead code"
+      },
+      {
+        "check": "layering",
+        "path": "packages/command-surface/src/system/index.ts",
+        "rule": "package-src",
+        "detail": "layering R11 guards workspace package boundaries"
+      },
+      {
+        "check": "vitest-related",
+        "path": "packages/command-surface/src/system/index.ts",
+        "rule": "vitest:related",
+        "detail": "Vitest resolves affected tests through its static module graph"
+      },
+      {
+        "check": "build",
+        "path": "packages/command-surface/src/system/index.ts",
+        "rule": "package-src",
+        "detail": "package source is bundled into the published artifact"
+      },
+      {
+        "check": "unit",
+        "path": "packages/command-surface/src/system/index.ts",
+        "rule": "own:unit-text-gates",
+        "detail": "unit-suite gates read production sources as text, which the Vitest module graph cannot trace"
+      },
+      {
+        "check": "replay-ios",
+        "path": "packages/command-surface/src/system/index.ts",
+        "rule": "own:device-lane:shared",
+        "detail": "shared runtime surface: every device lane drives the CLI and daemon through it"
+      },
+      {
+        "check": "replay-ios-device",
+        "path": "packages/command-surface/src/system/index.ts",
+        "rule": "own:device-lane:shared",
+        "detail": "shared runtime surface: every device lane drives the CLI and daemon through it"
+      },
+      {
+        "check": "replay-macos",
+        "path": "packages/command-surface/src/system/index.ts",
+        "rule": "own:device-lane:shared",
+        "detail": "shared runtime surface: every device lane drives the CLI and daemon through it"
+      },
+      {
+        "check": "replay-android",
+        "path": "packages/command-surface/src/system/index.ts",
+        "rule": "own:device-lane:shared",
+        "detail": "shared runtime surface: every device lane drives the CLI and daemon through it"
+      },
+      {
+        "check": "replay-linux",
+        "path": "packages/command-surface/src/system/index.ts",
+        "rule": "own:device-lane:shared",
+        "detail": "shared runtime surface: every device lane drives the CLI and daemon through it"
+      },
+      {
+        "check": "linux-command-evidence",
+        "path": "packages/command-surface/src/system/index.ts",
+        "rule": "own:device-lane:shared",
+        "detail": "shared runtime surface: every device lane drives the CLI and daemon through it"
+      },
+      {
+        "check": "web-smoke",
+        "path": "packages/command-surface/src/system/index.ts",
+        "rule": "own:device-lane:shared",
+        "detail": "shared runtime surface: every device lane drives the CLI and daemon through it"
+      },
+      {
+        "check": "format",
+        "path": "packages/platform-apple/src/core/__tests__/display-inventory.test.ts",
+        "rule": "gate:format",
+        "detail": "oxfmt covers packages/"
+      },
+      {
+        "check": "lint",
+        "path": "packages/platform-apple/src/core/__tests__/display-inventory.test.ts",
+        "rule": "gate:lint",
+        "detail": "oxlint covers packages/"
+      },
+      {
+        "check": "typecheck",
+        "path": "packages/platform-apple/src/core/__tests__/display-inventory.test.ts",
+        "rule": "gate:typecheck",
+        "detail": "tsc includes packages/"
+      },
+      {
+        "check": "fallow",
+        "path": "packages/platform-apple/src/core/__tests__/display-inventory.test.ts",
+        "rule": "gate:fallow",
+        "detail": "fallow audits changed TypeScript for dead code"
+      },
+      {
+        "check": "layering",
+        "path": "packages/platform-apple/src/core/__tests__/display-inventory.test.ts",
+        "rule": "package-src",
+        "detail": "layering R11 guards workspace package boundaries"
+      },
+      {
+        "check": "vitest-related",
+        "path": "packages/platform-apple/src/core/__tests__/display-inventory.test.ts",
+        "rule": "vitest:related",
+        "detail": "Vitest resolves affected tests through its static module graph"
+      },
+      {
+        "check": "unit",
+        "path": "packages/platform-apple/src/core/__tests__/display-inventory.test.ts",
+        "rule": "platform-package-contract",
+        "detail": "platform packages must satisfy the shared runtime contract scenarios"
+      },
+      {
+        "check": "provider-integration",
+        "path": "packages/platform-apple/src/core/__tests__/display-inventory.test.ts",
+        "rule": "platform-package-provider",
+        "detail": "platform packages participate in provider-first ownership scenarios"
+      },
+      {
+        "check": "coverage",
+        "path": "packages/platform-apple/src/core/__tests__/display-inventory.test.ts",
+        "rule": "platform-package-coverage",
+        "detail": "platform package changes require affected contract coverage evidence"
+      },
+      {
+        "check": "format",
+        "path": "packages/platform-apple/src/core/config.ts",
+        "rule": "gate:format",
+        "detail": "oxfmt covers packages/"
+      },
+      {
+        "check": "lint",
+        "path": "packages/platform-apple/src/core/config.ts",
+        "rule": "gate:lint",
+        "detail": "oxlint covers packages/"
+      },
+      {
+        "check": "typecheck",
+        "path": "packages/platform-apple/src/core/config.ts",
+        "rule": "gate:typecheck",
+        "detail": "tsc includes packages/"
+      },
+      {
+        "check": "fallow",
+        "path": "packages/platform-apple/src/core/config.ts",
+        "rule": "gate:fallow",
+        "detail": "fallow audits changed TypeScript for dead code"
+      },
+      {
+        "check": "layering",
+        "path": "packages/platform-apple/src/core/config.ts",
+        "rule": "package-src",
+        "detail": "layering R11 guards workspace package boundaries"
+      },
+      {
+        "check": "vitest-related",
+        "path": "packages/platform-apple/src/core/config.ts",
+        "rule": "vitest:related",
+        "detail": "Vitest resolves affected tests through its static module graph"
+      },
+      {
+        "check": "build",
+        "path": "packages/platform-apple/src/core/config.ts",
+        "rule": "package-src",
+        "detail": "package source is bundled into the published artifact"
+      },
+      {
+        "check": "unit",
+        "path": "packages/platform-apple/src/core/config.ts",
+        "rule": "own:unit-text-gates",
+        "detail": "unit-suite gates read production sources as text, which the Vitest module graph cannot trace"
+      },
+      {
+        "check": "unit",
+        "path": "packages/platform-apple/src/core/config.ts",
+        "rule": "platform-package-contract",
+        "detail": "platform packages must satisfy the shared runtime contract scenarios"
+      },
+      {
+        "check": "provider-integration",
+        "path": "packages/platform-apple/src/core/config.ts",
+        "rule": "platform-package-provider",
+        "detail": "platform packages participate in provider-first ownership scenarios"
+      },
+      {
+        "check": "coverage",
+        "path": "packages/platform-apple/src/core/config.ts",
+        "rule": "platform-package-coverage",
+        "detail": "platform package changes require affected contract coverage evidence"
+      },
+      {
+        "check": "replay-ios",
+        "path": "packages/platform-apple/src/core/config.ts",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "replay-ios-device",
+        "path": "packages/platform-apple/src/core/config.ts",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "replay-macos",
+        "path": "packages/platform-apple/src/core/config.ts",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "format",
+        "path": "packages/platform-apple/src/core/device-orientation.ts",
+        "rule": "gate:format",
+        "detail": "oxfmt covers packages/"
+      },
+      {
+        "check": "lint",
+        "path": "packages/platform-apple/src/core/device-orientation.ts",
+        "rule": "gate:lint",
+        "detail": "oxlint covers packages/"
+      },
+      {
+        "check": "typecheck",
+        "path": "packages/platform-apple/src/core/device-orientation.ts",
+        "rule": "gate:typecheck",
+        "detail": "tsc includes packages/"
+      },
+      {
+        "check": "fallow",
+        "path": "packages/platform-apple/src/core/device-orientation.ts",
+        "rule": "gate:fallow",
+        "detail": "fallow audits changed TypeScript for dead code"
+      },
+      {
+        "check": "layering",
+        "path": "packages/platform-apple/src/core/device-orientation.ts",
+        "rule": "package-src",
+        "detail": "layering R11 guards workspace package boundaries"
+      },
+      {
+        "check": "vitest-related",
+        "path": "packages/platform-apple/src/core/device-orientation.ts",
+        "rule": "vitest:related",
+        "detail": "Vitest resolves affected tests through its static module graph"
+      },
+      {
+        "check": "build",
+        "path": "packages/platform-apple/src/core/device-orientation.ts",
+        "rule": "package-src",
+        "detail": "package source is bundled into the published artifact"
+      },
+      {
+        "check": "unit",
+        "path": "packages/platform-apple/src/core/device-orientation.ts",
+        "rule": "own:unit-text-gates",
+        "detail": "unit-suite gates read production sources as text, which the Vitest module graph cannot trace"
+      },
+      {
+        "check": "unit",
+        "path": "packages/platform-apple/src/core/device-orientation.ts",
+        "rule": "platform-package-contract",
+        "detail": "platform packages must satisfy the shared runtime contract scenarios"
+      },
+      {
+        "check": "provider-integration",
+        "path": "packages/platform-apple/src/core/device-orientation.ts",
+        "rule": "platform-package-provider",
+        "detail": "platform packages participate in provider-first ownership scenarios"
+      },
+      {
+        "check": "coverage",
+        "path": "packages/platform-apple/src/core/device-orientation.ts",
+        "rule": "platform-package-coverage",
+        "detail": "platform package changes require affected contract coverage evidence"
+      },
+      {
+        "check": "replay-ios",
+        "path": "packages/platform-apple/src/core/device-orientation.ts",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "replay-ios-device",
+        "path": "packages/platform-apple/src/core/device-orientation.ts",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "replay-macos",
+        "path": "packages/platform-apple/src/core/device-orientation.ts",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "format",
+        "path": "packages/platform-apple/src/core/display-inventory.ts",
+        "rule": "gate:format",
+        "detail": "oxfmt covers packages/"
+      },
+      {
+        "check": "lint",
+        "path": "packages/platform-apple/src/core/display-inventory.ts",
+        "rule": "gate:lint",
+        "detail": "oxlint covers packages/"
+      },
+      {
+        "check": "typecheck",
+        "path": "packages/platform-apple/src/core/display-inventory.ts",
+        "rule": "gate:typecheck",
+        "detail": "tsc includes packages/"
+      },
+      {
+        "check": "fallow",
+        "path": "packages/platform-apple/src/core/display-inventory.ts",
+        "rule": "gate:fallow",
+        "detail": "fallow audits changed TypeScript for dead code"
+      },
+      {
+        "check": "layering",
+        "path": "packages/platform-apple/src/core/display-inventory.ts",
+        "rule": "package-src",
+        "detail": "layering R11 guards workspace package boundaries"
+      },
+      {
+        "check": "vitest-related",
+        "path": "packages/platform-apple/src/core/display-inventory.ts",
+        "rule": "vitest:related",
+        "detail": "Vitest resolves affected tests through its static module graph"
+      },
+      {
+        "check": "build",
+        "path": "packages/platform-apple/src/core/display-inventory.ts",
+        "rule": "package-src",
+        "detail": "package source is bundled into the published artifact"
+      },
+      {
+        "check": "unit",
+        "path": "packages/platform-apple/src/core/display-inventory.ts",
+        "rule": "own:unit-text-gates",
+        "detail": "unit-suite gates read production sources as text, which the Vitest module graph cannot trace"
+      },
+      {
+        "check": "unit",
+        "path": "packages/platform-apple/src/core/display-inventory.ts",
+        "rule": "platform-package-contract",
+        "detail": "platform packages must satisfy the shared runtime contract scenarios"
+      },
+      {
+        "check": "provider-integration",
+        "path": "packages/platform-apple/src/core/display-inventory.ts",
+        "rule": "platform-package-provider",
+        "detail": "platform packages participate in provider-first ownership scenarios"
+      },
+      {
+        "check": "coverage",
+        "path": "packages/platform-apple/src/core/display-inventory.ts",
+        "rule": "platform-package-coverage",
+        "detail": "platform package changes require affected contract coverage evidence"
+      },
+      {
+        "check": "replay-ios",
+        "path": "packages/platform-apple/src/core/display-inventory.ts",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "replay-ios-device",
+        "path": "packages/platform-apple/src/core/display-inventory.ts",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "replay-macos",
+        "path": "packages/platform-apple/src/core/display-inventory.ts",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "format",
+        "path": "packages/platform-apple/src/foldable/fold-helper.test.ts",
+        "rule": "gate:format",
+        "detail": "oxfmt covers packages/"
+      },
+      {
+        "check": "lint",
+        "path": "packages/platform-apple/src/foldable/fold-helper.test.ts",
+        "rule": "gate:lint",
+        "detail": "oxlint covers packages/"
+      },
+      {
+        "check": "typecheck",
+        "path": "packages/platform-apple/src/foldable/fold-helper.test.ts",
+        "rule": "gate:typecheck",
+        "detail": "tsc includes packages/"
+      },
+      {
+        "check": "fallow",
+        "path": "packages/platform-apple/src/foldable/fold-helper.test.ts",
+        "rule": "gate:fallow",
+        "detail": "fallow audits changed TypeScript for dead code"
+      },
+      {
+        "check": "layering",
+        "path": "packages/platform-apple/src/foldable/fold-helper.test.ts",
+        "rule": "package-src",
+        "detail": "layering R11 guards workspace package boundaries"
+      },
+      {
+        "check": "vitest-related",
+        "path": "packages/platform-apple/src/foldable/fold-helper.test.ts",
+        "rule": "vitest:related",
+        "detail": "Vitest resolves affected tests through its static module graph"
+      },
+      {
+        "check": "unit",
+        "path": "packages/platform-apple/src/foldable/fold-helper.test.ts",
+        "rule": "platform-package-contract",
+        "detail": "platform packages must satisfy the shared runtime contract scenarios"
+      },
+      {
+        "check": "provider-integration",
+        "path": "packages/platform-apple/src/foldable/fold-helper.test.ts",
+        "rule": "platform-package-provider",
+        "detail": "platform packages participate in provider-first ownership scenarios"
+      },
+      {
+        "check": "coverage",
+        "path": "packages/platform-apple/src/foldable/fold-helper.test.ts",
+        "rule": "platform-package-coverage",
+        "detail": "platform package changes require affected contract coverage evidence"
+      },
+      {
+        "check": "format",
+        "path": "packages/platform-apple/src/foldable/fold-helper.ts",
+        "rule": "gate:format",
+        "detail": "oxfmt covers packages/"
+      },
+      {
+        "check": "lint",
+        "path": "packages/platform-apple/src/foldable/fold-helper.ts",
+        "rule": "gate:lint",
+        "detail": "oxlint covers packages/"
+      },
+      {
+        "check": "typecheck",
+        "path": "packages/platform-apple/src/foldable/fold-helper.ts",
+        "rule": "gate:typecheck",
+        "detail": "tsc includes packages/"
+      },
+      {
+        "check": "fallow",
+        "path": "packages/platform-apple/src/foldable/fold-helper.ts",
+        "rule": "gate:fallow",
+        "detail": "fallow audits changed TypeScript for dead code"
+      },
+      {
+        "check": "layering",
+        "path": "packages/platform-apple/src/foldable/fold-helper.ts",
+        "rule": "package-src",
+        "detail": "layering R11 guards workspace package boundaries"
+      },
+      {
+        "check": "vitest-related",
+        "path": "packages/platform-apple/src/foldable/fold-helper.ts",
+        "rule": "vitest:related",
+        "detail": "Vitest resolves affected tests through its static module graph"
+      },
+      {
+        "check": "build",
+        "path": "packages/platform-apple/src/foldable/fold-helper.ts",
+        "rule": "package-src",
+        "detail": "package source is bundled into the published artifact"
+      },
+      {
+        "check": "unit",
+        "path": "packages/platform-apple/src/foldable/fold-helper.ts",
+        "rule": "own:unit-text-gates",
+        "detail": "unit-suite gates read production sources as text, which the Vitest module graph cannot trace"
+      },
+      {
+        "check": "unit",
+        "path": "packages/platform-apple/src/foldable/fold-helper.ts",
+        "rule": "platform-package-contract",
+        "detail": "platform packages must satisfy the shared runtime contract scenarios"
+      },
+      {
+        "check": "provider-integration",
+        "path": "packages/platform-apple/src/foldable/fold-helper.ts",
+        "rule": "platform-package-provider",
+        "detail": "platform packages participate in provider-first ownership scenarios"
+      },
+      {
+        "check": "coverage",
+        "path": "packages/platform-apple/src/foldable/fold-helper.ts",
+        "rule": "platform-package-coverage",
+        "detail": "platform package changes require affected contract coverage evidence"
+      },
+      {
+        "check": "replay-ios",
+        "path": "packages/platform-apple/src/foldable/fold-helper.ts",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "replay-ios-device",
+        "path": "packages/platform-apple/src/foldable/fold-helper.ts",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "replay-macos",
+        "path": "packages/platform-apple/src/foldable/fold-helper.ts",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "format",
+        "path": "packages/platform-apple/src/foldable/orientation.test.ts",
+        "rule": "gate:format",
+        "detail": "oxfmt covers packages/"
+      },
+      {
+        "check": "lint",
+        "path": "packages/platform-apple/src/foldable/orientation.test.ts",
+        "rule": "gate:lint",
+        "detail": "oxlint covers packages/"
+      },
+      {
+        "check": "typecheck",
+        "path": "packages/platform-apple/src/foldable/orientation.test.ts",
+        "rule": "gate:typecheck",
+        "detail": "tsc includes packages/"
+      },
+      {
+        "check": "fallow",
+        "path": "packages/platform-apple/src/foldable/orientation.test.ts",
+        "rule": "gate:fallow",
+        "detail": "fallow audits changed TypeScript for dead code"
+      },
+      {
+        "check": "layering",
+        "path": "packages/platform-apple/src/foldable/orientation.test.ts",
+        "rule": "package-src",
+        "detail": "layering R11 guards workspace package boundaries"
+      },
+      {
+        "check": "vitest-related",
+        "path": "packages/platform-apple/src/foldable/orientation.test.ts",
+        "rule": "vitest:related",
+        "detail": "Vitest resolves affected tests through its static module graph"
+      },
+      {
+        "check": "unit",
+        "path": "packages/platform-apple/src/foldable/orientation.test.ts",
+        "rule": "platform-package-contract",
+        "detail": "platform packages must satisfy the shared runtime contract scenarios"
+      },
+      {
+        "check": "provider-integration",
+        "path": "packages/platform-apple/src/foldable/orientation.test.ts",
+        "rule": "platform-package-provider",
+        "detail": "platform packages participate in provider-first ownership scenarios"
+      },
+      {
+        "check": "coverage",
+        "path": "packages/platform-apple/src/foldable/orientation.test.ts",
+        "rule": "platform-package-coverage",
+        "detail": "platform package changes require affected contract coverage evidence"
+      },
+      {
+        "check": "format",
+        "path": "packages/platform-apple/src/foldable/orientation.ts",
+        "rule": "gate:format",
+        "detail": "oxfmt covers packages/"
+      },
+      {
+        "check": "lint",
+        "path": "packages/platform-apple/src/foldable/orientation.ts",
+        "rule": "gate:lint",
+        "detail": "oxlint covers packages/"
+      },
+      {
+        "check": "typecheck",
+        "path": "packages/platform-apple/src/foldable/orientation.ts",
+        "rule": "gate:typecheck",
+        "detail": "tsc includes packages/"
+      },
+      {
+        "check": "fallow",
+        "path": "packages/platform-apple/src/foldable/orientation.ts",
+        "rule": "gate:fallow",
+        "detail": "fallow audits changed TypeScript for dead code"
+      },
+      {
+        "check": "layering",
+        "path": "packages/platform-apple/src/foldable/orientation.ts",
+        "rule": "package-src",
+        "detail": "layering R11 guards workspace package boundaries"
+      },
+      {
+        "check": "vitest-related",
+        "path": "packages/platform-apple/src/foldable/orientation.ts",
+        "rule": "vitest:related",
+        "detail": "Vitest resolves affected tests through its static module graph"
+      },
+      {
+        "check": "build",
+        "path": "packages/platform-apple/src/foldable/orientation.ts",
+        "rule": "package-src",
+        "detail": "package source is bundled into the published artifact"
+      },
+      {
+        "check": "unit",
+        "path": "packages/platform-apple/src/foldable/orientation.ts",
+        "rule": "own:unit-text-gates",
+        "detail": "unit-suite gates read production sources as text, which the Vitest module graph cannot trace"
+      },
+      {
+        "check": "unit",
+        "path": "packages/platform-apple/src/foldable/orientation.ts",
+        "rule": "platform-package-contract",
+        "detail": "platform packages must satisfy the shared runtime contract scenarios"
+      },
+      {
+        "check": "provider-integration",
+        "path": "packages/platform-apple/src/foldable/orientation.ts",
+        "rule": "platform-package-provider",
+        "detail": "platform packages participate in provider-first ownership scenarios"
+      },
+      {
+        "check": "coverage",
+        "path": "packages/platform-apple/src/foldable/orientation.ts",
+        "rule": "platform-package-coverage",
+        "detail": "platform package changes require affected contract coverage evidence"
+      },
+      {
+        "check": "replay-ios",
+        "path": "packages/platform-apple/src/foldable/orientation.ts",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "replay-ios-device",
+        "path": "packages/platform-apple/src/foldable/orientation.ts",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "replay-macos",
+        "path": "packages/platform-apple/src/foldable/orientation.ts",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "format",
+        "path": "packages/platform-apple/src/foldable/pose.ts",
+        "rule": "gate:format",
+        "detail": "oxfmt covers packages/"
+      },
+      {
+        "check": "lint",
+        "path": "packages/platform-apple/src/foldable/pose.ts",
+        "rule": "gate:lint",
+        "detail": "oxlint covers packages/"
+      },
+      {
+        "check": "typecheck",
+        "path": "packages/platform-apple/src/foldable/pose.ts",
+        "rule": "gate:typecheck",
+        "detail": "tsc includes packages/"
+      },
+      {
+        "check": "fallow",
+        "path": "packages/platform-apple/src/foldable/pose.ts",
+        "rule": "gate:fallow",
+        "detail": "fallow audits changed TypeScript for dead code"
+      },
+      {
+        "check": "layering",
+        "path": "packages/platform-apple/src/foldable/pose.ts",
+        "rule": "package-src",
+        "detail": "layering R11 guards workspace package boundaries"
+      },
+      {
+        "check": "vitest-related",
+        "path": "packages/platform-apple/src/foldable/pose.ts",
+        "rule": "vitest:related",
+        "detail": "Vitest resolves affected tests through its static module graph"
+      },
+      {
+        "check": "build",
+        "path": "packages/platform-apple/src/foldable/pose.ts",
+        "rule": "package-src",
+        "detail": "package source is bundled into the published artifact"
+      },
+      {
+        "check": "unit",
+        "path": "packages/platform-apple/src/foldable/pose.ts",
+        "rule": "own:unit-text-gates",
+        "detail": "unit-suite gates read production sources as text, which the Vitest module graph cannot trace"
+      },
+      {
+        "check": "unit",
+        "path": "packages/platform-apple/src/foldable/pose.ts",
+        "rule": "platform-package-contract",
+        "detail": "platform packages must satisfy the shared runtime contract scenarios"
+      },
+      {
+        "check": "provider-integration",
+        "path": "packages/platform-apple/src/foldable/pose.ts",
+        "rule": "platform-package-provider",
+        "detail": "platform packages participate in provider-first ownership scenarios"
+      },
+      {
+        "check": "coverage",
+        "path": "packages/platform-apple/src/foldable/pose.ts",
+        "rule": "platform-package-coverage",
+        "detail": "platform package changes require affected contract coverage evidence"
+      },
+      {
+        "check": "replay-ios",
+        "path": "packages/platform-apple/src/foldable/pose.ts",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "replay-ios-device",
+        "path": "packages/platform-apple/src/foldable/pose.ts",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "replay-macos",
+        "path": "packages/platform-apple/src/foldable/pose.ts",
+        "rule": "own:device-lane:apple",
+        "detail": "apple-owned tree: only the apple device lanes execute it"
+      },
+      {
+        "check": "format",
+        "path": "packages/platform-apple/src/foldable/runner-panel.test.ts",
+        "rule": "gate:format",
+        "detail": "oxfmt covers packages/"
+      },
+      {
+        "check": "lint",
+        "path": "packages/platform-apple/src/foldable/runner-panel.test.ts",
+        "rule": "gate:lint",
+        "detail": "oxlint covers packages/"
+      },
+      {
+        "check": "typecheck",
+        "path": "packages/platform-apple/src/foldable/runner-panel.test.ts",
+        "rule": "gate:typecheck",
+        "detail": "tsc includes packages/"
+      },
+      {
+        "check": "fallow",
+        "path": "packages/platform-apple/src/foldable/runner-panel.test.ts",
+        "rule": "gate:fallow",
+        "detail": "fallow audits changed TypeScript for dead code"
+      },
+      {
+        "check": "layering",
+        "path": "packages/platform-apple/src/foldable/runner-panel.test.ts",
+        "rule": "package-src",
+        "detail": "layering R11 guards workspace package boundaries"
+      },
+      {
+        "check": "vitest-related",
+        "path": "packages/platform-apple/src/foldable/runner-panel.test.ts",
+        "rule": "vitest:related",
+        "detail": "Vitest resolves affected tests through its static module graph"
+      },
+      {
+        "check": "unit",
+        "path": "packages/platform-apple/src/foldable/runner-panel.test.ts",
+        "rule": "platform-package-contract",
+        "detail": "platform packages must satisfy the shared runtime contract scenarios"
+      },
+      {
+        "check": "provider-integration",
+        "path": "packages/platform-apple/src/foldable/runner-panel.test.ts",
+        "rule": "platform-package-provider",
+        "detail": "platform packages participate in provider-first ownership scenarios"
+      },
+      {
+        "check": "coverage",
+        "path": "packages/platform-apple/src/foldable/runner-panel.test.ts",
+        "rule": "platform-package-coverage",
+        "detail": "platform package changes require affected contract coverage evidence"
+      },
+      {
+        "check": "format",
+        "path": "src/commands/schema/cli-help-foldable.ts",
+        "rule": "gate:format",
+        "detail": "oxfmt covers src/ and test/"
+      },
+      {
+        "check": "lint",
+        "path": "src/commands/schema/cli-help-foldable.ts",
+        "rule": "gate:lint",
+        "detail": "oxlint covers the source tree"
+      },
+      {
+        "check": "typecheck",
+        "path": "src/commands/schema/cli-help-foldable.ts",
+        "rule": "gate:typecheck",
+        "detail": "tsc includes src/ and test/"
+      },
+      {
+        "check": "fallow",
+        "path": "src/commands/schema/cli-help-foldable.ts",
+        "rule": "gate:fallow",
+        "detail": "fallow audits changed TypeScript for dead code"
+      },
+      {
+        "check": "layering",
+        "path": "src/commands/schema/cli-help-foldable.ts",
+        "rule": "gate:layering",
+        "detail": "layering guard reads production src/ modules"
+      },
+      {
+        "check": "build",
+        "path": "src/commands/schema/cli-help-foldable.ts",
+        "rule": "src-prod",
+        "detail": "production source is compiled by the build"
+      },
+      {
+        "check": "unit",
+        "path": "src/commands/schema/cli-help-foldable.ts",
+        "rule": "own:unit-text-gates",
+        "detail": "unit-suite gates read production sources as text, which the Vitest module graph cannot trace"
+      },
+      {
+        "check": "vitest-related",
+        "path": "src/commands/schema/cli-help-foldable.ts",
+        "rule": "vitest:related",
+        "detail": "Vitest resolves affected tests through its static module graph"
+      },
+      {
+        "check": "replay-ios",
+        "path": "src/commands/schema/cli-help-foldable.ts",
+        "rule": "own:device-lane:shared",
+        "detail": "shared runtime surface: every device lane drives the CLI and daemon through it"
+      },
+      {
+        "check": "replay-ios-device",
+        "path": "src/commands/schema/cli-help-foldable.ts",
+        "rule": "own:device-lane:shared",
+        "detail": "shared runtime surface: every device lane drives the CLI and daemon through it"
+      },
+      {
+        "check": "replay-macos",
+        "path": "src/commands/schema/cli-help-foldable.ts",
+        "rule": "own:device-lane:shared",
+        "detail": "shared runtime surface: every device lane drives the CLI and daemon through it"
+      },
+      {
+        "check": "replay-android",
+        "path": "src/commands/schema/cli-help-foldable.ts",
+        "rule": "own:device-lane:shared",
+        "detail": "shared runtime surface: every device lane drives the CLI and daemon through it"
+      },
+      {
+        "check": "replay-linux",
+        "path": "src/commands/schema/cli-help-foldable.ts",
+        "rule": "own:device-lane:shared",
+        "detail": "shared runtime surface: every device lane drives the CLI and daemon through it"
+      },
+      {
+        "check": "linux-command-evidence",
+        "path": "src/commands/schema/cli-help-foldable.ts",
+        "rule": "own:device-lane:shared",
+        "detail": "shared runtime surface: every device lane drives the CLI and daemon through it"
+      },
+      {
+        "check": "web-smoke",
+        "path": "src/commands/schema/cli-help-foldable.ts",
+        "rule": "own:device-lane:shared",
+        "detail": "shared runtime surface: every device lane drives the CLI and daemon through it"
+      },
+      {
+        "check": "format",
+        "path": "test/integration/provider-scenarios/ios-fold.test.ts",
+        "rule": "gate:format",
+        "detail": "oxfmt covers src/ and test/"
+      },
+      {
+        "check": "lint",
+        "path": "test/integration/provider-scenarios/ios-fold.test.ts",
+        "rule": "gate:lint",
+        "detail": "oxlint covers the source tree"
+      },
+      {
+        "check": "typecheck",
+        "path": "test/integration/provider-scenarios/ios-fold.test.ts",
+        "rule": "gate:typecheck",
+        "detail": "tsc includes src/ and test/"
+      },
+      {
+        "check": "fallow",
+        "path": "test/integration/provider-scenarios/ios-fold.test.ts",
+        "rule": "gate:fallow",
+        "detail": "fallow audits changed TypeScript for dead code"
+      },
+      {
+        "check": "vitest-related",
+        "path": "test/integration/provider-scenarios/ios-fold.test.ts",
+        "rule": "vitest:related",
+        "detail": "Vitest resolves affected tests through its static module graph"
+      },
+      {
+        "check": "replay-ios",
+        "path": "test/integration/provider-scenarios/ios-fold.test.ts",
+        "rule": "own:device-lane:shared",
+        "detail": "shared runtime surface: every device lane drives the CLI and daemon through it"
+      },
+      {
+        "check": "replay-ios-device",
+        "path": "test/integration/provider-scenarios/ios-fold.test.ts",
+        "rule": "own:device-lane:shared",
+        "detail": "shared runtime surface: every device lane drives the CLI and daemon through it"
+      },
+      {
+        "check": "replay-macos",
+        "path": "test/integration/provider-scenarios/ios-fold.test.ts",
+        "rule": "own:device-lane:shared",
+        "detail": "shared runtime surface: every device lane drives the CLI and daemon through it"
+      },
+      {
+        "check": "replay-android",
+        "path": "test/integration/provider-scenarios/ios-fold.test.ts",
+        "rule": "own:device-lane:shared",
+        "detail": "shared runtime surface: every device lane drives the CLI and daemon through it"
+      },
+      {
+        "check": "replay-linux",
+        "path": "test/integration/provider-scenarios/ios-fold.test.ts",
+        "rule": "own:device-lane:shared",
+        "detail": "shared runtime surface: every device lane drives the CLI and daemon through it"
+      },
+      {
+        "check": "linux-command-evidence",
+        "path": "test/integration/provider-scenarios/ios-fold.test.ts",
+        "rule": "own:device-lane:shared",
+        "detail": "shared runtime surface: every device lane drives the CLI and daemon through it"
+      },
+      {
+        "check": "web-smoke",
+        "path": "test/integration/provider-scenarios/ios-fold.test.ts",
+        "rule": "own:device-lane:shared",
+        "detail": "shared runtime surface: every device lane drives the CLI and daemon through it"
+      },
+      {
+        "check": "command-docs",
+        "path": "website/docs/docs/commands.md",
+        "rule": "own:command-docs",
+        "detail": "the command reference is asserted against the CLI in both directions"
+      },
+      {
+        "check": "docs-links",
+        "path": "website/docs/docs/commands.md",
+        "rule": "own:docs-links",
+        "detail": "internal docs links must land on an existing page and heading"
+      },
+      {
+        "check": "docs-prose",
+        "path": "website/docs/docs/commands.md",
+        "rule": "own:docs-prose",
+        "detail": "user docs avoid filler, marketing, and time-relative words"
+      }
+    ],
+    "failOpenReasons": [],
+    "docsOnlyPaths": [
+      ".changeset/foldable-scoped-rotation.md"
+    ]
+  },
+  "final": {
+    "head": "20841c06340e7b1483b0286dd3a7a45ed9053e77",
+    "status": "",
+    "fingerprint": "4795f321ded4f37e3513e0b1453bb82bd9e9f6812c19646f57163bf9967b22ca"
+  },
+  "finishedAt": "2026-11-12T16:04:51.866Z"
+}

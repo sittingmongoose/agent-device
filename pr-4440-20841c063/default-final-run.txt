@@ -1,0 +1,27 @@
+--- long-job pr4440-r2-default-final attempt 1 started 2026-11-12T13:50:38Z on Jareds-MacBook-Air-3.local: bash /private/tmp/pr4440-r2/drivers/default-run.sh final ---
+Owned default Duo: 6164BADC-D2E1-4455-A4DB-D9D2C73C1228
+{"name":"H00-open-safari","exit":0,"ms":5436.602542}
+{"name":"H01-fold-closed","exit":0,"ms":1467.593417}
+{"name":"H02-outer-left","exit":0,"ms":6396.895791999999}
+{"name":"H02-outer-left-screenshot","exit":0,"ms":2178.017}
+{"name":"H03-outer-left-repeat","exit":0,"ms":938.5639159999992}
+{"name":"H03-outer-left-repeat-screenshot","exit":0,"ms":977.122124999998}
+{"name":"H04-outer-right","exit":0,"ms":1893.4504159999997}
+{"name":"H04-outer-right-screenshot","exit":0,"ms":849.4158749999988}
+{"name":"H05-outer-portrait","exit":0,"ms":1679.5621659999997}
+{"name":"H05-outer-portrait-screenshot","exit":0,"ms":782.1739589999997}
+{"name":"H06-fold-open","exit":0,"ms":1656.744083999998}
+{"name":"H07-inner-portrait","exit":0,"ms":1660.3950000000004}
+{"name":"H07-inner-portrait-screenshot","exit":0,"ms":835.859999999997}
+{"name":"H08-inner-left","exit":0,"ms":1549.3279999999977}
+{"name":"H08-inner-left-screenshot","exit":0,"ms":845.2550840000004}
+{"name":"H09-inner-right","exit":0,"ms":1539.6779590000006}
+{"name":"H09-inner-right-screenshot","exit":0,"ms":829.9322920000013}
+{"name":"H10-fold-closed","exit":0,"ms":1311.668999999998}
+{"name":"H11-post-fold-left","exit":0,"ms":5363.276292000002}
+{"name":"H11-post-fold-left-screenshot","exit":0,"ms":832.9758339999971}
+{"name":"H12-open-settings","exit":0,"ms":2574.0053340000013}
+{"name":"H13-unachievable-right","exit":1,"ms":6576.152833}
+{"name":"H13-unachievable-screenshot","exit":0,"ms":952.8590419999964}
+{"name":"H99-close","exit":0,"ms":90.57754199999908}
+--- long-job pr4440-r2-default-final attempt 1 ended 2026-11-12T13:51:29Z: exit 0 ---

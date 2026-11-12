@@ -1,0 +1,3 @@
+--- long-job pr4440-r2-prechange-typecheck attempt 1 started 2026-11-12T12:56:09Z on ubuntuserver: env PATH=<VM_HOME>/.local/share/node-v26.13.0-linux-x64/bin:<VM_HOME>/.npm/_npx/acaf29b40d536b0e/node_modules/.bin:<VM_HOME>/.local/bin:/usr/bin:/bin pnpm typecheck ---
+$ tsc -b tsconfig.typecheck.json examples/sdk/tsconfig.json
+--- long-job pr4440-r2-prechange-typecheck attempt 1 ended 2026-11-12T12:56:12Z: exit 0 ---

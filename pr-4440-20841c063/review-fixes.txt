@@ -1,0 +1,76 @@
+--- long-job pr4440-r2-review-fixes attempt 1 started 2026-11-12T15:48:38Z on ubuntuserver: env PATH=<VM_HOME>/.local/share/node-v26.13.0-linux-x64/bin:<VM_HOME>/.npm/_npx/acaf29b40d536b0e/node_modules/.bin:<VM_HOME>/.local/bin:/usr/bin:/bin AGENT_DEVICE_VITEST_MAX_WORKERS=4 bash -euc 'pnpm format
+pnpm exec vitest run --project unit-core packages/platform-apple/src/foldable/orientation.test.ts
+pnpm gate agent-guidance
+pnpm gate adr-citations
+pnpm gate docs-prose' ---
+$ node ./node_modules/oxfmt/bin/oxfmt --write
+Finished in 3029ms on 5288 files using 52 threads.
+
+ RUN  v5.0.4 <CHECKOUT>
+
+·····················································
+
+ Test Files  1 passed (1)
+      Tests  53 passed (53)
+   Start at  15:48:45
+   Duration  3.24s (transform 66%, import 26%, tests 6%, setup 1%)
+
+$ node --experimental-strip-types scripts/gate/run.ts agent-guidance
+[gate] agent-guidance: pnpm run check:agent-guidance
+$ node --experimental-strip-types scripts/node-test-tmpdir.ts --experimental-strip-types --test scripts/__tests__/agent-guidance-contract.test.ts
+✔ high-traffic guidance stays within its reviewed context budget (10.439222ms)
+✔ task guidance stays focused instead of growing another handbook (11.347399ms)
+✔ CONTEXT.md remains a glossary rather than an architecture or workflow document (2.503735ms)
+✔ AGENTS.md routes each shared primitive to a package that publishes it (8.150808ms)
+✔ the AGENTS.md task router points only at files that exist (4.639364ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 257.711011
+$ node --experimental-strip-types scripts/gate/run.ts adr-citations
+[gate] adr-citations: pnpm run check:adr-citations
+$ vitest run --project unit-core test/repo-guards/adr-citations.test.ts
+
+ RUN  v5.0.4 <CHECKOUT>
+
+··
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  15:48:55
+   Duration  2.31s (transform 79%, import 14%, tests 5%, setup 2%)
+
+$ node --experimental-strip-types scripts/gate/run.ts docs-prose
+[gate] docs-prose: pnpm run check:doc-prose
+$ node --experimental-strip-types scripts/node-test-tmpdir.ts --experimental-strip-types --test scripts/__tests__/check-doc-prose.test.ts && node --experimental-strip-types scripts/check-doc-prose.ts
+✔ banned words match case-insensitively as whole words, with line and column (5.580634ms)
+✔ phrases match across any run of whitespace (0.272236ms)
+✔ bare new, now, and current are allowed (0.218306ms)
+✔ each violation names the file, position, matched text, and reason (0.288638ms)
+✔ every rule is a lowercase word or phrase with a reason (0.508036ms)
+✔ YAML frontmatter at the top is skipped, but a later thematic break is prose (0.335627ms)
+✔ fenced code is skipped until a matching closer of at least the opening length (0.303971ms)
+✔ a backtick fence is not closed by tildes (0.304891ms)
+✔ a fence inside a blockquote is skipped through its quoted closer (0.296129ms)
+✔ a fence inside an HTML comment does not swallow the prose after the comment (0.353601ms)
+✔ inline code spans are skipped, matching backtick run lengths (0.262164ms)
+✔ an inline code span that wraps across lines is skipped (0.234179ms)
+✔ a stray backtick does not mask past the end of its paragraph (0.177589ms)
+✔ a phrase wrapped across lines matches at its first word (0.178585ms)
+✔ HTML tags, comments, link destinations, and bare URLs are skipped (0.191486ms)
+✔ link text is prose (0.185521ms)
+✔ CRLF line endings are scanned like LF (0.221736ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 184.53745
+doc prose: 32 files clean.
+--- long-job pr4440-r2-review-fixes attempt 1 ended 2026-11-12T15:49:01Z: exit 0 ---

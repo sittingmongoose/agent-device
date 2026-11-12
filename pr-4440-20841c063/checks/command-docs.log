@@ -1,0 +1,11 @@
+$ vitest run --project unit-core test/repo-guards/command-doc-coverage.test.ts
+
+ RUN  v5.0.4 <CHECKOUT>
+
+············
+
+ Test Files  1 passed (1)
+      Tests  12 passed (12)
+   Start at  15:36:55
+   Duration  1.72s (transform 57%, import 36%, setup 4%, tests 2%)
+

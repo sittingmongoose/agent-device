@@ -1,0 +1,18 @@
+{
+  "exitCode": 0,
+  "startedAt": "2026-11-12T13:36:53.817Z",
+  "finishedAt": "2026-11-12T13:36:58.144Z",
+  "wallClockMs": 4327.109624999999,
+  "stdout": "{\n  \"success\": true,\n  \"data\": {\n    \"action\": \"fold\",\n    \"pose\": \"closed\",\n    \"hingeAngleDegrees\": 0,\n    \"message\": \"Folded to closed (hinge 0\u00b0); refs from before the pose change are stale\"\n  }\n}\n",
+  "stderr": "[agent-device][diag] {\"ts\":\"2026-11-12T13:36:54.115Z\",\"level\":\"info\",\"phase\":\"daemon_startup\",\"session\":\"pr4440-baseline\",\"requestId\":\"3c9652970db6fd0e\",\"command\":\"fold\",\"durationMs\":15,\"data\":{\"requestId\":\"3c9652970db6fd0e\",\"session\":\"pr4440-baseline\"}}\n[agent-device][diag] {\"ts\":\"2026-11-12T13:36:54.118Z\",\"level\":\"info\",\"phase\":\"daemon_request_prepare\",\"session\":\"pr4440-baseline\",\"requestId\":\"3c9652970db6fd0e\",\"command\":\"fold\",\"data\":{\"requestId\":\"3c9652970db6fd0e\",\"command\":\"fold\",\"session\":\"pr4440-baseline\"}}\n[agent-device][diag] {\"ts\":\"2026-11-12T13:36:58.134Z\",\"level\":\"info\",\"phase\":\"daemon_request\",\"session\":\"pr4440-baseline\",\"requestId\":\"3c9652970db6fd0e\",\"command\":\"fold\",\"durationMs\":4016,\"data\":{\"requestId\":\"3c9652970db6fd0e\",\"command\":\"fold\"}}\n",
+  "payload": {
+    "success": true,
+    "data": {
+      "action": "fold",
+      "pose": "closed",
+      "hingeAngleDegrees": 0,
+      "message": "Folded to closed (hinge 0\u00b0); refs from before the pose change are stale"
+    }
+  },
+  "ok": true
+}

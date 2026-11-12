@@ -1,0 +1,62 @@
+[
+  {
+    "id": "provider-integration",
+    "command": [
+      "pnpm",
+      "gate",
+      "provider-integration"
+    ],
+    "exitCode": 0,
+    "head": "4433ac18db7609c88e25dedc6dbca95a26a5f51d"
+  },
+  {
+    "id": "command-docs",
+    "command": [
+      "pnpm",
+      "gate",
+      "command-docs"
+    ],
+    "exitCode": 0,
+    "head": "4433ac18db7609c88e25dedc6dbca95a26a5f51d"
+  },
+  {
+    "id": "adr-citations",
+    "command": [
+      "pnpm",
+      "gate",
+      "adr-citations"
+    ],
+    "exitCode": 0,
+    "head": "4433ac18db7609c88e25dedc6dbca95a26a5f51d"
+  },
+  {
+    "id": "docs-links",
+    "command": [
+      "pnpm",
+      "gate",
+      "docs-links"
+    ],
+    "exitCode": 0,
+    "head": "4433ac18db7609c88e25dedc6dbca95a26a5f51d"
+  },
+  {
+    "id": "docs-prose",
+    "command": [
+      "pnpm",
+      "gate",
+      "docs-prose"
+    ],
+    "exitCode": 0,
+    "head": "4433ac18db7609c88e25dedc6dbca95a26a5f51d"
+  },
+  {
+    "id": "agent-guidance",
+    "command": [
+      "pnpm",
+      "gate",
+      "agent-guidance"
+    ],
+    "exitCode": 1,
+    "head": "4433ac18db7609c88e25dedc6dbca95a26a5f51d"
+  }
+]

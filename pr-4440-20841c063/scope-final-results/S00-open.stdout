@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "session": "t3-5ffde7",
+    "sessionStateDir": "/private/tmp/pr4440-r2/scope-final/state/sessions/t3-5ffde7",
+    "runnerLogPath": "/private/tmp/pr4440-r2/scope-final/state/sessions/t3-5ffde7/runner.log",
+    "requestLogPath": "/private/tmp/pr4440-r2/scope-final/state/sessions/t3-5ffde7/requests/a339395402d928d0.ndjson",
+    "eventLogPath": "/private/tmp/pr4440-r2/scope-final/state/sessions/t3-5ffde7/events.ndjson",
+    "appName": "com.apple.mobilesafari",
+    "appBundleId": "com.apple.mobilesafari",
+    "selection": {
+      "reason": "explicit-selector",
+      "source": "local",
+      "candidateCount": 1,
+      "bootOccurred": false
+    },
+    "startup": {
+      "durationMs": 4172,
+      "measuredAt": "2026-11-12T13:58:43.826Z",
+      "method": "open-command-roundtrip",
+      "appTarget": "com.apple.mobilesafari",
+      "appBundleId": "com.apple.mobilesafari"
+    },
+    "platform": "ios",
+    "target": "mobile",
+    "device": "simlock-dfe28842-ce9b-49ec-b5f1-c927e73c4704",
+    "id": "98EC746E-2A44-4866-AB70-B0ABE81BDE58",
+    "device_udid": "98EC746E-2A44-4866-AB70-B0ABE81BDE58",
+    "ios_simulator_device_set": "<MAC_HOME>/.simlock/devices/ios",
+    "message": "Opened: com.apple.mobilesafari"
+  }
+}

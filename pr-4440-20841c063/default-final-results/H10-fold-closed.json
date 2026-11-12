@@ -1,0 +1,86 @@
+{
+  "args": [
+    "fold",
+    "closed"
+  ],
+  "exitCode": 0,
+  "startedAt": "2026-11-12T13:51:11.283Z",
+  "finishedAt": "2026-11-12T13:51:12.595Z",
+  "wallClockMs": 1311.668999999998,
+  "stdout": "<unrelated setup output omitted>",
+  "stderr": "[agent-device][diag] {\"ts\":\"2026-11-12T13:51:11.353Z\",\"level\":\"info\",\"phase\":\"daemon_startup\",\"session\":\"pr4440-proof\",\"requestId\":\"60dc4c8dbc186577\",\"command\":\"fold\",\"durationMs\":2,\"data\":{\"requestId\":\"60dc4c8dbc186577\",\"session\":\"pr4440-proof\"}}\n[agent-device][diag] {\"ts\":\"2026-11-12T13:51:11.355Z\",\"level\":\"info\",\"phase\":\"daemon_request_prepare\",\"session\":\"pr4440-proof\",\"requestId\":\"60dc4c8dbc186577\",\"command\":\"fold\",\"data\":{\"requestId\":\"60dc4c8dbc186577\",\"command\":\"fold\",\"session\":\"pr4440-proof\"}}\n[agent-device][diag] {\"ts\":\"2026-11-12T13:51:12.590Z\",\"level\":\"info\",\"phase\":\"daemon_request\",\"session\":\"pr4440-proof\",\"requestId\":\"60dc4c8dbc186577\",\"command\":\"fold\",\"durationMs\":1235,\"data\":{\"requestId\":\"60dc4c8dbc186577\",\"command\":\"fold\"}}\n",
+  "payload": {
+    "success": true,
+    "data": {
+      "action": "fold",
+      "pose": "closed",
+      "hingeAngleDegrees": 0,
+      "message": "Folded to closed (hinge 0\u00b0); refs from before the pose change are stale"
+    }
+  },
+  "ok": true,
+  "calls": [
+    {
+      "startedAt": "2026-11-12T13:51:11.446732+00:00",
+      "finishedAt": "2026-11-12T13:51:11.668245+00:00",
+      "durationMs": 221,
+      "args": [
+        "simctl",
+        "spawn",
+        "6164BADC-D2E1-4455-A4DB-D9D2C73C1228",
+        "<MAC_HOME>/.agent-device/fold-helper/950f94d11269d473a277638fe11c5be7/fold-helper",
+        "panels"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"version\":1,\"displays\":[{\"primary\":true,\"currentOrientation\":\"rot0\",\"pointScale\":3,\"backlightState\":\"off\",\"nativeSize\":[1398,2034],\"type\":{\"integrated\":{}},\"name\":\"LCD\",\"displayId\":1},{\"primary\":false,\"currentOrientation\":\"rot90\",\"pointScale\":3,\"backlightState\":\"activeOn\",\"nativeSize\":[2007,2853],\"type\":{\"integrated\":{}},\"name\":\"LCD-1\",\"displayId\":3}]}\n",
+      "stderr": ""
+    },
+    {
+      "startedAt": "2026-11-12T13:51:11.697838+00:00",
+      "finishedAt": "2026-11-12T13:51:11.898589+00:00",
+      "durationMs": 201,
+      "args": [
+        "simctl",
+        "spawn",
+        "6164BADC-D2E1-4455-A4DB-D9D2C73C1228",
+        "<MAC_HOME>/.agent-device/fold-helper/950f94d11269d473a277638fe11c5be7/fold-helper",
+        "set",
+        "closed"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "startedAt": "2026-11-12T13:51:11.938395+00:00",
+      "finishedAt": "2026-11-12T13:51:12.240143+00:00",
+      "durationMs": 302,
+      "args": [
+        "simctl",
+        "spawn",
+        "6164BADC-D2E1-4455-A4DB-D9D2C73C1228",
+        "<MAC_HOME>/.agent-device/fold-helper/950f94d11269d473a277638fe11c5be7/fold-helper",
+        "hinge",
+        "0"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"version\":1,\"angleDegrees\":0,\"angleValid\":true}\n",
+      "stderr": ""
+    },
+    {
+      "startedAt": "2026-11-12T13:51:12.294933+00:00",
+      "finishedAt": "2026-11-12T13:51:12.586667+00:00",
+      "durationMs": 291,
+      "args": [
+        "simctl",
+        "spawn",
+        "6164BADC-D2E1-4455-A4DB-D9D2C73C1228",
+        "<MAC_HOME>/.agent-device/fold-helper/950f94d11269d473a277638fe11c5be7/fold-helper",
+        "panels"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"version\":1,\"displays\":[{\"primary\":true,\"currentOrientation\":\"rot0\",\"pointScale\":3,\"backlightState\":\"activeOn\",\"nativeSize\":[1398,2034],\"type\":{\"integrated\":{}},\"name\":\"LCD\",\"displayId\":1},{\"primary\":false,\"currentOrientation\":\"rot90\",\"pointScale\":3,\"backlightState\":\"activeOn\",\"nativeSize\":[2007,2853],\"type\":{\"integrated\":{}},\"name\":\"LCD-1\",\"displayId\":3}]}\n",
+      "stderr": ""
+    }
+  ]
+}

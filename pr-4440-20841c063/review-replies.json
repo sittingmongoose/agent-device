@@ -1,0 +1,22 @@
+[
+  {
+    "thread": "PRRT_kwDORFGHaM62srQL",
+    "body": "Fixed in 20841c063: default capture explicitly uses CoreDevice; scoped capture and rotation use the exact helper command with --set <set>; default rotation explicitly omits that pair. Removed bracketed syntax. Equivalent wording was shortened to keep the guidance budget at 39,960 bytes; the five guidance tests pass."
+  },
+  {
+    "thread": "PRRT_kwDORFGHaM62srQf",
+    "body": "Fixed in 20841c063. The rotation amendment now states the guest table verdict in both sets, the fixed panel mapping, the established-lit-panel safety rules, the no-redispatch behavior and the shared orientation-unverified error. The old CoreDevice-verification/scoped-refusal contract is removed. The pud dispatch distinction and obsolete untested-quarter-turn gap are corrected too."
+  },
+  {
+    "thread": "PRRT_kwDORFGHaM62srQn",
+    "body": "Fixed in 20841c063: the ADR now names IOS_GUEST_DISPLAY_PROBE_BUDGET_MS. ADR citation checks pass."
+  },
+  {
+    "thread": "PRRT_kwDORFGHaM62srQs",
+    "body": "Removed in 20841c063, including the fs import and deviceOrientation conversion; the error message is now set-independent. The final fixture throws on every unexpected CoreDevice call and retains the explicit zero-call assertions. All 53 orientation tests pass."
+  },
+  {
+    "thread": "PRRT_kwDORFGHaM62srRC",
+    "body": "The measurement claim is backed by live runs, not only fixtures. Before editing production code I measured the default Duo at all four inner picker values and all three supported outer targets, repeating guest reads before CoreDevice queries, and reran the scoped Duo. The raw baseline matrix is https://github.com/sittingmongoose/agent-device/blob/bea92a5d77d38a654bfd2ccf468a946ea8f847d0/pr-4440-61c5a43fe/baseline-measurements.json ; the default raw records are https://github.com/sittingmongoose/agent-device/blob/bea92a5d77d38a654bfd2ccf468a946ea8f847d0/pr-4440-61c5a43fe/default-baseline-results and the scoped host trace is https://github.com/sittingmongoose/agent-device/blob/bea92a5d77d38a654bfd2ccf468a946ea8f847d0/pr-4440-61c5a43fe/scope-baseline-xcrun.jsonl . They reproduce outer 0 and inner +90, consistent with the earlier 18 inner and 9 outer readings. The unit fixtures model those observations. Keeping the measured-in-both-sets statement."
+  }
+]

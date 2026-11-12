@@ -1,0 +1,90 @@
+{
+  "args": [
+    "open",
+    "com.apple.Preferences"
+  ],
+  "exitCode": 0,
+  "startedAt": "2026-11-12T13:51:18.795Z",
+  "finishedAt": "2026-11-12T13:51:21.369Z",
+  "wallClockMs": 2574.0053340000013,
+  "stdout": "<unrelated setup output omitted>",
+  "stderr": "[agent-device][diag] {\"ts\":\"2026-11-12T13:51:18.870Z\",\"level\":\"info\",\"phase\":\"daemon_startup\",\"session\":\"pr4440-proof\",\"requestId\":\"1f367eea5e5c40c3\",\"command\":\"open\",\"durationMs\":3,\"data\":{\"requestId\":\"1f367eea5e5c40c3\",\"session\":\"pr4440-proof\"}}\n[agent-device][diag] {\"ts\":\"2026-11-12T13:51:18.871Z\",\"level\":\"info\",\"phase\":\"daemon_request_prepare\",\"session\":\"pr4440-proof\",\"requestId\":\"1f367eea5e5c40c3\",\"command\":\"open\",\"data\":{\"requestId\":\"1f367eea5e5c40c3\",\"command\":\"open\",\"session\":\"pr4440-proof\"}}\n[agent-device][diag] {\"ts\":\"2026-11-12T13:51:21.351Z\",\"level\":\"info\",\"phase\":\"daemon_request\",\"session\":\"pr4440-proof\",\"requestId\":\"1f367eea5e5c40c3\",\"command\":\"open\",\"durationMs\":2480,\"data\":{\"requestId\":\"1f367eea5e5c40c3\",\"command\":\"open\"}}\n",
+  "payload": {
+    "success": true,
+    "data": {
+      "session": "pr4440-proof",
+      "sessionStateDir": "/private/tmp/pr4440-r2/default-final/state/sessions/pr4440-proof",
+      "runnerLogPath": "/private/tmp/pr4440-r2/default-final/state/sessions/pr4440-proof/runner.log",
+      "requestLogPath": "/private/tmp/pr4440-r2/default-final/state/sessions/pr4440-proof/requests/1f367eea5e5c40c3.ndjson",
+      "eventLogPath": "/private/tmp/pr4440-r2/default-final/state/sessions/pr4440-proof/events.ndjson",
+      "appName": "com.apple.Preferences",
+      "appBundleId": "com.apple.Preferences",
+      "selection": {
+        "reason": "existing-session",
+        "source": "session",
+        "candidateCount": 1,
+        "bootOccurred": false
+      },
+      "startup": {
+        "durationMs": 2314,
+        "measuredAt": "2026-11-12T13:51:21.345Z",
+        "method": "open-command-roundtrip",
+        "appTarget": "com.apple.Preferences",
+        "appBundleId": "com.apple.Preferences"
+      },
+      "platform": "ios",
+      "target": "mobile",
+      "device": "pr4440-r2-owned",
+      "id": "6164BADC-D2E1-4455-A4DB-D9D2C73C1228",
+      "device_udid": "6164BADC-D2E1-4455-A4DB-D9D2C73C1228",
+      "ios_simulator_device_set": null,
+      "message": "Opened: com.apple.Preferences"
+    }
+  },
+  "ok": true,
+  "calls": [
+    {
+      "startedAt": "2026-11-12T13:51:18.905226+00:00",
+      "finishedAt": "2026-11-12T13:51:19.011294+00:00",
+      "durationMs": 106,
+      "args": [
+        "simctl",
+        "list",
+        "devices",
+        "-j"
+      ],
+      "exitCode": 0,
+      "stdout": "<unrelated setup output omitted>",
+      "stderr": ""
+    },
+    {
+      "startedAt": "2026-11-12T13:51:19.062291+00:00",
+      "finishedAt": "2026-11-12T13:51:19.545932+00:00",
+      "durationMs": 484,
+      "args": [
+        "simctl",
+        "launch",
+        "6164BADC-D2E1-4455-A4DB-D9D2C73C1228",
+        "com.apple.Preferences"
+      ],
+      "exitCode": 0,
+      "stdout": "<unrelated setup output omitted>",
+      "stderr": ""
+    },
+    {
+      "startedAt": "2026-11-12T13:51:19.592590+00:00",
+      "finishedAt": "2026-11-12T13:51:19.976857+00:00",
+      "durationMs": 384,
+      "args": [
+        "simctl",
+        "spawn",
+        "6164BADC-D2E1-4455-A4DB-D9D2C73C1228",
+        "launchctl",
+        "list"
+      ],
+      "exitCode": 0,
+      "stdout": "<unrelated setup output omitted>",
+      "stderr": ""
+    }
+  ]
+}

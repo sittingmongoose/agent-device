@@ -1,0 +1,13 @@
+$ node --experimental-strip-types scripts/gate/run.ts provider-integration
+[gate] provider-integration: pnpm run test:integration:provider
+$ vitest run --project provider-integration
+
+ RUN  v5.0.4 <CHECKOUT>
+
+·································································································································································································································································
+
+ Test Files  70 passed (70)
+      Tests  257 passed (257)
+   Start at  15:06:33
+   Duration  154.82s (tests 72%, import 19%, transform 7%, setup 1%)
+

@@ -1,0 +1,95 @@
+--- long-job pr4440-r2-smoke-head attempt 1 started 2026-11-12T14:42:03Z on ubuntuserver: env PATH=/tmp/pr4440-r2-tools/bin:<VM_HOME>/.local/share/node-v26.13.0-linux-x64/bin:<VM_HOME>/.npm/_npx/acaf29b40d536b0e/node_modules/.bin:<VM_HOME>/.local/bin:/usr/bin:/bin AGENT_DEVICE_VITEST_MAX_WORKERS=2 bash -euc 'git rev-parse HEAD
+pnpm test:smoke' ---
+4433ac18db7609c88e25dedc6dbca95a26a5f51d
+$ node --experimental-strip-types scripts/node-test-tmpdir.ts --test test/integration/smoke-*.test.ts
+✔ Android emulator coverage declarations cover exactly the public catalog with an assertion and owner (3.421702ms)
+✔ Android coverage classification summary is the rollup of the manifest declarations (0.617071ms)
+✔ Android scenario command declarations equal the live manifest rows with one owner per command (1.293997ms)
+✔ Android app scenarios declare deterministic starting surfaces and IME modes (0.58343ms)
+✔ Android permission recovery waits for the asynchronous native prompt (0.327174ms)
+✔ Android emulator scenarios can be selected as an ordered subset (1.525211ms)
+✔ Android emulator completeness checks selected scenario completion and recorded command and behavior evidence (3.481138ms)
+✔ Android command-contract evidence names an existing test file and claims exactly the rows that cite it (7.81508ms)
+✔ Android behavior declarations equal the scenario behavior declarations with one owner each (0.864866ms)
+✔ Android fact-owned denials are declared command-contract (0.506042ms)
+﹣ live Android emulator fixture E2E (1.699984ms) # Set AGENT_DEVICE_ANDROID_E2E=1 with fixture APK path/id and emulator serial to run.
+✔ clean-xcuitest ios removes only transient root entries and reports preserved cache entries (605.159318ms)
+✔ clean-xcuitest ios reports a no-op when only preserved entries remain (421.966797ms)
+✔ clean-xcuitest macos skips a missing derived directory (496.361064ms)
+✔ clean-xcuitest macos removes the entire platform directory when present (478.92243ms)
+✔ clean-xcuitest ios cleans the override directory and leaves the default untouched (430.652501ms)
+✔ clean-xcuitest macos cleans the override directory and leaves the default untouched (424.224048ms)
+✔ clean-xcuitest ignores a blank override and keeps the default directory (414.471146ms)
+✔ clean-xcuitest reports cleanup failures directly (452.992892ms)
+✔ cli --help returns usage (1310.382673ms)
+✔ cli --version prints semver and exits 0 (198.727113ms)
+✔ cli -V prints semver and exits 0 (285.626103ms)
+✔ cli without command prints usage and exits 1 (698.094047ms)
+✔ alias --help matches the canonical command help (5032.093157ms)
+✔ clean daemon retains metadata when a live recorded process is not a verified daemon (593.509346ms)
+✔ clean daemon script stops a live daemon before removing metadata (5192.692057ms)
+✔ forced retirement waits for a real daemon and reclaims its abandoned registration claim (3382.79933ms)
+✔ daemon HTTP transport starts from CLI and accepts a command RPC (4780.696309ms)
+✔ iOS runner status transport stays visible while command execution remains serial (366.415483ms)
+✔ iOS simulator coverage declarations cover exactly the public catalog with an assertion and owner (2.572244ms)
+✔ iOS live command declarations name existing scenario ids with one owner per command (5.205283ms)
+✔ iOS behavior declarations name an existing scenario id or a file containing the owner test text (0.937515ms)
+✔ iOS non-live owner declarations name an existing file containing the evidence test text (4.975181ms)
+✔ fixture identifier coverage rejects direct-selector drift (1.37743ms)
+✔ live iOS scenario sources reference test IDs present in the fixture app sources (13.951055ms)
+✔ iOS fact-owned simulator denials are declared command-contract (0.265462ms)
+✔ fixture replay gestures fit the smallest supported iPhone viewport (13.006796ms)
+✔ drag replay fixtures use parseable source and destination selectors (3.025987ms)
+✔ fixture navigation uses edge-aware traversal without losing direct swipe evidence (0.757342ms)
+✔ fixture navigation establishes the home route before selecting Catalog (0.543593ms)
+✔ event timeline coverage follows cursors beyond the first page (0.872762ms)
+✔ event timeline coverage rejects malformed and non-advancing pages (1.581105ms)
+✔ event timeline coverage fails fast on runaway pagination (1.601469ms)
+﹣ live iOS simulator fixture E2E (1.549592ms) # Set AGENT_DEVICE_IOS_E2E=1 with fixture path/id and simulator UDID to run.
+✔ snapshot backend conformance checks each backend contract independently (4.765262ms)
+✔ snapshot backend conformance rejects every promised control invariant (5.889573ms)
+✔ backend forcing stays in the test-owned daemon transport seam (0.60256ms)
+﹣ live iOS runner discloses a foreground repair on the command that paid for it (1.877073ms) # Set AGENT_DEVICE_IOS_E2E=1 to run the live iOS lanes.
+✔ Linux coverage declarations cover exactly the public catalog with an assertion and owner (3.839546ms)
+✔ Linux coverage classification summary is the rollup of the manifest declarations (0.725305ms)
+✔ Linux live declarations equal the commands parsed from the smoke replay script (6.237644ms)
+✔ Linux command-evidence declarations match command assertions named in the lane runner source (2.973023ms)
+✔ Linux contract declarations name an existing file containing the evidence test text (6.894486ms)
+✔ Linux accepted-gap rows are exactly the pinned command list (0.454591ms)
+✔ macOS coverage declarations cover exactly the public catalog with an assertion and owner (3.666048ms)
+✔ macOS coverage classification summary is the rollup of the manifest declarations (0.65991ms)
+✔ macOS live declarations equal the commands named in live scenario sources (7.113649ms)
+✔ macOS live declarations name commands present in their scenario source files (1.400747ms)
+✔ macOS non-live evidence declarations name an existing file containing the evidence test text (5.319836ms)
+✔ macOS known gaps use one grouped tracking issue (0.443592ms)
+✔ macOS coverage report persists the manifest rollup and live command list (11.384268ms)
+✔ connect prepares Metro and open reuses bridged runtime for remote daemon (1003.56636ms)
+✔ built CLI provider flow closes its named session before disconnect cleanup (2116.333101ms)
+✔ tvOS coverage declarations cover exactly the public catalog with an assertion and owner (3.301954ms)
+✔ tvOS coverage classification summary is the rollup of the manifest declarations (0.491557ms)
+✔ tvOS contract declarations name an existing file containing the evidence test text (4.071164ms)
+✔ tvOS provider-contract declarations match callCommand names in the scenario source (0.505278ms)
+✔ tvOS host-dependent audio admission remains explicit (0.355783ms)
+✔ tvOS gesture contract preserves the typed multi-touch denial (496.222431ms)
+✔ tvOS known gaps use one grouped tracking issue (0.321339ms)
+✔ web coverage declarations cover exactly the public catalog with an assertion and owner (2.44041ms)
+✔ web coverage classification summary is the rollup of the manifest declarations (0.456766ms)
+✔ web live declarations equal the commands named as argv heads in the smoke scenario source (0.854193ms)
+✔ web contract declarations name an existing file containing the evidence test text (10.347437ms)
+✔ web accepted gap is exactly the structurally excluded test command (0.675329ms)
+✔ web coverage report persists the manifest rollup and live command list (7.664003ms)
+✔ web coverage report survives a failed close cleanup (5.977289ms)
+✔ web cleanup error is preserved when report writing also fails (1.903275ms)
+✔ web shutdown cleanup reaps the exact daemon that survived graceful shutdown (658.680907ms)
+﹣ live web platform e2e smoke (0.420634ms) # Set AGENT_DEVICE_WEB_E2E=1 to run the managed web backend smoke.
+﹣ live web coordinate fill selects in the page and refuses what it cannot confirm (0.152754ms) # Set AGENT_DEVICE_WEB_E2E=1 to run the managed web backend smoke.
+﹣ live web platform e2e daemon-shutdown browser cleanup (0.163898ms) # Set AGENT_DEVICE_WEB_E2E=1 to run the managed web backend smoke.
+ℹ tests 82
+ℹ suites 0
+ℹ pass 76
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 6
+ℹ todo 0
+ℹ duration_ms 10021.896857
+--- long-job pr4440-r2-smoke-head attempt 1 ended 2026-11-12T14:42:14Z: exit 0 ---

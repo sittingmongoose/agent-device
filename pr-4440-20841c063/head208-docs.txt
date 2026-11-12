@@ -1,0 +1,209 @@
+--- long-job pr4440-r2-head208-docs attempt 1 started 2026-11-12T16:05:43Z on ubuntuserver: env PATH=<VM_HOME>/.local/share/node-v26.13.0-linux-x64/bin:<VM_HOME>/.npm/_npx/acaf29b40d536b0e/node_modules/.bin:<VM_HOME>/.local/bin:/usr/bin:/bin bash -euc 'pnpm gate command-docs
+pnpm gate adr-citations
+pnpm gate docs-links
+pnpm gate docs-prose
+pnpm gate agent-guidance' ---
+$ node --experimental-strip-types scripts/gate/run.ts command-docs
+[gate] command-docs: pnpm run check:command-docs
+$ vitest run --project unit-core test/repo-guards/command-doc-coverage.test.ts
+
+ RUN  v5.0.4 <CHECKOUT>
+
+············
+
+ Test Files  1 passed (1)
+      Tests  12 passed (12)
+   Start at  16:05:49
+   Duration  2.07s (transform 61%, import 29%, setup 8%, tests 2%)
+
+$ node --experimental-strip-types scripts/gate/run.ts adr-citations
+[gate] adr-citations: pnpm run check:adr-citations
+$ vitest run --project unit-core test/repo-guards/adr-citations.test.ts
+
+ RUN  v5.0.4 <CHECKOUT>
+
+··
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  16:05:55
+   Duration  3.13s (transform 86%, import 10%, tests 3%, setup 2%)
+
+$ node --experimental-strip-types scripts/gate/run.ts docs-links
+[gate] docs-links: pnpm run check:doc-links
+$ node --experimental-strip-types scripts/node-test-tmpdir.ts --experimental-strip-types --test scripts/__tests__/check-doc-links.test.ts && pnpm --dir website build && node --experimental-strip-types scripts/check-doc-links.ts
+✔ links to rendered pages and IDs pass (4.903754ms)
+✔ a link to a page that was not built fails (3.08409ms)
+✔ a link to an ID the target page does not render fails (1.170812ms)
+✔ a same-page fragment must name an ID on that page (0.882409ms)
+✔ a heading ID rendered twice on one page fails; repeated non-heading IDs do not (0.909405ms)
+✔ external URLs are skipped and asset links must exist (0.763978ms)
+✔ README links into the published docs are checked against the built pages (1.083413ms)
+✔ a docs page without its Markdown twin fails (0.704573ms)
+✔ the base is read from the asset paths and proven by the home link (1.310803ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 206.278935
+$ astro build --force && node --experimental-strip-types scripts/build-depgraph.mjs
+16:06:08 [WARN] [content] data store cleared (force)
+16:06:10 [content] Syncing content
+16:06:13 [content] Synced content
+16:06:13 [types] Generated 5.19s
+16:06:13 [build] output: "static"
+16:06:13 [build] mode: "static"
+16:06:13 [build] directory: <CHECKOUT>/website/dist/
+16:06:13 [build] Collecting build info...
+16:06:13 [build] ✓ Completed in 5.54s.
+16:06:13 [build] Building static entrypoints...
+16:06:18 [vite] ✓ built in 4.95s
+16:06:18 [vite] ✓ built in 308ms
+16:06:18 [build] Rearranging server assets...
+
+ generating static routes 
+16:06:19 [WARN] [content] The collection "i18n" does not exist or is empty. Please check your content config file for errors.
+16:06:19   ├─ /.well-known/mcp.json (+261ms) 
+16:06:19   ├─ /404.html (+332ms) 
+16:06:20   ├─ /cloud.html (+9ms) 
+16:06:20   ├─ /contact.html (+5ms) 
+16:06:20   ├─ /docs/agent-setup.md (+3ms) 
+16:06:20   ├─ /docs/ai-sdk.md (+1ms) 
+16:06:20   ├─ /docs/aws-device-farm.md (+2ms) 
+16:06:20   ├─ /docs/batching.md (+1ms) 
+16:06:20   ├─ /docs/browserstack.md (+1ms) 
+16:06:20   ├─ /docs/build-an-integration.md (+2ms) 
+16:06:20   ├─ /docs/capabilities.md (+1ms) 
+16:06:20   ├─ /docs/client-api.md (+1ms) 
+16:06:20   ├─ /docs/commands.md (+2ms) 
+16:06:20   ├─ /docs/configuration.md (+1ms) 
+16:06:20   ├─ /docs/debugging-profiling.md (+1ms) 
+16:06:20   ├─ /docs/device-clouds.md (+1ms) 
+16:06:20   ├─ /docs/eve.md (+1ms) 
+16:06:20   ├─ /docs/installation.md (+1ms) 
+16:06:20   ├─ /docs/introduction.md (+1ms) 
+16:06:20   ├─ /docs/known-limitations.md (+1ms) 
+16:06:20   ├─ /docs/limrun.md (+1ms) 
+16:06:20   ├─ /docs/migrating-gestures.md (+1ms) 
+16:06:20   ├─ /docs/plugins.md (+1ms) 
+16:06:20   ├─ /docs/quick-start.md (+1ms) 
+16:06:20   ├─ /docs/remote-proxy.md (+1ms) 
+16:06:20   ├─ /docs/replay-e2e.md (+1ms) 
+16:06:20   ├─ /docs/revyl.md (+1ms) 
+16:06:20   ├─ /docs/run-maestro-flows.md (+1ms) 
+16:06:20   ├─ /docs/security-trust.md (+1ms) 
+16:06:20   ├─ /docs/selectors.md (+1ms) 
+16:06:20   ├─ /docs/sessions.md (+1ms) 
+16:06:20   ├─ /docs/snapshots.md (+1ms) 
+16:06:20   ├─ /docs/testmu.md (+1ms) 
+16:06:20   ├─ /docs/tizen.md (+1ms) 
+16:06:20   ├─ /docs/webos.md (+2ms) 
+16:06:20   ├─ /llms-full.txt (+2.23s) 
+16:06:22   ├─ /llms-small.txt (+1.27s) 
+16:06:23   ├─ /llms.txt (+4ms) 
+16:06:23   ├─ /robots.txt (+3ms) 
+16:06:23   ├─ /showcase.html (+7ms) 
+16:06:23   ├─ /version.txt (+3ms) 
+16:06:23   ├─ /index.html (+286ms) 
+16:06:23   ├─ /docs/agent-setup.html (+32ms) 
+16:06:24   ├─ /docs/ai-sdk.html (+8ms) 
+16:06:24   ├─ /docs/aws-device-farm.html (+9ms) 
+16:06:24   ├─ /docs/batching.html (+7ms) 
+16:06:24   ├─ /docs/browserstack.html (+6ms) 
+16:06:24   ├─ /docs/build-an-integration.html (+7ms) 
+16:06:24   ├─ /docs/capabilities.html (+6ms) 
+16:06:24   ├─ /docs/client-api.html (+8ms) 
+16:06:24   ├─ /docs/commands.html (+10ms) 
+16:06:24   ├─ /docs/configuration.html (+6ms) 
+16:06:24   ├─ /docs/debugging-profiling.html (+8ms) 
+16:06:24   ├─ /docs/device-clouds.html (+8ms) 
+16:06:24   ├─ /docs/eve.html (+6ms) 
+16:06:24   ├─ /docs/installation.html (+5ms) 
+16:06:24   ├─ /docs/introduction.html (+6ms) 
+16:06:24   ├─ /docs/known-limitations.html (+5ms) 
+16:06:24   ├─ /docs/limrun.html (+5ms) 
+16:06:24   ├─ /docs/migrating-gestures.html (+5ms) 
+16:06:24   ├─ /docs/plugins.html (+5ms) 
+16:06:24   ├─ /docs/quick-start.html (+6ms) 
+16:06:24   ├─ /docs/remote-proxy.html (+5ms) 
+16:06:24   ├─ /docs/replay-e2e.html (+5ms) 
+16:06:24   ├─ /docs/revyl.html (+5ms) 
+16:06:24   ├─ /docs/run-maestro-flows.html (+13ms) 
+16:06:24   ├─ /docs/security-trust.html (+5ms) 
+16:06:24   ├─ /docs/selectors.html (+4ms) 
+16:06:24   ├─ /docs/sessions.html (+5ms) 
+16:06:24   ├─ /docs/snapshots.html (+5ms) 
+16:06:24   ├─ /docs/testmu.html (+4ms) 
+16:06:24   ├─ /docs/tizen.html (+4ms) 
+16:06:24   ├─ /docs/webos.html (+4ms) 
+16:06:24 ✓ Completed in 5.23s.
+
+16:06:24 [build] ✓ Completed in 10.65s.
+16:06:24 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+16:06:24 [starlight:pagefind] Building search index with Pagefind...
+16:06:24 [starlight:pagefind] Found 36 HTML files.
+16:06:24 [starlight:pagefind] Finished building search index in 442ms.
+16:06:24 [build] 36 page(s) built in 16.68s
+16:06:24 [build] Complete!
+Dependency graph: 1964 files, 11327 edges, 49 zones
+  value-import cycles (R4): 0
+  type-only/dynamic cycles (not gate-rejected): 21
+  spine back-edges (R5): 0
+  type-only spine inversions (R6): 4
+  value edges whose target is also reachable at distance >= 2: 2774
+  declared-authority labels: vocabulary=194, capability=52, live-state-shape=104, live-state-authority=71, executable-policy=91, ordinary=10818
+    (reachability only — not a removability claim, see scripts/depgraph/README.md)
+  dominator summary for src/daemon.ts: 357 of 1964 files loaded eagerly, biggest branch packages/daemon/src/index.ts (333 files, 62233 loc)
+  zone-level SCCs: 0 cyclic group(s) across 49 zones
+  modularity: declared zones 0.366, detected communities 0.539, least cohesive zone sdk (24%)
+  wrote website/dist/depgraph/graph.json
+doc links: every internal link resolves (base /).
+$ node --experimental-strip-types scripts/gate/run.ts docs-prose
+[gate] docs-prose: pnpm run check:doc-prose
+$ node --experimental-strip-types scripts/node-test-tmpdir.ts --experimental-strip-types --test scripts/__tests__/check-doc-prose.test.ts && node --experimental-strip-types scripts/check-doc-prose.ts
+✔ banned words match case-insensitively as whole words, with line and column (5.814901ms)
+✔ phrases match across any run of whitespace (0.332725ms)
+✔ bare new, now, and current are allowed (0.215174ms)
+✔ each violation names the file, position, matched text, and reason (0.291057ms)
+✔ every rule is a lowercase word or phrase with a reason (0.572432ms)
+✔ YAML frontmatter at the top is skipped, but a later thematic break is prose (0.346263ms)
+✔ fenced code is skipped until a matching closer of at least the opening length (0.36338ms)
+✔ a backtick fence is not closed by tildes (0.298759ms)
+✔ a fence inside a blockquote is skipped through its quoted closer (0.457668ms)
+✔ a fence inside an HTML comment does not swallow the prose after the comment (0.678365ms)
+✔ inline code spans are skipped, matching backtick run lengths (0.391508ms)
+✔ an inline code span that wraps across lines is skipped (0.357601ms)
+✔ a stray backtick does not mask past the end of its paragraph (0.296103ms)
+✔ a phrase wrapped across lines matches at its first word (0.285567ms)
+✔ HTML tags, comments, link destinations, and bare URLs are skipped (0.346737ms)
+✔ link text is prose (0.313665ms)
+✔ CRLF line endings are scanned like LF (0.4331ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 222.733278
+doc prose: 32 files clean.
+$ node --experimental-strip-types scripts/gate/run.ts agent-guidance
+[gate] agent-guidance: pnpm run check:agent-guidance
+$ node --experimental-strip-types scripts/node-test-tmpdir.ts --experimental-strip-types --test scripts/__tests__/agent-guidance-contract.test.ts
+✔ high-traffic guidance stays within its reviewed context budget (9.326453ms)
+✔ task guidance stays focused instead of growing another handbook (10.32147ms)
+✔ CONTEXT.md remains a glossary rather than an architecture or workflow document (3.351076ms)
+✔ AGENTS.md routes each shared primitive to a package that publishes it (14.962278ms)
+✔ the AGENTS.md task router points only at files that exist (10.159028ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 236.859133
+--- long-job pr4440-r2-head208-docs attempt 1 ended 2026-11-12T16:06:37Z: exit 0 ---

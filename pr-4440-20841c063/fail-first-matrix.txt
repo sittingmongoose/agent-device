@@ -1,0 +1,623 @@
+
+ RUN  v5.0.4 <CHECKOUT>
+
+------xxxxxxxxxxx·xxxxxxxxxxx·························------
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 22 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > confirms outer portrait from the lit panel without CoreDevice
+AssertionError: expected [ 'portrait' ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   "portrait",
++ ]
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:341:29
+    339|     await expect(rotateScoped(sim, target)).resolves.toEqual({ orienta…
+    340|     expect(sim.litScreen()).toBe(`rot${PANEL_ANGLE[target]}`);
+    341|     expect(sim.rotations()).toEqual(dispatched);
+       |                             ^
+    342|     expect(sim.devicectl).toEqual([]);
+    343|     expect(mockRunner).not.toHaveBeenCalled();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/22]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > confirms outer landscape-left from the lit panel without CoreDevice
+AssertionError: expected [ …(3) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   "devicectl device info displays --device sim-1-2 --json-output /tmp/agent-device-test-run-1316388-lF8XbO/agent-device-apple-displays-1316659-1794479662450-fila0gmhu1.json",
++   "devicectl device orientation get --device sim-1-2 --json-output /tmp/agent-device-test-run-1316388-lF8XbO/agent-device-apple-orientation-1316659-1794479692450-x3rd2oknm6l.json",
++   "devicectl device orientation get --device sim-1-2 --json-output /tmp/agent-device-test-run-1316388-lF8XbO/agent-device-apple-orientation-1316659-1794479692450-78ycl4jpqkm.json",
++ ]
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:342:27
+    340|     expect(sim.litScreen()).toBe(`rot${PANEL_ANGLE[target]}`);
+    341|     expect(sim.rotations()).toEqual(dispatched);
+    342|     expect(sim.devicectl).toEqual([]);
+       |                           ^
+    343|     expect(mockRunner).not.toHaveBeenCalled();
+    344|   },
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/22]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > confirms outer landscape-right from the lit panel without CoreDevice
+AssertionError: expected [ …(3) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   "devicectl device info displays --device sim-1-3 --json-output /tmp/agent-device-test-run-1316388-lF8XbO/agent-device-apple-displays-1316659-1794479662460-2ibbrtde6aj.json",
++   "devicectl device orientation get --device sim-1-3 --json-output /tmp/agent-device-test-run-1316388-lF8XbO/agent-device-apple-orientation-1316659-1794479692460-2d31er4qrr5.json",
++   "devicectl device orientation get --device sim-1-3 --json-output /tmp/agent-device-test-run-1316388-lF8XbO/agent-device-apple-orientation-1316659-1794479692460-b4ofce6fi2j.json",
++ ]
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:342:27
+    340|     expect(sim.litScreen()).toBe(`rot${PANEL_ANGLE[target]}`);
+    341|     expect(sim.rotations()).toEqual(dispatched);
+    342|     expect(sim.devicectl).toEqual([]);
+       |                           ^
+    343|     expect(mockRunner).not.toHaveBeenCalled();
+    344|   },
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/22]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > confirms inner portrait from the lit panel without CoreDevice
+AssertionError: expected Error: iPhone 17 Pro did not rotate to po… { …(2) } to deeply equal { orientation: 'portrait' }
+
+- Expected
++ Received
+
+- {
+-   "orientation": "portrait",
++ AppError {
++   "message": "iPhone 17 Pro did not rotate to portrait: CoreDevice reports landscape-right",
++   "code": "COMMAND_FAILED",
++   "details": {
++     "deviceId": "sim-1-4",
++     "hint": "The simulator HID command completed, but CoreDevice did not report the new orientation. Read it with xcrun devicectl device orientation get --device <udid>, then retry.",
++     "observedOrientation": "landscape-right",
++     "reason": "orientation-unverified",
++     "requestedOrientation": "portrait",
++   },
+  }
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:339:44
+    337|   async (lit, target, dispatched) => {
+    338|     const sim = fakeScopedDuo(simulator({ simulatorSetPath }), { lit, …
+    339|     await expect(rotateScoped(sim, target)).resolves.toEqual({ orienta…
+       |                                            ^
+    340|     expect(sim.litScreen()).toBe(`rot${PANEL_ANGLE[target]}`);
+    341|     expect(sim.rotations()).toEqual(dispatched);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/22]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > confirms inner landscape-left from the lit panel without CoreDevice
+AssertionError: expected Error: iPhone 17 Pro did not rotate to la… { …(2) } to deeply equal { orientation: 'landscape-left' }
+
+- Expected
++ Received
+
+- {
+-   "orientation": "landscape-left",
++ AppError {
++   "message": "iPhone 17 Pro did not rotate to landscape-left: CoreDevice reports portrait",
++   "code": "COMMAND_FAILED",
++   "details": {
++     "deviceId": "sim-1-5",
++     "hint": "The simulator HID command completed, but CoreDevice did not report the new orientation. Read it with xcrun devicectl device orientation get --device <udid>, then retry.",
++     "observedOrientation": "portrait",
++     "reason": "orientation-unverified",
++     "requestedOrientation": "landscape-left",
++   },
+  }
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:339:44
+    337|   async (lit, target, dispatched) => {
+    338|     const sim = fakeScopedDuo(simulator({ simulatorSetPath }), { lit, …
+    339|     await expect(rotateScoped(sim, target)).resolves.toEqual({ orienta…
+       |                                            ^
+    340|     expect(sim.litScreen()).toBe(`rot${PANEL_ANGLE[target]}`);
+    341|     expect(sim.rotations()).toEqual(dispatched);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/22]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > confirms inner landscape-right from the lit panel without CoreDevice
+AssertionError: expected Error: iPhone 17 Pro did not rotate to la… { …(2) } to deeply equal { orientation: 'landscape-right' }
+
+- Expected
++ Received
+
+- {
+-   "orientation": "landscape-right",
++ AppError {
++   "message": "iPhone 17 Pro did not rotate to landscape-right: CoreDevice reports portrait-upside-down",
++   "code": "COMMAND_FAILED",
++   "details": {
++     "deviceId": "sim-1-6",
++     "hint": "The simulator HID command completed, but CoreDevice did not report the new orientation. Read it with xcrun devicectl device orientation get --device <udid>, then retry.",
++     "observedOrientation": "portrait-upside-down",
++     "reason": "orientation-unverified",
++     "requestedOrientation": "landscape-right",
++   },
+  }
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:339:44
+    337|   async (lit, target, dispatched) => {
+    338|     const sim = fakeScopedDuo(simulator({ simulatorSetPath }), { lit, …
+    339|     await expect(rotateScoped(sim, target)).resolves.toEqual({ orienta…
+       |                                            ^
+    340|     expect(sim.litScreen()).toBe(`rot${PANEL_ANGLE[target]}`);
+    341|     expect(sim.rotations()).toEqual(dispatched);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/22]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > a foldable simulator in a scoped set rotates on the first command, confirmed by the panel table
+AssertionError: expected Error: iPhone 17 Pro did not rotate to po… { …(2) } to deeply equal { orientation: 'portrait' }
+
+- Expected
++ Received
+
+- {
+-   "orientation": "portrait",
++ AppError {
++   "message": "iPhone 17 Pro did not rotate to portrait: CoreDevice reports landscape-right",
++   "code": "COMMAND_FAILED",
++   "details": {
++     "deviceId": "sim-1-7",
++     "hint": "The simulator HID command completed, but CoreDevice did not report the new orientation. Read it with xcrun devicectl device orientation get --device <udid>, then retry.",
++     "observedOrientation": "landscape-right",
++     "reason": "orientation-unverified",
++     "requestedOrientation": "portrait",
++   },
+  }
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:352:46
+    350|   const sim = fakeScopedDuo(scoped, { lit: 'inner', picker: 'portrait'…
+    351|   expect(sim.litScreen()).toBe('rot90');
+    352|   await expect(rotateScoped(sim, 'portrait')).resolves.toEqual({ orien…
+       |                                              ^
+    353|   expect(sim.litScreen()).toBe('rot0');
+    354|   // The measured inner offset makes the first dispatch exact: portrai…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/22]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > a scoped rotation to landscape-left dispatches the upside-down picker value when the delta needs it
+AssertionError: expected Error: iPhone 17 Pro did not rotate to la… { …(2) } to deeply equal { orientation: 'landscape-left' }
+
+- Expected
++ Received
+
+- {
+-   "orientation": "landscape-left",
++ AppError {
++   "message": "iPhone 17 Pro did not rotate to landscape-left: CoreDevice reports portrait",
++   "code": "COMMAND_FAILED",
++   "details": {
++     "deviceId": "sim-1-8",
++     "hint": "The simulator HID command completed, but CoreDevice did not report the new orientation. Read it with xcrun devicectl device orientation get --device <udid>, then retry.",
++     "observedOrientation": "portrait",
++     "reason": "orientation-unverified",
++     "requestedOrientation": "landscape-left",
++   },
+  }
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:367:52
+    365|   });
+    366|   expect(sim.litScreen()).toBe('rot0');
+    367|   await expect(rotateScoped(sim, 'landscape-left')).resolves.toEqual({
+       |                                                    ^
+    368|     orientation: 'landscape-left',
+    369|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/22]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > the outer panel reads the picker value itself, so its first dispatch is the target
+AssertionError: expected [ …(7) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   "devicectl device info displays --device sim-1-9 --json-output /tmp/agent-device-test-run-1316388-lF8XbO/agent-device-apple-displays-1316659-1794479662537-7ndwo1vvfso.json",
++   "devicectl device orientation get --device sim-1-9 --json-output /tmp/agent-device-test-run-1316388-lF8XbO/agent-device-apple-orientation-1316659-1794479692537-gdd7bkf68eo.json",
++   "devicectl device orientation get --device sim-1-9 --json-output /tmp/agent-device-test-run-1316388-lF8XbO/agent-device-apple-orientation-1316659-1794479692537-3gz0ch8v9d8.json",
++   "devicectl device orientation get --device sim-1-9 --json-output /tmp/agent-device-test-run-1316388-lF8XbO/agent-device-apple-orientation-1316659-1794479662541-f6jwpu4ue07.json",
++   "devicectl device orientation get --device sim-1-9 --json-output /tmp/agent-device-test-run-1316388-lF8XbO/agent-device-apple-orientation-1316659-1794479692541-xm3zdi8wvk.json",
++   "devicectl device orientation get --device sim-1-9 --json-output /tmp/agent-device-test-run-1316388-lF8XbO/agent-device-apple-orientation-1316659-1794479662543-fye2mwdmf6c.json",
++   "devicectl device orientation get --device sim-1-9 --json-output /tmp/agent-device-test-run-1316388-lF8XbO/agent-device-apple-orientation-1316659-1794479692543-58irngyyex2.json",
++ ]
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:384:25
+    382|     expect(sim.rotations()).toEqual([rotation]);
+    383|   }
+    384|   expect(sim.devicectl).toEqual([]);
+       |                         ^
+    385| });
+    386|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/22]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > a panel whose offset differs from the measured one still converges
+AssertionError: expected Error: iPhone 17 Pro did not rotate to la… { …(2) } to deeply equal { orientation: 'landscape-right' }
+
+- Expected
++ Received
+
+- {
+-   "orientation": "landscape-right",
++ AppError {
++   "message": "iPhone 17 Pro did not rotate to landscape-right: CoreDevice reports portrait",
++   "code": "COMMAND_FAILED",
++   "details": {
++     "deviceId": "sim-1-10",
++     "hint": "The simulator HID command completed, but CoreDevice did not report the new orientation. Read it with xcrun devicectl device orientation get --device <udid>, then retry.",
++     "observedOrientation": "portrait",
++     "reason": "orientation-unverified",
++     "requestedOrientation": "landscape-right",
++   },
+  }
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:394:53
+    392|     offsets: { inner: 90, outer: 270 },
+    393|   });
+    394|   await expect(rotateScoped(sim, 'landscape-right')).resolves.toEqual({
+       |                                                     ^
+    395|     orientation: 'landscape-right',
+    396|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/22]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > the picker survives a fold in both directions and each panel adds its own offset
+AssertionError: expected Error: iPhone 17 Pro did not rotate to la… { …(2) } to deeply equal { orientation: 'landscape-left' }
+
+- Expected
++ Received
+
+- {
+-   "orientation": "landscape-left",
++ AppError {
++   "message": "iPhone 17 Pro did not rotate to landscape-left: CoreDevice reports portrait",
++   "code": "COMMAND_FAILED",
++   "details": {
++     "deviceId": "sim-1-11",
++     "hint": "The simulator HID command completed, but CoreDevice did not report the new orientation. Read it with xcrun devicectl device orientation get --device <udid>, then retry.",
++     "observedOrientation": "portrait",
++     "reason": "orientation-unverified",
++     "requestedOrientation": "landscape-left",
++   },
+  }
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:416:52
+    414|   sim.fold('inner');
+    415|   expect(sim.litScreen()).toBe('rot90');
+    416|   await expect(rotateScoped(sim, 'landscape-left')).resolves.toEqual({
+       |                                                    ^
+    417|     orientation: 'landscape-left',
+    418|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/22]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > reads with both panels lit after a fold to closed neither confirm nor dispatch
+AssertionError: expected Error: iPhone 17 Pro did not rotate to po… { …(2) } to deeply equal { orientation: 'portrait' }
+
+- Expected
++ Received
+
+- {
+-   "orientation": "portrait",
++ AppError {
++   "message": "iPhone 17 Pro did not rotate to portrait: CoreDevice reports landscape-right",
++   "code": "COMMAND_FAILED",
++   "details": {
++     "deviceId": "sim-1-13",
++     "hint": "The simulator HID command completed, but CoreDevice did not report the new orientation. Read it with xcrun devicectl device orientation get --device <udid>, then retry.",
++     "observedOrientation": "landscape-right",
++     "reason": "orientation-unverified",
++     "requestedOrientation": "portrait",
++   },
+  }
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:445:46
+    443|   const sim = fakeScopedDuo(scoped, { lit: 'inner', picker: 'landscape…
+    444|   // A first command routes the device as a foldable (one panel probe)…
+    445|   await expect(rotateScoped(sim, 'portrait')).resolves.toEqual({ orien…
+       |                                              ^
+    446|   // The outer panel already shows the target, but the table names two…
+    447|   sim.fold('outer', { bothLitReads: 2 });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/22]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > after the both-lit reads, the first single-lit reading drives one exact dispatch
+AssertionError: expected Error: iPhone 17 Pro did not rotate to po… { …(2) } to deeply equal { orientation: 'portrait' }
+
+- Expected
++ Received
+
+- {
+-   "orientation": "portrait",
++ AppError {
++   "message": "iPhone 17 Pro did not rotate to portrait: CoreDevice reports landscape-right",
++   "code": "COMMAND_FAILED",
++   "details": {
++     "deviceId": "sim-1-14",
++     "hint": "The simulator HID command completed, but CoreDevice did not report the new orientation. Read it with xcrun devicectl device orientation get --device <udid>, then retry.",
++     "observedOrientation": "landscape-right",
++     "reason": "orientation-unverified",
++     "requestedOrientation": "portrait",
++   },
+  }
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:460:46
+    458|   const scoped = simulator({ simulatorSetPath });
+    459|   const sim = fakeScopedDuo(scoped, { lit: 'inner', picker: 'landscape…
+    460|   await expect(rotateScoped(sim, 'portrait')).resolves.toEqual({ orien…
+       |                                              ^
+    461|   sim.fold('outer', { bothLitReads: 2 });
+    462|   await expect(rotateScoped(sim, 'landscape-right')).resolves.toEqual({
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/22]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > a table that never names a single lit panel dispatches nothing and is refused
+AssertionError: expected { orientation: 'landscape-left' } to match object { code: 'COMMAND_FAILED', …(1) }
+(1 matching property omitted from actual)
+
+- Expected
++ Received
+
+  {
+-   "code": "COMMAND_FAILED",
+-   "details": {
+-     "reason": "orientation-unverified-scoped-set",
+-     "requestedOrientation": "landscape-left",
+-   },
++   "orientation": "landscape-left",
+  }
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:473:19
+    471|   const sim = fakeScopedDuo(scoped, { lit: 'outer', picker: 'portrait'…
+    472|   const outcome = await rotateScoped(sim, 'landscape-left');
+    473|   expect(outcome).toMatchObject({
+       |                   ^
+    474|     code: 'COMMAND_FAILED',
+    475|     details: {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/22]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > an undecided final read does not report an earlier reading as the current one
+AssertionError: expected Error: iPhone 17 Pro did not rotate to po… { …(2) } to match object { code: 'COMMAND_FAILED', …(1) }
+(5 matching properties omitted from actual)
+
+- Expected
++ Received
+
+- {
++ AppError {
+    "code": "COMMAND_FAILED",
+    "details": {
+-     "reason": "orientation-unverified-scoped-set",
++     "reason": "orientation-unverified",
+    },
+  }
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:495:19
+    493|   });
+    494|   const outcome = await rotateScoped(sim, 'portrait');
+    495|   expect(outcome).toMatchObject({
+       |                   ^
+    496|     code: 'COMMAND_FAILED',
+    497|     details: { reason: 'orientation-unverified-scoped-set' },
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[15/22]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > a scoped rotation to the orientation already showing dispatches nothing
+AssertionError: expected Error: iPhone 17 Pro did not rotate to po… { …(2) } to deeply equal { orientation: 'portrait' }
+
+- Expected
++ Received
+
+- {
+-   "orientation": "portrait",
++ AppError {
++   "message": "iPhone 17 Pro did not rotate to portrait: CoreDevice reports landscape-right",
++   "code": "COMMAND_FAILED",
++   "details": {
++     "deviceId": "sim-1-17",
++     "hint": "The simulator HID command completed, but CoreDevice did not report the new orientation. Read it with xcrun devicectl device orientation get --device <udid>, then retry.",
++     "observedOrientation": "landscape-right",
++     "reason": "orientation-unverified",
++     "requestedOrientation": "portrait",
++   },
+  }
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:511:46
+    509|   });
+    510|   expect(sim.litScreen()).toBe('rot0');
+    511|   await expect(rotateScoped(sim, 'portrait')).resolves.toEqual({ orien…
+       |                                              ^
+    512|   expect(sim.rotations()).toEqual([]);
+    513| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[16/22]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > an incomplete panel table never confirms or dispatches (the parsed panel already shows the target)
+AssertionError: expected { orientation: 'landscape-left' } to match object { code: 'COMMAND_FAILED', …(1) }
+(1 matching property omitted from actual)
+
+- Expected
++ Received
+
+  {
+-   "code": "COMMAND_FAILED",
+-   "details": {
+-     "reason": "orientation-unverified-scoped-set",
+-     "requestedOrientation": "landscape-left",
+-   },
++   "orientation": "landscape-left",
+  }
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:531:21
+    529|     expect(sim.litScreen()).toBe('rot270');
+    530|     const outcome = await rotateScoped(sim, target);
+    531|     expect(outcome).toMatchObject({
+       |                     ^
+    532|       code: 'COMMAND_FAILED',
+    533|       details: { reason: 'orientation-unverified-scoped-set', requeste…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[17/22]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > an incomplete panel table never confirms or dispatches (the parsed panel shows another rotation)
+AssertionError: expected { orientation: 'landscape-right' } to match object { code: 'COMMAND_FAILED', …(1) }
+(1 matching property omitted from actual)
+
+- Expected
++ Received
+
+  {
+-   "code": "COMMAND_FAILED",
+-   "details": {
+-     "reason": "orientation-unverified-scoped-set",
+-     "requestedOrientation": "landscape-right",
+-   },
++   "orientation": "landscape-right",
+  }
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:531:21
+    529|     expect(sim.litScreen()).toBe('rot270');
+    530|     const outcome = await rotateScoped(sim, target);
+    531|     expect(outcome).toMatchObject({
+       |                     ^
+    532|       code: 'COMMAND_FAILED',
+    533|       details: { reason: 'orientation-unverified-scoped-set', requeste…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[18/22]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > a panel of unknown power beside the lit one never confirms or dispatches (the lit panel already shows the target)
+AssertionError: expected { orientation: 'landscape-left' } to match object { code: 'COMMAND_FAILED', …(1) }
+(1 matching property omitted from actual)
+
+- Expected
++ Received
+
+  {
+-   "code": "COMMAND_FAILED",
+-   "details": {
+-     "reason": "orientation-unverified-scoped-set",
+-     "requestedOrientation": "landscape-left",
+-   },
++   "orientation": "landscape-left",
+  }
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:557:21
+    555|     expect(sim.litScreen()).toBe('rot270');
+    556|     const outcome = await rotateScoped(sim, target);
+    557|     expect(outcome).toMatchObject({
+       |                     ^
+    558|       code: 'COMMAND_FAILED',
+    559|       details: { reason: 'orientation-unverified-scoped-set', requeste…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[19/22]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > a panel of unknown power beside the lit one never confirms or dispatches (the lit panel shows another rotation)
+AssertionError: expected { orientation: 'landscape-right' } to match object { code: 'COMMAND_FAILED', …(1) }
+(1 matching property omitted from actual)
+
+- Expected
++ Received
+
+  {
+-   "code": "COMMAND_FAILED",
+-   "details": {
+-     "reason": "orientation-unverified-scoped-set",
+-     "requestedOrientation": "landscape-right",
+-   },
++   "orientation": "landscape-right",
+  }
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:557:21
+    555|     expect(sim.litScreen()).toBe('rot270');
+    556|     const outcome = await rotateScoped(sim, target);
+    557|     expect(outcome).toMatchObject({
+       |                     ^
+    558|       code: 'COMMAND_FAILED',
+    559|       details: { reason: 'orientation-unverified-scoped-set', requeste…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[20/22]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > a reading taken before the dispatch lands teaches nothing and is not followed by another dispatch
+AssertionError: expected Error: iPhone 17 Pro did not rotate to la… { …(2) } to deeply equal { orientation: 'landscape-left' }
+
+- Expected
++ Received
+
+- {
+-   "orientation": "landscape-left",
++ AppError {
++   "message": "iPhone 17 Pro did not rotate to landscape-left: CoreDevice reports landscape-right",
++   "code": "COMMAND_FAILED",
++   "details": {
++     "deviceId": "sim-1-22",
++     "hint": "The simulator HID command completed, but CoreDevice did not report the new orientation. Read it with xcrun devicectl device orientation get --device <udid>, then retry.",
++     "observedOrientation": "landscape-right",
++     "reason": "orientation-unverified",
++     "requestedOrientation": "landscape-left",
++   },
+  }
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:572:52
+    570|   const sim = fakeScopedDuo(scoped, { lit: 'inner', picker: 'portrait'…
+    571|   expect(sim.litScreen()).toBe('rot90');
+    572|   await expect(rotateScoped(sim, 'landscape-left')).resolves.toEqual({
+       |                                                    ^
+    573|     orientation: 'landscape-left',
+    574|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[21/22]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > a scoped rotation the lit panel never shows is refused as unverified
+AssertionError: expected Error: iPhone 17 Pro did not rotate to po… { …(2) } to match object { code: 'COMMAND_FAILED', …(2) }
+(3 matching properties omitted from actual)
+
+- Expected
++ Received
+
+- {
++ AppError {
+    "code": "COMMAND_FAILED",
+    "details": {
+      "observedOrientation": "landscape-right",
+-     "rawPanelOrientation": "rot90",
+-     "reason": "orientation-unverified-scoped-set",
++     "reason": "orientation-unverified",
+      "requestedOrientation": "portrait",
+    },
+-   "message": StringContaining "the lit panel shows landscape-right",
+  }
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:587:46
+    585|     followsHid: false,
+    586|   });
+    587|   await expect(rotateScoped(sim, 'portrait')).resolves.toMatchObject({
+       |                                              ^
+    588|     code: 'COMMAND_FAILED',
+    589|     message: expect.stringContaining('the lit panel shows landscape-ri…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[22/22]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  22 failed | 26 passed | 12 skipped (60)
+   Start at  10:34:18
+   Duration  4.07s (transform 68%, import 21%, tests 10%, setup 1%)
+

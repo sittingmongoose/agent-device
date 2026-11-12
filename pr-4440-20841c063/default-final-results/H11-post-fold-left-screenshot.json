@@ -1,0 +1,157 @@
+{
+  "args": [
+    "screenshot",
+    "/private/tmp/pr4440-r2/default-final/evidence/H11-post-fold-left.png"
+  ],
+  "exitCode": 0,
+  "startedAt": "2026-11-12T13:51:17.960Z",
+  "finishedAt": "2026-11-12T13:51:18.793Z",
+  "wallClockMs": 832.9758339999971,
+  "stdout": "{\n  \"success\": true,\n  \"data\": {\n    \"path\": \"/private/tmp/pr4440-r2/default-final/evidence/H11-post-fold-left.png\",\n    \"width\": 678,\n    \"height\": 466,\n    \"logicalWidth\": 678,\n    \"logicalHeight\": 466,\n    \"pixelDensity\": 1\n  }\n}\n",
+  "stderr": "[agent-device][diag] {\"ts\":\"2026-11-12T13:51:18.087Z\",\"level\":\"info\",\"phase\":\"daemon_startup\",\"session\":\"pr4440-proof\",\"requestId\":\"c167dd90074fe7f5\",\"command\":\"screenshot\",\"durationMs\":44,\"data\":{\"requestId\":\"c167dd90074fe7f5\",\"session\":\"pr4440-proof\"}}\n[agent-device][diag] {\"ts\":\"2026-11-12T13:51:18.090Z\",\"level\":\"info\",\"phase\":\"daemon_request_prepare\",\"session\":\"pr4440-proof\",\"requestId\":\"c167dd90074fe7f5\",\"command\":\"screenshot\",\"data\":{\"requestId\":\"c167dd90074fe7f5\",\"command\":\"screenshot\",\"session\":\"pr4440-proof\"}}\n[agent-device][diag] {\"ts\":\"2026-11-12T13:51:18.788Z\",\"level\":\"info\",\"phase\":\"daemon_request\",\"session\":\"pr4440-proof\",\"requestId\":\"c167dd90074fe7f5\",\"command\":\"screenshot\",\"durationMs\":698,\"data\":{\"requestId\":\"c167dd90074fe7f5\",\"command\":\"screenshot\"}}\n",
+  "payload": {
+    "success": true,
+    "data": {
+      "path": "/private/tmp/pr4440-r2/default-final/evidence/H11-post-fold-left.png",
+      "width": 678,
+      "height": 466,
+      "logicalWidth": 678,
+      "logicalHeight": 466,
+      "pixelDensity": 1
+    }
+  },
+  "ok": true,
+  "calls": [
+    {
+      "startedAt": "2026-11-12T13:51:18.129432+00:00",
+      "finishedAt": "2026-11-12T13:51:18.240572+00:00",
+      "durationMs": 111,
+      "args": [
+        "devicectl",
+        "device",
+        "info",
+        "displays",
+        "--device",
+        "6164BADC-D2E1-4455-A4DB-D9D2C73C1228",
+        "--json-output",
+        "/var/folders/11/2hptcv3s40dbdlfwdzmy3ym80000gn/T/agent-device-apple-displays-75027-1794491478099-neuw3t6wraf.json"
+      ],
+      "exitCode": 0,
+      "stdout": "<unrelated setup output omitted>",
+      "stderr": "",
+      "payload": {
+        "info": {
+          "arguments": [
+            "devicectl",
+            "device",
+            "info",
+            "displays",
+            "--device",
+            "6164BADC-D2E1-4455-A4DB-D9D2C73C1228",
+            "--json-output",
+            "/var/folders/11/2hptcv3s40dbdlfwdzmy3ym80000gn/T/agent-device-apple-displays-75027-1794491478099-neuw3t6wraf.json"
+          ],
+          "commandType": "devicectl.device.info.displays",
+          "environment": {},
+          "jsonVersion": 6,
+          "outcome": "success",
+          "version": "689.2"
+        },
+        "result": {
+          "backlightState": "activeOn",
+          "displays": [
+            {
+              "active": true,
+              "backlightState": "activeOn",
+              "bounds": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1398,
+                  2034
+                ]
+              ],
+              "chromeIdentifier": "com.apple.dt.devicekit.chrome.phone15",
+              "currentOrientation": "rot270",
+              "displayId": 1,
+              "framebufferMaskIdentifier": "1C896A2B-F0D7-405C-8D0F-66E4B80AD044",
+              "name": "LCD",
+              "nativeOrientation": "rot0",
+              "nativeSize": [
+                1398,
+                2034
+              ],
+              "physicalSize": [
+                3.039130449295044,
+                4.421739101409912
+              ],
+              "pointScale": 3,
+              "primary": true,
+              "type": {
+                "integrated": {}
+              },
+              "uniqueId": "0EFA32DF-E2FD-4285-8E20-E28B2626DFC3"
+            },
+            {
+              "active": false,
+              "backlightState": "off",
+              "bounds": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  2007,
+                  2853
+                ]
+              ],
+              "chromeIdentifier": "com.apple.dt.devicekit.chrome.phone14",
+              "currentOrientation": "rot90",
+              "displayId": 3,
+              "framebufferMaskIdentifier": "BF0DC480-5EE2-4EC1-B02B-C75E94759832",
+              "name": "LCD-1",
+              "nativeOrientation": "rot0",
+              "nativeSize": [
+                2007,
+                2853
+              ],
+              "physicalSize": [
+                4.363043308258057,
+                6.202173709869385
+              ],
+              "pointScale": 3,
+              "primary": false,
+              "type": {
+                "integrated": {}
+              },
+              "uniqueId": "DD8BB8B9-A11A-48B7-94A6-DA76B25F8A73"
+            }
+          ],
+          "orientation": {
+            "currentDeviceNonFlatOrientation": "landscapeLeft",
+            "currentDeviceOrientation": "landscapeLeft",
+            "currentDeviceOrientationLocked": false
+          }
+        }
+      }
+    },
+    {
+      "startedAt": "2026-11-12T13:51:18.269721+00:00",
+      "finishedAt": "2026-11-12T13:51:18.693629+00:00",
+      "durationMs": 424,
+      "args": [
+        "simctl",
+        "io",
+        "6164BADC-D2E1-4455-A4DB-D9D2C73C1228",
+        "screenshot",
+        "--display=LCD",
+        "/private/tmp/pr4440-r2/default-final/evidence/H11-post-fold-left.png"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "Detected file type from extension: PNG\nWrote screenshot to: /private/tmp/pr4440-r2/default-final/evidence/H11-post-fold-left.png\n"
+    }
+  ]
+}

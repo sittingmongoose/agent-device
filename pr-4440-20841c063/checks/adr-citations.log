@@ -1,0 +1,11 @@
+$ vitest run --project unit-core test/repo-guards/adr-citations.test.ts
+
+ RUN  v5.0.4 <CHECKOUT>
+
+··
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  15:36:59
+   Duration  2.01s (transform 74%, import 17%, tests 6%, setup 2%, worker 1%)
+

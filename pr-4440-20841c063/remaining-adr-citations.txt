@@ -1,0 +1,13 @@
+$ node --experimental-strip-types scripts/gate/run.ts adr-citations
+[gate] adr-citations: pnpm run check:adr-citations
+$ vitest run --project unit-core test/repo-guards/adr-citations.test.ts
+
+ RUN  v5.0.4 <CHECKOUT>
+
+··
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  15:09:19
+   Duration  1.78s (transform 64%, import 23%, tests 7%, setup 5%, worker 1%)
+
