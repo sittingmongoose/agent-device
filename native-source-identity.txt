@@ -1,0 +1,5 @@
+Native-tested head: 1b4c2e74420b12f3a1a050036e344256e7a9362e
+Final review head: b4f5510e99457323511476c952aef6192a3ce272
+Command: git diff --exit-code 1b4c2e74420b12f3a1a050036e344256e7a9362e b4f5510e99457323511476c952aef6192a3ce272 -- apple/runner/AgentDeviceRunner apple/snapshot-presentation apple/snapshot-bridge
+Exit: 0
+Output: empty

@@ -2,7 +2,8 @@
 
 PR: https://github.com/callstack/agent-device/pull/4454
 
-Head: `1b4c2e74420b12f3a1a050036e344256e7a9362e`.
+Native-tested head: `1b4c2e74420b12f3a1a050036e344256e7a9362e`.
+Final review head: `b4f5510e99457323511476c952aef6192a3ce272` (README-only follow-up; native sources are identical).
 Base: upstream main `2deb909ec88bbbde615ec7c8f3895ef222d8ab3d`.
 
 ## Results
@@ -14,7 +15,7 @@ Base: upstream main `2deb909ec88bbbde615ec7c8f3895ef222d8ab3d`.
 
 Both builds reported `response.ok=true` for both commands. The base fails the two busy-label assertions. The Return test also asserts `wasVisible=true` and `visible=false`; both builds report `visible=false` after the fixture submits.
 
-The target was one newly created, throwaway **iPhone 17 Pro**, **iOS 27.3 (24C5037i)**, arm64, UDID `CCAA9D4C-88CF-4F12-9090-A1D900C15B34`. Toolchain: **Xcode 27.3, build 27C5020n**, macOS 27.3, Node 25.6.1, pnpm 11.17.0. The simulator was shut down and deleted after these runs. No simulator pool device or installed runner patch was changed.
+The target was one newly created, throwaway **iPhone 17 Pro**, **iOS 27.3 (24C5037i)**, arm64, UDID `CCAA9D4C-88CF-4F12-9090-A1D900C15B34`. Toolchain: **Xcode 27.3, build 27C5020n**, macOS 27.3, Node 26.13.0, pnpm 11.17.0. The simulator was shut down and deleted after these runs. No simulator pool device or installed runner patch was changed.
 
 ## Inspectable outputs
 
@@ -61,6 +62,8 @@ pnpm check:affected --base upstream/main --head HEAD --run --json
 ## Review dispositions
 
 - [Software-keyboard visibility](https://github.com/callstack/agent-device/pull/4454#discussion_r4546269090): missing visibility now fails instead of skipping; simulator setup is documented. Fixed, replied, resolved.
+- [Preference restoration](https://github.com/callstack/agent-device/pull/4454#discussion_r4546509010): save and restore the old value; delete an originally absent key. Fixed, replied, resolved.
+- [README section placement](https://github.com/callstack/agent-device/pull/4454#discussion_r4546509024): the busy-keyboard subsection follows the entire file map. Fixed, replied, resolved.
 - [Return post-event quiescence](https://github.com/callstack/agent-device/pull/4454#discussion_r4546269098): `.preEventSkipped` preserves bounded post-event quiescence; the regression checks reported visibility. Fixed, replied, resolved.
 
 ## Remaining evidence

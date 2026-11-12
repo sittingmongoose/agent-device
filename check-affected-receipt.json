@@ -1,14 +1,14 @@
 {
   "version": 1,
   "cwd": "<checkout>",
-  "startedAt": "2026-11-12T04:52:50.013Z",
+  "startedAt": "2026-11-12T05:04:19.980Z",
   "status": "passed",
   "exitCode": 0,
   "refs": {
     "base": "upstream/main",
     "head": "HEAD",
     "resolvedBase": "2deb909ec88bbbde615ec7c8f3895ef222d8ab3d",
-    "resolvedHead": "1b4c2e74420b12f3a1a050036e344256e7a9362e",
+    "resolvedHead": "b4f5510e99457323511476c952aef6192a3ce272",
     "mergeBase": "2deb909ec88bbbde615ec7c8f3895ef222d8ab3d"
   },
   "checkoutChanged": false,
@@ -22,9 +22,9 @@
         "run",
         "check:native-dupes"
       ],
-      "logPath": "<checkout>/.tmp/validation/run-fsDlXz/0.log",
+      "logPath": "<checkout>/.tmp/validation/run-PgnKam/0.log",
       "exitCode": 0,
-      "durationMs": 1589,
+      "durationMs": 1472,
       "testReportPaths": [],
       "tests": []
     },
@@ -46,9 +46,9 @@
         "run",
         "check:xctest-selection"
       ],
-      "logPath": "<checkout>/.tmp/validation/run-fsDlXz/3.log",
+      "logPath": "<checkout>/.tmp/validation/run-PgnKam/3.log",
       "exitCode": 0,
-      "durationMs": 1799,
+      "durationMs": 1897,
       "testReportPaths": [],
       "tests": []
     },
@@ -60,9 +60,9 @@
         "run",
         "check:packaged-runner-swift"
       ],
-      "logPath": "<checkout>/.tmp/validation/run-fsDlXz/4.log",
+      "logPath": "<checkout>/.tmp/validation/run-PgnKam/4.log",
       "exitCode": 0,
-      "durationMs": 1658,
+      "durationMs": 1764,
       "testReportPaths": [],
       "tests": []
     },
@@ -83,9 +83,9 @@
     }
   ],
   "initial": {
-    "head": "1b4c2e74420b12f3a1a050036e344256e7a9362e",
+    "head": "b4f5510e99457323511476c952aef6192a3ce272",
     "status": "",
-    "fingerprint": "bf9806e766d0d4e87771a3a880d1b873f03b14e019a76e873165f36216070f12"
+    "fingerprint": "3a8484372ebbbdebaafd28a6c168ca2f1e84ff3575147eceb5a218957b7fdd87"
   },
   "changedFiles": [
     "apple/runner/AgentDeviceRunner/AgentDeviceRunner/AgentDeviceRunnerAppFixtures.m",
@@ -251,9 +251,9 @@
     ]
   },
   "final": {
-    "head": "1b4c2e74420b12f3a1a050036e344256e7a9362e",
+    "head": "b4f5510e99457323511476c952aef6192a3ce272",
     "status": "",
-    "fingerprint": "bf9806e766d0d4e87771a3a880d1b873f03b14e019a76e873165f36216070f12"
+    "fingerprint": "3a8484372ebbbdebaafd28a6c168ca2f1e84ff3575147eceb5a218957b7fdd87"
   },
-  "finishedAt": "2026-11-12T04:52:56.351Z"
+  "finishedAt": "2026-11-12T05:04:26.366Z"
 }
