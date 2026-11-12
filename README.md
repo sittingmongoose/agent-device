@@ -1,4 +1,4 @@
-# PR 4454 round 2: native regression evidence
+# PR 4454 round 2: native and packed-CLI evidence
 
 PR: https://github.com/callstack/agent-device/pull/4454
 
@@ -66,6 +66,34 @@ pnpm check:affected --base upstream/main --head HEAD --run --json
 - [README section placement](https://github.com/callstack/agent-device/pull/4454#discussion_r4546509024): the busy-keyboard subsection follows the entire file map. Fixed, replied, resolved.
 - [Return post-event quiescence](https://github.com/callstack/agent-device/pull/4454#discussion_r4546269098): `.preEventSkipped` preserves bounded post-event quiescence; the regression checks reported visibility. Fixed, replied, resolved.
 
-## Remaining evidence
+## Packed-head CLI daemon route
 
-The packed-head ordinary CLI enter/dismiss run is pending a shared-Mac scheduling slot. No CLI daemon run is claimed by this native-only evidence commit. Full replay, macOS native build, and physical-device validation are not claimed.
+The final head `b4f5510e99457323511476c952aef6192a3ce272` was built in a clean checkout with `pnpm build`, followed by `node scripts/package-apple-runner-source.mjs` and `npm pack --ignore-scripts`. The archive was unpacked and its ordinary `bin/agent-device.mjs` CLI ran with a new state directory and a new runner derived directory. No released installation was modified.
+
+Archive SHA-256: `ebd2aa91a3e810d65c111934d276c6d16247c6672500348508d7282862c088aa`.
+
+The fixture app was copied from the native-tested host app, given the separate bundle id `com.callstack.agentdevice.keyboardbusy`, and ad-hoc re-signed. Its native sources are unchanged at the final head. This keeps the test fixture separate from the production runner host. The fixture's busy backstop was 30 seconds.
+
+The single CLI target was a newly created **iPhone 17 Pro / iOS 27.3** simulator, UDID `478BA792-128B-4E19-B028-6474F8C2A9A2`. Preflight load was about 3 with more than 6 GiB available. The simulator was shut down and deleted afterward. The test session closed successfully; `daemon stop --clean` returned `stopped=true`, `clean=true`, and no warnings.
+
+| Ordinary CLI command | Exit | Success | Command time | Actual fixture label afterward |
+| --- | ---: | --- | ---: | --- |
+| `keyboard enter` | 0 | true | 2.678 s | `Return while busy` |
+| `keyboard dismiss` | 0 | true | 5.773 s | `Done while busy` |
+
+`cli-runner.log` shows `Tap "Return" Button` and `Tap "Done" Button` inside the corresponding native command spans, followed by `COMMAND_COMPLETED ... ok=1`. The initial enter visibility observation was false while the keyboard appeared; the subsequent Return control was found and tapped. Its final visibility was false. The exact response is preserved in `cli.log`.
+
+Inspectable files:
+
+- `cli.log`: every CLI command, duration, exit, full JSON response, and semantic snapshots.
+- `cli-summary.json`: the assertion-backed result summary.
+- `cli-runner.log`: native command acceptance, actual key taps, and completion. Its final `BUILD INTERRUPTED` is the expected cancellation of the long-running `testCommand` server during successful explicit daemon cleanup, after both commands completed.
+- `cli-runner-build-metadata.json`: production runner source fingerprint, Xcode/SDK identity, build settings, and artifact digests. Unit-test fixture compilation is disabled for this runner.
+- `cli-build.log`, `pack-head.txt`, `pack-checkout-status.txt`, `pack-sha256.txt`, `runner-source-sha256.txt`: build/package provenance.
+- `cli-setup.sh`, `cli-run.mjs`: the exact setup and ordinary-CLI driver; private directories use `<evidence>`.
+
+The driver's command sequence is boot, install the fixture, then for each action: `open ... --relaunch --launch-args --agent-device-keyboard-busy --launch-args 30`, `press 'id="agent-device-keyboard-busy-input"'`, `keyboard enter` or `keyboard dismiss`, and `snapshot -i`. All commands target the explicit UDID, session `pr4454-busy`, and separate state directory, with `--platform ios --json`. The script asserts CLI success and the actual busy label in each semantic snapshot. It then closes the session and stops its daemon.
+
+## CI scope
+
+The final-head local affected receipt passed with `exactCommit: true`. The native simulator tests and packed CLI run above are additional live evidence. The cubic reviewer check passed; upstream GitHub workflows remain `action_required` pending maintainer approval. Full replay, macOS native build, and physical-device validation were not run here.

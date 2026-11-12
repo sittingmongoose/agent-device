@@ -1,0 +1,147 @@
+Command line invocation:
+    /Applications/Xcode-27.3-beta.app/Contents/Developer/usr/bin/xcodebuild test-without-building -only-testing AgentDeviceRunnerUITests/RunnerTests/testCommand -parallel-testing-enabled NO -test-timeouts-enabled NO -collect-test-diagnostics never -maximum-concurrent-test-simulator-destinations 1 -destination-timeout 20 -xctestrun <evidence>/cli-derived/Build/Products/AgentDeviceRunner.env.session-478BA792-128B-4E19-B028-6474F8C2A9A2-owner-89855-a59d9e1e-49363.xctestrun -derivedDataPath <evidence>/cli-derived -destination "platform=iOS Simulator,id=478BA792-128B-4E19-B028-6474F8C2A9A2"
+
+2026-11-12 00:38:57.074145-0500 AgentDeviceRunnerUITests-Runner[92763:125969835] [Default] Running tests...
+objc[92763]: Class UIAccessibilityLoaderWebShared is implemented in both <runtime>/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x106428310) and <runtime>/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x102fe0398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+    t =      nans Interface orientation changed to Portrait
+Test Suite 'Selected tests' started at 2026-11-12 00:39:04.670.
+Test Suite 'AgentDeviceRunnerUITests.xctest' started at 2026-11-12 00:39:04.672.
+Test Suite 'RunnerTests' started at 2026-11-12 00:39:04.672.
+Test Case '-[AgentDeviceRunnerUITests.RunnerTests testCommand]' started.
+    t =     0.00s Start Test at 2026-11-12 00:39:04.675
+    t =     0.00s Set Up
+2026-11-12 00:39:04.677582-0500 AgentDeviceRunnerUITests-Runner[92763:125969835] AGENT_DEVICE_RUNNER_HEADLESS_STARTUP=1
+2026-11-12 00:39:04.679327-0500 AgentDeviceRunnerUITests-Runner[92763:125969835] AGENT_DEVICE_RUNNER_AUTH=required
+2026-11-12 00:39:04.679397-0500 AgentDeviceRunnerUITests-Runner[92763:125969835] AGENT_DEVICE_RUNNER_DESIRED_PORT=49363
+2026-11-12 00:39:04.682347-0500 AgentDeviceRunnerUITests-Runner[92763:125969835] AGENT_DEVICE_RUNNER_WAITING
+2026-11-12 00:39:04.713115-0500 AgentDeviceRunnerUITests-Runner[92763:125971666] [] nw_listener_socket_inbox_create_socket setsockopt SO_NECP_LISTENUUID failed [2: No such file or directory]
+2026-11-12 00:39:04.713587-0500 AgentDeviceRunnerUITests-Runner[92763:125971666] AGENT_DEVICE_RUNNER_LISTENER_READY
+2026-11-12 00:39:04.713632-0500 AgentDeviceRunnerUITests-Runner[92763:125971666] AGENT_DEVICE_RUNNER_PORT=49363
+2026-11-12 00:39:04.761842-0500 AgentDeviceRunnerUITests-Runner[92763:125971666] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=snapshot commandId=runner-3321097a-e6cb-450c-89fd-f9b215c03edd
+2026-11-12 00:39:04.794410-0500 AgentDeviceRunnerUITests-Runner[92763:125969835] AGENT_DEVICE_RUNNER_ACTIVATE bundle=com.callstack.agentdevice.keyboardbusy state=4 reason=bundle_changed
+2026-11-12 00:39:04.794582-0500 AgentDeviceRunnerUITests-Runner[92763:125969835] AGENT_DEVICE_RUNNER_ACTIVATE_SKIPPED bundle=com.callstack.agentdevice.keyboardbusy reason=already_foreground
+2026-11-12 00:39:04.796751-0500 AgentDeviceRunnerUITests-Runner[92763:125969835] AGENT_DEVICE_RUNNER_FAST_APP_GUARD bundle=com.callstack.agentdevice.keyboardbusy state=4
+    t =     0.13s Get all elements bound by index for: Elements containing elements matching type Alert with identifier '(null)'
+    t =     0.24s Get all elements bound by index for: Elements containing elements matching type Sheet with identifier '(null)'
+    t =     0.27s Find the Application 'com.callstack.agentdevice.keyboardbusy'
+    t =     0.34s Get all elements bound by index for: Descendants matching type Window
+    t =     0.34s Checking existence of `Window (Element at index 0)`
+    t =     0.35s Find the Window (Element at index 0)
+2026-11-12 00:39:05.028836-0500 AgentDeviceRunnerUITests-Runner[92763:125971657] AGENT_DEVICE_RUNNER_KEYBOARD_BAND_FACT kind=absent reason=- elapsedMs=0
+2026-11-12 00:39:05.043800-0500 AgentDeviceRunnerUITests-Runner[92763:125971657] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=snapshot commandId=runner-3321097a-e6cb-450c-89fd-f9b215c03edd ok=1
+2026-11-12 00:39:05.279623-0500 AgentDeviceRunnerUITests-Runner[92763:125971669] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-e5d1bec9-1752-4df1-8f5b-8638a37f9f23
+2026-11-12 00:39:05.279822-0500 AgentDeviceRunnerUITests-Runner[92763:125971669] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-606c0d57-37ec-4860-94c1-ea38381a8945
+2026-11-12 00:39:05.282649-0500 AgentDeviceRunnerUITests-Runner[92763:125971657] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-e5d1bec9-1752-4df1-8f5b-8638a37f9f23 ok=1
+2026-11-12 00:39:05.283690-0500 AgentDeviceRunnerUITests-Runner[92763:125971657] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-606c0d57-37ec-4860-94c1-ea38381a8945 ok=1
+2026-11-12 00:39:05.503692-0500 AgentDeviceRunnerUITests-Runner[92763:125971657] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=tap commandId=runner-d8105a42-b3ae-4e1e-bde1-444255f6a55f
+    t =     0.83s Get all elements bound by index for: Elements containing elements matching type Alert with identifier '(null)'
+    t =     0.85s Get all elements bound by index for: Elements containing elements matching type Sheet with identifier '(null)'
+    t =     0.87s Get all elements bound by index for: Descendants matching type Window
+    t =     0.87s Checking existence of `Window (Element at index 0)`
+    t =     0.88s Find the Window (Element at index 0)
+    t =     0.89s Checking existence of `Any (First Match)`
+    t =     0.89s Get all elements bound by index for: Descendants matching type TextField
+    t =     0.89s Find the TextField (Element at index 0)
+    t =     0.90s Get all elements bound by index for: Descendants matching type SecureTextField
+    t =     0.90s Get all elements bound by index for: Descendants matching type SearchField
+    t =     0.91s Get all elements bound by index for: Descendants matching type TextView
+    t =     0.91s Get all elements bound by index for: Descendants matching type Window
+    t =     0.91s Checking existence of `Window (Element at index 0)`
+    t =     0.92s Find the Window (Element at index 0)
+2026-11-12 00:39:05.599194-0500 AgentDeviceRunnerUITests-Runner[92763:125969835] AGENT_DEVICE_RUNNER_SYNTHESIZED_DISPATCH kind=tap point=(201.0,496.0) reference=(0.0,0.0,402.0,874.0) orientation=1
+    t =     0.93s Find the Window at {{0.0, 0.0}, {402.0, 874.0}}
+2026-11-12 00:39:05.612260-0500 AgentDeviceRunnerUITests-Runner[92763:125969835] AGENT_DEVICE_RUNNER_SYNTHESIZED_RECORD name=agent-device-tap displayID=1 interfaceOrientation=1
+2026-11-12 00:39:06.034376-0500 AgentDeviceRunnerUITests-Runner[92763:125969835] AGENT_DEVICE_RUNNER_SYNTHESIZED_GESTURE_POLICY kind=coordinateTap axHealth=healthy fallbackAllowed=true fallbackAttempted=false
+2026-11-12 00:39:06.034678-0500 AgentDeviceRunnerUITests-Runner[92763:125971657] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=tap commandId=runner-d8105a42-b3ae-4e1e-bde1-444255f6a55f ok=1
+2026-11-12 00:39:06.699268-0500 AgentDeviceRunnerUITests-Runner[92763:125971666] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=keyboardReturn commandId=runner-8d24f07a-585e-4114-aab9-f3d9201ade51
+    t =     2.25s Checking existence of `Keyboard (First Match)`
+    t =     2.38s Checking existence of `"return" Button`
+    t =     2.91s Checking existence of `"return" Key`
+    t =     3.07s Checking existence of `"Return" Button`
+    t =     3.11s Find the "Return" Button
+    t =     3.15s Tap "Return" Button
+    t =     3.15s     Find the "Return" Button
+    t =     3.17s     Check for interrupting elements affecting "Return" Button
+    t =     3.20s     Synthesize event
+    t =     3.51s     Wait for com.callstack.agentdevice.keyboardbusy to idle
+    t =     4.04s Checking existence of `Keyboard (First Match)`
+2026-11-12 00:39:08.721858-0500 AgentDeviceRunnerUITests-Runner[92763:125971666] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=keyboardReturn commandId=runner-8d24f07a-585e-4114-aab9-f3d9201ade51 ok=1
+2026-11-12 00:39:08.950544-0500 AgentDeviceRunnerUITests-Runner[92763:125971666] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-b15a9757-ef7d-4f5e-a18f-43a64982a93a
+2026-11-12 00:39:08.955180-0500 AgentDeviceRunnerUITests-Runner[92763:125971657] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-a74e012e-bea9-4181-a174-d27707a2c523
+2026-11-12 00:39:08.954960-0500 AgentDeviceRunnerUITests-Runner[92763:125971666] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-b15a9757-ef7d-4f5e-a18f-43a64982a93a ok=1
+2026-11-12 00:39:08.961529-0500 AgentDeviceRunnerUITests-Runner[92763:125971666] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-a74e012e-bea9-4181-a174-d27707a2c523 ok=1
+2026-11-12 00:39:10.065135-0500 AgentDeviceRunnerUITests-Runner[92763:125971673] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=targetReset commandId=runner-50441b90-0222-4b80-88ec-d3859840192d
+2026-11-12 00:39:10.081998-0500 AgentDeviceRunnerUITests-Runner[92763:125969835] AGENT_DEVICE_RUNNER_TARGET_CACHE_INVALIDATE reason=external_app_relaunch
+2026-11-12 00:39:10.082908-0500 AgentDeviceRunnerUITests-Runner[92763:125971673] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=targetReset commandId=runner-50441b90-0222-4b80-88ec-d3859840192d ok=1
+2026-11-12 00:39:12.383879-0500 AgentDeviceRunnerUITests-Runner[92763:125971673] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-50509c87-3d13-4e2b-8e23-27b696e527b5
+2026-11-12 00:39:12.385027-0500 AgentDeviceRunnerUITests-Runner[92763:125971657] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-843ecf6f-358a-4050-ad0b-fe56737f4ce5
+2026-11-12 00:39:12.386207-0500 AgentDeviceRunnerUITests-Runner[92763:125971673] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-50509c87-3d13-4e2b-8e23-27b696e527b5 ok=1
+2026-11-12 00:39:12.388433-0500 AgentDeviceRunnerUITests-Runner[92763:125971673] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-843ecf6f-358a-4050-ad0b-fe56737f4ce5 ok=1
+2026-11-12 00:39:12.466327-0500 AgentDeviceRunnerUITests-Runner[92763:125971673] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=tap commandId=runner-5f8205fb-1a09-4547-8548-198b0321bff1
+    t =     7.79s Get all elements bound by index for: Elements containing elements matching type Alert with identifier '(null)'
+    t =     7.82s Get all elements bound by index for: Elements containing elements matching type Sheet with identifier '(null)'
+2026-11-12 00:39:12.525184-0500 AgentDeviceRunnerUITests-Runner[92763:125969835] AGENT_DEVICE_RUNNER_ACTIVATE bundle=com.callstack.agentdevice.keyboardbusy state=4 reason=bundle_changed
+2026-11-12 00:39:12.528607-0500 AgentDeviceRunnerUITests-Runner[92763:125969835] AGENT_DEVICE_RUNNER_ACTIVATE_SKIPPED bundle=com.callstack.agentdevice.keyboardbusy reason=already_foreground
+2026-11-12 00:39:12.530303-0500 AgentDeviceRunnerUITests-Runner[92763:125969835] AGENT_DEVICE_RUNNER_FAST_APP_GUARD bundle=com.callstack.agentdevice.keyboardbusy state=4
+    t =     7.86s Get all elements bound by index for: Descendants matching type Window
+2026-11-12 00:39:12.986657-0500 AgentDeviceRunnerUITests-Runner[92763:125971666] [connection] nw_connection_set_state_changed_handler_block_invoke [C5] Cannot set state changed handler after cancel
+    t =     8.45s Checking existence of `Window (Element at index 0)`
+    t =     8.45s Find the Window (Element at index 0)
+    t =     8.53s Checking existence of `Any (First Match)`
+    t =     8.53s Get all elements bound by index for: Descendants matching type TextField
+    t =     8.56s Find the TextField (Element at index 0)
+    t =     8.60s Get all elements bound by index for: Descendants matching type SecureTextField
+    t =     8.62s Get all elements bound by index for: Descendants matching type SearchField
+    t =     8.64s Get all elements bound by index for: Descendants matching type TextView
+    t =     8.67s Get all elements bound by index for: Descendants matching type Window
+    t =     8.69s Checking existence of `Window (Element at index 0)`
+    t =     8.73s Find the Window (Element at index 0)
+2026-11-12 00:39:14.020710-0500 AgentDeviceRunnerUITests-Runner[92763:125969835] AGENT_DEVICE_RUNNER_SYNTHESIZED_DISPATCH kind=tap point=(201.0,496.0) reference=(0.0,0.0,402.0,874.0) orientation=1
+    t =     9.41s Find the Window at {{0.0, 0.0}, {402.0, 874.0}}
+2026-11-12 00:39:14.134230-0500 AgentDeviceRunnerUITests-Runner[92763:125969835] AGENT_DEVICE_RUNNER_SYNTHESIZED_RECORD name=agent-device-tap displayID=1 interfaceOrientation=1
+2026-11-12 00:39:14.610856-0500 AgentDeviceRunnerUITests-Runner[92763:125969835] AGENT_DEVICE_RUNNER_SYNTHESIZED_GESTURE_POLICY kind=coordinateTap axHealth=healthy fallbackAllowed=true fallbackAttempted=false
+2026-11-12 00:39:14.671261-0500 AgentDeviceRunnerUITests-Runner[92763:125971673] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=tap commandId=runner-5f8205fb-1a09-4547-8548-198b0321bff1 ok=1
+2026-11-12 00:39:15.867747-0500 AgentDeviceRunnerUITests-Runner[92763:125975888] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=keyboardDismiss commandId=runner-31b4bbb8-f653-4292-be75-5a47f5d9572b
+    t =    11.20s Checking existence of `Keyboard (First Match)`
+    t =    11.22s Find the Keyboard (First Match)
+    t =    11.26s Checking existence of `Keyboard (First Match)`
+    t =    11.27s Find the Keyboard (First Match)
+    t =    11.28s Checking existence of `"Hide keyboard" Button`
+    t =    11.33s Checking existence of `"Hide keyboard" Key`
+    t =    11.41s Checking existence of `"Hide keyboard" Button`
+    t =    11.45s Get all elements bound by index for: Elements matching predicate 'label == "Hide keyboard" OR identifier == "Hide keyboard"'
+    t =    11.48s Checking existence of `"Dismiss keyboard" Button`
+    t =    11.51s Checking existence of `"Dismiss keyboard" Key`
+    t =    11.54s Checking existence of `"Dismiss keyboard" Button`
+    t =    11.57s Get all elements bound by index for: Elements matching predicate 'label == "Dismiss keyboard" OR identifier == "Dismiss keyboard"'
+    t =    11.60s Checking existence of `"Done" Button`
+    t =    11.64s Checking existence of `"Done" Key`
+    t =    11.70s Checking existence of `"Done" Button`
+2026-11-12 00:39:16.400238-0500 AgentDeviceRunnerUITests-Runner[92763:125971657] [connection] nw_connection_set_state_changed_handler_block_invoke [C4] Cannot set state changed handler after cancel
+    t =    11.76s Get all elements bound by index for: Elements matching predicate 'label == "Done" OR identifier == "Done"'
+    t =    11.79s Checking existence of `Button (Element at index 0)`
+    t =    11.82s Find the Button (Element at index 0)
+    t =    11.87s Find the "Done" Button
+    t =    12.06s Tap "Done" Button
+    t =    12.06s     Find the "Done" Button
+    t =    12.17s     Check for interrupting elements affecting "Done" Button
+    t =    12.31s     Synthesize event
+    t =    12.72s Waiting 2.0s for Keyboard (First Match) to not exist
+    t =    13.74s     Checking `Expect predicate `existsNoRetry == 0` for object Keyboard (First Match)`
+    t =    13.76s         Checking existence of `Keyboard (First Match)`
+    t =    13.82s Checking existence of `Window (First Match)`
+    t =    13.85s Find the Window (First Match)
+    t =    14.89s Checking existence of `Window (First Match)`
+    t =    14.91s Find the Window (First Match)
+2026-11-12 00:39:19.871677-0500 AgentDeviceRunnerUITests-Runner[92763:125971657] [connection] nw_connection_set_state_changed_handler_block_invoke [C1] Cannot set state changed handler after cancel
+    t =    15.50s Checking existence of `Window (First Match)`
+    t =    15.51s Find the Window (First Match)
+2026-11-12 00:39:20.617311-0500 AgentDeviceRunnerUITests-Runner[92763:125969835] AGENT_DEVICE_RUNNER_KEYBOARD_STABILITY samples=3 captured=3 settled=yes
+    t =    15.95s Checking existence of `Keyboard (First Match)`
+2026-11-12 00:39:20.651218-0500 AgentDeviceRunnerUITests-Runner[92763:125975888] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=keyboardDismiss commandId=runner-31b4bbb8-f653-4292-be75-5a47f5d9572b ok=1
+2026-11-12 00:39:21.292179-0500 AgentDeviceRunnerUITests-Runner[92763:125971657] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-b5eb8391-b568-4f33-a191-3e1cad4adfe2
+2026-11-12 00:39:21.303059-0500 AgentDeviceRunnerUITests-Runner[92763:125971673] AGENT_DEVICE_RUNNER_COMMAND_ACCEPTED command=appState commandId=runner-4d631863-ab45-4693-9d62-ba845fb4c477
+2026-11-12 00:39:21.317466-0500 AgentDeviceRunnerUITests-Runner[92763:125971657] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-b5eb8391-b568-4f33-a191-3e1cad4adfe2 ok=1
+2026-11-12 00:39:21.362663-0500 AgentDeviceRunnerUITests-Runner[92763:125971657] AGENT_DEVICE_RUNNER_COMMAND_COMPLETED command=appState commandId=runner-4d631863-ab45-4693-9d62-ba845fb4c477 ok=1
+2026-11-12 00:39:22.720434-0500 AgentDeviceRunnerUITests-Runner[92763:125971673] [connection] nw_connection_set_state_changed_handler_block_invoke [C3] Cannot set state changed handler after cancel
+** BUILD INTERRUPTED **

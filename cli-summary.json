@@ -1,0 +1,16 @@
+[
+  {
+    "action": "enter",
+    "success": true,
+    "expected": "Return while busy",
+    "observed": true,
+    "keyboardElapsedMs": 2678
+  },
+  {
+    "action": "dismiss",
+    "success": true,
+    "expected": "Done while busy",
+    "observed": true,
+    "keyboardElapsedMs": 5773
+  }
+]
