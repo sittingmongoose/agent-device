@@ -1,0 +1,47 @@
+{
+  "args": [
+    "simctl",
+    "spawn",
+    "6164BADC-D2E1-4455-A4DB-D9D2C73C1228",
+    "/private/tmp/pr4440-r2/observer-helper",
+    "panels"
+  ],
+  "exitCode": 0,
+  "stdout": "{\"version\":1,\"displays\":[{\"primary\":true,\"currentOrientation\":\"rot0\",\"pointScale\":3,\"backlightState\":\"activeOn\",\"nativeSize\":[1398,2034],\"type\":{\"integrated\":{}},\"name\":\"LCD\",\"displayId\":1},{\"primary\":false,\"currentOrientation\":\"rot90\",\"pointScale\":3,\"backlightState\":\"off\",\"nativeSize\":[2007,2853],\"type\":{\"integrated\":{}},\"name\":\"LCD-1\",\"displayId\":3}]}\n",
+  "stderr": "",
+  "payload": {
+    "version": 1,
+    "displays": [
+      {
+        "primary": true,
+        "currentOrientation": "rot0",
+        "pointScale": 3,
+        "backlightState": "activeOn",
+        "nativeSize": [
+          1398,
+          2034
+        ],
+        "type": {
+          "integrated": {}
+        },
+        "name": "LCD",
+        "displayId": 1
+      },
+      {
+        "primary": false,
+        "currentOrientation": "rot90",
+        "pointScale": 3,
+        "backlightState": "off",
+        "nativeSize": [
+          2007,
+          2853
+        ],
+        "type": {
+          "integrated": {}
+        },
+        "name": "LCD-1",
+        "displayId": 3
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+--- long-job pr4440-r2-scope-baseline attempt 1 started 2026-11-12T13:34:04Z on ubuntuserver: python3 <EVIDENCE>/round2-evidence/drivers/scope-cli.py <VM_HOME>/.t3/userdata/device/targets/t3-b17d22cf25a49b7b3b16158b/agent-device /tmp/pr4440-r2-baseline-config.json F910312A-7580-4B66-A806-A4888BFB28DE baseline <EVIDENCE>/round2-evidence/scope-baseline-results ---
+S00-open 0 2.036
+S01-close-pose 0 2.474
+S02-outer-landscape-left 0 2.609
+S04-outer-landscape-right 0 2.143
+S05-outer-portrait 0 2.225
+S06-open-pose 0 1.789
+S07-inner-portrait 0 3.693
+S08-inner-landscape-left 0 2.119
+S09-inner-landscape-right 0 2.205
+S99-close 0 0.615
+--- long-job pr4440-r2-scope-baseline attempt 1 ended 2026-11-12T13:34:26Z: exit 0 ---

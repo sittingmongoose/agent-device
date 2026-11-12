@@ -1,0 +1,14 @@
+{
+  "args": [
+    "/private/tmp/pr4440-r2/final/package/bin/agent-device.mjs",
+    "daemon",
+    "stop",
+    "--state-dir",
+    "/private/tmp/pr4440-r2/default-final/state",
+    "--clean",
+    "--json"
+  ],
+  "exitCode": 0,
+  "stdout": "<unrelated setup output omitted>",
+  "stderr": ""
+}

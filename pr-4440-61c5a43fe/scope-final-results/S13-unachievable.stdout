@@ -1,0 +1,23 @@
+{
+  "success": false,
+  "error": {
+    "code": "COMMAND_FAILED",
+    "message": "simlock-dfe28842-ce9b-49ec-b5f1-c927e73c4704 did not confirm rotation to landscape-right: the lit panel shows portrait",
+    "hint": "The lit panel did not show the requested orientation, or the simulator never reported a single lit panel; the app in front may not support that orientation. Take a screenshot to see the screen, then retry.",
+    "diagnosticId": "mwdm6pn4-6b99d669",
+    "logPath": "/tmp/pr4440-r2-client-scope-final/remote-diagnostics/t3-5ffde7/requests/355952a879a4100c.ndjson",
+    "diagnosticsRecord": {
+      "session": "t3-5ffde7",
+      "requestId": "355952a879a4100c"
+    },
+    "details": {
+      "deviceId": "98EC746E-2A44-4866-AB70-B0ABE81BDE58",
+      "requestedOrientation": "landscape-right",
+      "observedOrientation": "portrait",
+      "rawPanelOrientation": "rot0",
+      "reason": "orientation-unverified",
+      "dispatched": "unknown",
+      "requestId": "355952a879a4100c"
+    }
+  }
+}

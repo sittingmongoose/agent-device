@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "action": "orientation",
+    "orientation": "landscape-left",
+    "message": "Rotated to landscape-left"
+  }
+}

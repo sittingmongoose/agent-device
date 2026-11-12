@@ -1,0 +1,7 @@
+{
+  "success": true,
+  "data": {
+    "sessions": []
+  }
+}
+{"version": "0.21.37-dev", "codeOrigin": "installed", "codeSignature": "graph:124:ecebe8231ba996c053e1b0c389ffd39f7c7a0d36", "capabilities": ["quiesce"], "plugins": [{"provider": "browserstack", "source": "builtin", "state": "active", "credentials": {"variables": ["BROWSERSTACK_USERNAME", "BROWSERSTACK_ACCESS_KEY"], "byBackend": {}}}, {"provider": "aws-device-farm", "source": "builtin", "state": "active", "credentials": {"variables": [], "byBackend": {}}}], "ownership": "detached", "port": 65021, "httpPort": 65022, "transport": "dual", "pid": 55073, "processStartTime": "Thu Nov 12 08:32:14 2026", "stateDir": "/private/tmp/pr4440-r2/scope-baseline/state"}

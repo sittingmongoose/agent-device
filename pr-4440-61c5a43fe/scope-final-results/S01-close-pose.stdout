@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "data": {
+    "action": "fold",
+    "pose": "closed",
+    "hingeAngleDegrees": 0,
+    "screen": {
+      "display": "LCD",
+      "coordinateSpace": "native-panel",
+      "widthPt": 466,
+      "heightPt": 678
+    },
+    "message": "Folded to closed (hinge 0°, LCD native panel 466x678pt, not snapshot coordinates); refs from before the pose change are stale"
+  }
+}

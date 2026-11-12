@@ -1,0 +1,49 @@
+diff --git a/packages/platform-apple/src/foldable/orientation.test.ts b/packages/platform-apple/src/foldable/orientation.test.ts
+index 815e1c5fd..776638db4 100644
+--- a/packages/platform-apple/src/foldable/orientation.test.ts
++++ b/packages/platform-apple/src/foldable/orientation.test.ts
+@@ -241,6 +241,18 @@ function fakeScopedDuo(
+       const [tool, ...rest] = args;
+       if (tool !== 'simctl') {
+         devicectl.push(args.join(' '));
++        if (!device.simulatorSetPath && tool === 'devicectl') {
++          const displays = [panel('outer', false), panel('inner', false)];
++          const rotation = rotationAtAngle(shown[lit]);
++          const deviceOrientation = rotation.replace(/-([a-z])/g, (_, letter: string) =>
++            letter.toUpperCase(),
++          );
++          fs.writeFileSync(
++            args.at(-1)!,
++            JSON.stringify({ result: { displays, deviceOrientation } }),
++          );
++          return { stdout: '', stderr: '', exitCode: 0 };
++        }
+         throw new Error(`unexpected tool call in a scoped set: ${args.join(' ')}`);
+       }
+       const spawn = rest.slice(rest.indexOf('spawn'));
+@@ -312,6 +324,25 @@ async function rotateScoped(
+   }
+ }
+ 
++test.each([
++  ['outer', 'portrait', []],
++  ['outer', 'landscape-left', ['landscape-left']],
++  ['outer', 'landscape-right', ['landscape-right']],
++  ['inner', 'portrait', ['landscape-left']],
++  ['inner', 'landscape-left', ['portrait-upside-down']],
++  ['inner', 'landscape-right', []],
++] as const)(
++  'the default set confirms %s %s from the lit panel without CoreDevice',
++  async (lit, target, dispatched) => {
++    const sim = fakeScopedDuo(simulator(), { lit, picker: 'portrait' });
++    await expect(rotateScoped(sim, target)).resolves.toEqual({ orientation: target });
++    expect(sim.litScreen()).toBe(`rot${PANEL_ANGLE[target]}`);
++    expect(sim.rotations()).toEqual(dispatched);
++    expect(sim.devicectl).toEqual([]);
++    expect(mockRunner).not.toHaveBeenCalled();
++  },
++);
++
+ test('a foldable simulator in a scoped set rotates on the first command, confirmed by the panel table', async () => {
+   const scoped = simulator({ simulatorSetPath: '/tmp/scoped-set' });
+   // The inner panel lights at rot90 while the picker sits at portrait (K = +90, measured).

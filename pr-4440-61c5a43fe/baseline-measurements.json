@@ -1,0 +1,122 @@
+[
+  {
+    "panel": "outer",
+    "picker": "portrait",
+    "guestReadings": [
+      "rot0",
+      "rot0",
+      "rot0"
+    ],
+    "coreDeviceReadings": [
+      "landscapeLeft",
+      "portrait"
+    ],
+    "measuredOffset": 0,
+    "exception": null
+  },
+  {
+    "panel": "outer",
+    "picker": "landscape-left",
+    "guestReadings": [
+      "rot270",
+      "rot270",
+      "rot270"
+    ],
+    "coreDeviceReadings": [
+      "landscapeLeft",
+      "landscapeLeft"
+    ],
+    "measuredOffset": 0,
+    "exception": null
+  },
+  {
+    "panel": "outer",
+    "picker": "landscape-right",
+    "guestReadings": [
+      "rot90",
+      "rot90",
+      "rot90"
+    ],
+    "coreDeviceReadings": [
+      "portrait",
+      "landscapeRight"
+    ],
+    "measuredOffset": 0,
+    "exception": null
+  },
+  {
+    "panel": "outer",
+    "picker": "portrait-upside-down",
+    "guestReadings": [
+      "rot90",
+      "rot90",
+      "rot90"
+    ],
+    "coreDeviceReadings": [
+      "landscapeRight",
+      "portraitUpsideDown"
+    ],
+    "measuredOffset": null,
+    "exception": "Safari outer panel retains previous frame for unsupported upside-down"
+  },
+  {
+    "panel": "inner",
+    "picker": "portrait",
+    "guestReadings": [
+      "rot90",
+      "rot90",
+      "rot90"
+    ],
+    "coreDeviceReadings": [
+      "landscapeLeft",
+      "portrait"
+    ],
+    "measuredOffset": 90,
+    "exception": null
+  },
+  {
+    "panel": "inner",
+    "picker": "landscape-left",
+    "guestReadings": [
+      "rot0",
+      "rot0",
+      "rot0"
+    ],
+    "coreDeviceReadings": [
+      "landscapeRight",
+      "landscapeLeft"
+    ],
+    "measuredOffset": 90,
+    "exception": null
+  },
+  {
+    "panel": "inner",
+    "picker": "landscape-right",
+    "guestReadings": [
+      "rot180",
+      "rot180",
+      "rot180"
+    ],
+    "coreDeviceReadings": [
+      "portrait",
+      "landscapeRight"
+    ],
+    "measuredOffset": 90,
+    "exception": null
+  },
+  {
+    "panel": "inner",
+    "picker": "portrait-upside-down",
+    "guestReadings": [
+      "rot270",
+      "rot270",
+      "rot270"
+    ],
+    "coreDeviceReadings": [
+      "landscapeRight",
+      "portraitUpsideDown"
+    ],
+    "measuredOffset": 90,
+    "exception": null
+  }
+]

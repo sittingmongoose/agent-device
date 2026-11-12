@@ -1,0 +1,19 @@
+{
+  "exitCode": 1,
+  "startedAt": "2026-11-12T13:38:26.407Z",
+  "finishedAt": "2026-11-12T13:38:26.550Z",
+  "wallClockMs": 142.6212910000031,
+  "stdout": "{\n  \"success\": false,\n  \"error\": {\n    \"code\": \"INVALID_ARGS\",\n    \"message\": \"Flags --session, --platform, --udid, --ios-xctest-derived-data-path are not supported for command daemon.\",\n    \"hint\": \"Fix the command arguments; run help <command> for usage.\",\n    \"diagnosticId\": \"mwdlfmuh-5a19b286\",\n    \"logPath\": \"<MAC_HOME>/.agent-device/logs/pr4440-baseline/2026-11-12/2026-11-12T13-38-26-543Z-mwdlfmuh-5a19b286.ndjson\"\n  }\n}\n",
+  "stderr": "[agent-device][diag] {\"ts\":\"2026-11-12T13:38:26.538Z\",\"level\":\"error\",\"phase\":\"cli_parse_failed\",\"session\":\"pr4440-baseline\",\"requestId\":\"64995dc888d4de15\",\"command\":\"daemon\",\"data\":{\"error\":\"Flags --session, --platform, --udid, --ios-xctest-derived-data-path are not supported for command daemon.\"}}\n",
+  "payload": {
+    "success": false,
+    "error": {
+      "code": "INVALID_ARGS",
+      "message": "Flags --session, --platform, --udid, --ios-xctest-derived-data-path are not supported for command daemon.",
+      "hint": "Fix the command arguments; run help <command> for usage.",
+      "diagnosticId": "mwdlfmuh-5a19b286",
+      "logPath": "<MAC_HOME>/.agent-device/logs/pr4440-baseline/2026-11-12/2026-11-12T13-38-26-543Z-mwdlfmuh-5a19b286.ndjson"
+    }
+  },
+  "ok": false
+}

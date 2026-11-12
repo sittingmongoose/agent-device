@@ -1,0 +1,3 @@
+[agent-device][diag] {"ts":"2026-11-12T13:58:39.259Z","level":"info","phase":"daemon_startup","session":"t3-5ffde7","requestId":"a339395402d928d0","command":"--config","durationMs":58,"data":{"requestId":"a339395402d928d0","session":"t3-5ffde7"}}
+[agent-device][diag] {"ts":"2026-11-12T13:58:39.262Z","level":"info","phase":"daemon_request_prepare","session":"t3-5ffde7","requestId":"a339395402d928d0","command":"--config","data":{"requestId":"a339395402d928d0","command":"open","session":"t3-5ffde7"}}
+[agent-device][diag] {"ts":"2026-11-12T13:58:43.846Z","level":"info","phase":"daemon_request","session":"t3-5ffde7","requestId":"a339395402d928d0","command":"--config","durationMs":4583,"data":{"requestId":"a339395402d928d0","command":"open"}}

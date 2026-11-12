@@ -1,0 +1,25 @@
+--- long-job pr4440-r2-scope-final attempt 1 started 2026-11-12T13:58:38Z on ubuntuserver: python3 <EVIDENCE>/round2-evidence/drivers/scope-cli.py <VM_HOME>/.t3/userdata/device/targets/t3-f52053931ef614de9076e65a/agent-device /tmp/pr4440-r2-final-config.json 98EC746E-2A44-4866-AB70-B0ABE81BDE58 final <EVIDENCE>/round2-evidence/scope-final-results ---
+S00-open 0 4.964
+S01-close-pose 0 3.444
+S02-outer-landscape-left 0 2.415
+S02-shot 0 2.67
+S03-repeat 0 1.041
+S04-outer-landscape-right 0 2.313
+S04-shot 0 1.696
+S05-outer-portrait 0 4.337
+S05-shot 0 1.737
+S06-open-pose 0 2.358
+S07-inner-portrait 0 2.465
+S07-shot 0 1.772
+S08-inner-landscape-left 0 2.177
+S08-shot 0 1.736
+S09-inner-landscape-right 0 2.119
+S09-shot 0 1.786
+S10-close-pose 0 2.106
+S11-post-fold 0 4.837
+S11-shot 0 1.592
+S12-settings 0 2.972
+S13-unachievable 1 6.792
+S13-shot 0 1.507
+S99-close 0 0.552
+--- long-job pr4440-r2-scope-final attempt 1 ended 2026-11-12T13:59:38Z: exit 0 ---

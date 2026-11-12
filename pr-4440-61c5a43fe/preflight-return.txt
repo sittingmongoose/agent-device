@@ -1,0 +1,10 @@
+ok: one simlock daemon (56204 )
+ok: 2 agent-device daemon(s)
+info: simlock 0.7.0, agent-device 0.21.36, running=0 reserved=0
+ok: no booted simulator in the default set
+ok: 0 booted pool simulator(s), simlock accounts for 0
+ok: no runner/xcodebuild leftovers
+info: warm-pool ready devices: 0
+ok: memory 6.9 GiB available
+ok: load 6.48
+PREFLIGHT OK

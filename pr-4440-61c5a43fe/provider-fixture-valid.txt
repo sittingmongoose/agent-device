@@ -1,0 +1,18 @@
+--- long-job pr4440-r2-provider-fixture-valid attempt 1 started 2026-11-12T14:14:50Z on ubuntuserver: env PATH=/tmp/pr4440-r2-tools/bin:<VM_HOME>/.local/share/node-v26.13.0-linux-x64/bin:<VM_HOME>/.npm/_npx/acaf29b40d536b0e/node_modules/.bin:<VM_HOME>/.local/bin:/usr/bin:/bin AGENT_DEVICE_VITEST_MAX_WORKERS=2 pnpm exec vitest run --project provider-integration test/integration/provider-scenarios/ios-fold.test.ts --reporter=verbose ---
+
+ RUN  v5.0.4 <CHECKOUT>
+
+ ✓ |provider-integration| test/integration/provider-scenarios/ios-fold.test.ts > timed fold keyframes reach simulator HID through the public client and daemon 3883ms
+ ✓ |provider-integration| test/integration/provider-scenarios/ios-fold.test.ts > fold worst-case ledger covers the client envelope with the daemon-result margin 988ms
+ ✓ |provider-integration| test/integration/provider-scenarios/ios-fold.test.ts > batch worst-case fold returns a daemon result (timeout=undefined) 1347ms
+ ✓ |provider-integration| test/integration/provider-scenarios/ios-fold.test.ts > replay worst-case fold returns a daemon result (timeout=undefined) 1308ms
+ ✓ |provider-integration| test/integration/provider-scenarios/ios-fold.test.ts > replay worst-case fold returns a daemon result (timeout=1000) 1224ms
+ ✓ |provider-integration| test/integration/provider-scenarios/ios-fold.test.ts > replay worst-case fold returns a daemon result (timeout=120000) 1355ms
+ ✓ |provider-integration| test/integration/provider-scenarios/ios-fold.test.ts > replay worst-case fold returns a daemon result (timeout=300000) 1355ms
+
+ Test Files  1 passed (1)
+      Tests  7 passed (7)
+   Start at  14:14:53
+   Duration  16.28s (tests 73%, transform 19%, import 8%)
+
+--- long-job pr4440-r2-provider-fixture-valid attempt 1 ended 2026-11-12T14:15:09Z: exit 0 ---

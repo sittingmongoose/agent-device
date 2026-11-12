@@ -1,0 +1,69 @@
+
+ RUN  v5.0.4 <CHECKOUT>
+
+---------------x-----------------------x--------------------
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set undefined > an unexpected panel response cannot calibrate another picker value
+AssertionError: expected [ …(10) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   "devicectl device info displays --device sim-1-1 --json-output /tmp/agent-device-test-run-1323975-uincOj/agent-device-apple-displays-1324163-1794479774004-v6dkv13g92k.json",
++   "devicectl device orientation get --device sim-1-1 --json-output /tmp/agent-device-test-run-1323975-uincOj/agent-device-apple-orientation-1324163-1794479804004-8abm4dkooe6.json",
++   "devicectl device orientation get --device sim-1-1 --json-output /tmp/agent-device-test-run-1323975-uincOj/agent-device-apple-orientation-1324163-1794479804004-rrq6k14l4x.json",
++   "devicectl device orientation get --device sim-1-1 --json-output /tmp/agent-device-test-run-1323975-uincOj/agent-device-apple-orientation-1324163-1794479804004-vkuil4gcue.json",
++   "devicectl device orientation get --device sim-1-1 --json-output /tmp/agent-device-test-run-1323975-uincOj/agent-device-apple-orientation-1324163-1794479804004-vskn7mgkr2.json",
++   "devicectl device orientation get --device sim-1-1 --json-output /tmp/agent-device-test-run-1323975-uincOj/agent-device-apple-orientation-1324163-1794479804004-vqdvfn9cqr9.json",
++   "devicectl device orientation get --device sim-1-1 --json-output /tmp/agent-device-test-run-1323975-uincOj/agent-device-apple-orientation-1324163-1794479804004-dq4mcw56z86.json",
++   "devicectl device orientation get --device sim-1-1 --json-output /tmp/agent-device-test-run-1323975-uincOj/agent-device-apple-orientation-1324163-1794479804004-rkxhnb8wbk9.json",
++   "devicectl device orientation get --device sim-1-1 --json-output /tmp/agent-device-test-run-1323975-uincOj/agent-device-apple-orientation-1324163-1794479804004-tmk2idhebb.json",
++   "devicectl device orientation get --device sim-1-1 --json-output /tmp/agent-device-test-run-1323975-uincOj/agent-device-apple-orientation-1324163-1794479804004-zbmfjx0rye.json",
++ ]
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:402:25
+    400|   // An unexpected reading is not evidence that an unsupported picker …
+    401|   expect(sim.rotations()).toEqual(['landscape-right']);
+    402|   expect(sim.devicectl).toEqual([]);
+       |                         ^
+    403| });
+    404|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  |unit-core| packages/platform-apple/src/foldable/orientation.test.ts > foldable rotation, set /tmp/scoped-set > an unexpected panel response cannot calibrate another picker value
+AssertionError: expected { orientation: 'landscape-right' } to match object { code: 'COMMAND_FAILED', …(1) }
+(1 matching property omitted from actual)
+
+- Expected
++ Received
+
+  {
+-   "code": "COMMAND_FAILED",
+-   "details": {
+-     "observedOrientation": "portrait",
+-     "requestedOrientation": "landscape-right",
+-   },
++   "orientation": "landscape-right",
+  }
+
+ ❯ packages/platform-apple/src/foldable/orientation.test.ts:395:19
+    393|   });
+    394|   const outcome = await rotateScoped(sim, 'landscape-right');
+    395|   expect(outcome).toMatchObject({
+       |                   ^
+    396|     code: 'COMMAND_FAILED',
+    397|     details: { requestedOrientation: 'landscape-right', observedOrient…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 58 skipped (60)
+   Start at  10:36:11
+   Duration  2.93s (transform 64%, import 32%, tests 3%, setup 1%)
+

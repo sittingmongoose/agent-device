@@ -1,0 +1,15 @@
+{
+  "args": [
+    "devicectl",
+    "device",
+    "orientation",
+    "get",
+    "--device",
+    "6164BADC-D2E1-4455-A4DB-D9D2C73C1228",
+    "--json-output",
+    "/private/tmp/pr4440-r2/default-baseline/evidence/B-inner-landscape-left-core-2.json"
+  ],
+  "exitCode": 0,
+  "stdout": "Current Device Orientation: landscapeLeft\n",
+  "stderr": ""
+}

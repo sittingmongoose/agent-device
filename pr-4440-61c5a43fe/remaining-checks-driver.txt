@@ -1,0 +1,8 @@
+--- long-job pr4440-r2-remaining-checks attempt 1 started 2026-11-12T15:06:28Z on ubuntuserver: env PATH=/tmp/pr4440-r2-tools/bin:<VM_HOME>/.local/share/node-v26.13.0-linux-x64/bin:<VM_HOME>/.npm/_npx/acaf29b40d536b0e/node_modules/.bin:<VM_HOME>/.local/bin:/usr/bin:/bin AGENT_DEVICE_VITEST_MAX_WORKERS=2 python3 <EVIDENCE>/round2-evidence/run-remaining-checks.py ---
+provider-integration 0
+command-docs 0
+adr-citations 0
+docs-links 0
+docs-prose 0
+agent-guidance 1
+--- long-job pr4440-r2-remaining-checks attempt 1 ended 2026-11-12T15:09:57Z: exit 1 ---

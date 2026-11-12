@@ -1,0 +1,250 @@
+[
+  {
+    "set": "default",
+    "step": "H02-outer-left",
+    "target": "landscape-left",
+    "exit": 0,
+    "panel": "LCD",
+    "final": "rot270",
+    "dispatches": [
+      "landscape-left"
+    ],
+    "reads": 7,
+    "ambiguousReads": 5,
+    "devicectl": 0
+  },
+  {
+    "set": "default",
+    "step": "H03-outer-left-repeat",
+    "target": "landscape-left",
+    "exit": 0,
+    "panel": "LCD",
+    "final": "rot270",
+    "dispatches": [],
+    "reads": 1,
+    "ambiguousReads": 0,
+    "devicectl": 0
+  },
+  {
+    "set": "default",
+    "step": "H04-outer-right",
+    "target": "landscape-right",
+    "exit": 0,
+    "panel": "LCD",
+    "final": "rot90",
+    "dispatches": [
+      "landscape-right"
+    ],
+    "reads": 2,
+    "ambiguousReads": 0,
+    "devicectl": 0
+  },
+  {
+    "set": "default",
+    "step": "H05-outer-portrait",
+    "target": "portrait",
+    "exit": 0,
+    "panel": "LCD",
+    "final": "rot0",
+    "dispatches": [
+      "portrait"
+    ],
+    "reads": 2,
+    "ambiguousReads": 0,
+    "devicectl": 0
+  },
+  {
+    "set": "default",
+    "step": "H07-inner-portrait",
+    "target": "portrait",
+    "exit": 0,
+    "panel": "LCD-1",
+    "final": "rot0",
+    "dispatches": [
+      "landscape-left"
+    ],
+    "reads": 2,
+    "ambiguousReads": 0,
+    "devicectl": 0
+  },
+  {
+    "set": "default",
+    "step": "H08-inner-left",
+    "target": "landscape-left",
+    "exit": 0,
+    "panel": "LCD-1",
+    "final": "rot270",
+    "dispatches": [
+      "portrait-upside-down"
+    ],
+    "reads": 2,
+    "ambiguousReads": 0,
+    "devicectl": 0
+  },
+  {
+    "set": "default",
+    "step": "H09-inner-right",
+    "target": "landscape-right",
+    "exit": 0,
+    "panel": "LCD-1",
+    "final": "rot90",
+    "dispatches": [
+      "portrait"
+    ],
+    "reads": 2,
+    "ambiguousReads": 0,
+    "devicectl": 0
+  },
+  {
+    "set": "default",
+    "step": "H11-post-fold-left",
+    "target": "landscape-left",
+    "exit": 0,
+    "panel": "LCD",
+    "final": "rot270",
+    "dispatches": [
+      "landscape-left"
+    ],
+    "reads": 6,
+    "ambiguousReads": 4,
+    "devicectl": 0
+  },
+  {
+    "set": "default",
+    "step": "H13-unachievable-right",
+    "target": "landscape-right",
+    "exit": 1,
+    "panel": "LCD",
+    "final": "rot0",
+    "dispatches": [
+      "landscape-right"
+    ],
+    "reads": 7,
+    "ambiguousReads": 0,
+    "devicectl": 0
+  },
+  {
+    "set": "scope",
+    "step": "S02-outer-landscape-left",
+    "target": "landscape-left",
+    "exit": 0,
+    "panel": "LCD",
+    "final": "rot270",
+    "dispatches": [
+      "landscape-left"
+    ],
+    "reads": 3,
+    "ambiguousReads": 0,
+    "devicectl": 0
+  },
+  {
+    "set": "scope",
+    "step": "S03-repeat",
+    "target": "landscape-left",
+    "exit": 0,
+    "panel": "LCD",
+    "final": "rot270",
+    "dispatches": [],
+    "reads": 1,
+    "ambiguousReads": 0,
+    "devicectl": 0
+  },
+  {
+    "set": "scope",
+    "step": "S04-outer-landscape-right",
+    "target": "landscape-right",
+    "exit": 0,
+    "panel": "LCD",
+    "final": "rot90",
+    "dispatches": [
+      "landscape-right"
+    ],
+    "reads": 2,
+    "ambiguousReads": 0,
+    "devicectl": 0
+  },
+  {
+    "set": "scope",
+    "step": "S05-outer-portrait",
+    "target": "portrait",
+    "exit": 0,
+    "panel": "LCD",
+    "final": "rot0",
+    "dispatches": [
+      "portrait"
+    ],
+    "reads": 2,
+    "ambiguousReads": 0,
+    "devicectl": 0
+  },
+  {
+    "set": "scope",
+    "step": "S07-inner-portrait",
+    "target": "portrait",
+    "exit": 0,
+    "panel": "LCD-1",
+    "final": "rot0",
+    "dispatches": [
+      "landscape-left"
+    ],
+    "reads": 2,
+    "ambiguousReads": 0,
+    "devicectl": 0
+  },
+  {
+    "set": "scope",
+    "step": "S08-inner-landscape-left",
+    "target": "landscape-left",
+    "exit": 0,
+    "panel": "LCD-1",
+    "final": "rot270",
+    "dispatches": [
+      "portrait-upside-down"
+    ],
+    "reads": 2,
+    "ambiguousReads": 0,
+    "devicectl": 0
+  },
+  {
+    "set": "scope",
+    "step": "S09-inner-landscape-right",
+    "target": "landscape-right",
+    "exit": 0,
+    "panel": "LCD-1",
+    "final": "rot90",
+    "dispatches": [
+      "portrait"
+    ],
+    "reads": 2,
+    "ambiguousReads": 0,
+    "devicectl": 0
+  },
+  {
+    "set": "scope",
+    "step": "S11-post-fold",
+    "target": "landscape-left",
+    "exit": 0,
+    "panel": "LCD",
+    "final": "rot270",
+    "dispatches": [
+      "landscape-left"
+    ],
+    "reads": 5,
+    "ambiguousReads": 3,
+    "devicectl": 0
+  },
+  {
+    "set": "scope",
+    "step": "S13-unachievable",
+    "target": "landscape-right",
+    "exit": 1,
+    "panel": "LCD",
+    "final": "rot0",
+    "dispatches": [
+      "landscape-right"
+    ],
+    "reads": 7,
+    "ambiguousReads": 0,
+    "devicectl": 0
+  }
+]

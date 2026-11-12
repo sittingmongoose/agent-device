@@ -1,0 +1,11 @@
+$ fallow audit --base 9cbbae2c857d5ce2915b0fe3f8953999c967d2c8
+loaded config: <CHECKOUT>/.fallowrc.json
+   2.042516702s  WARN Skipped 2 package.json entry points outside project root or containing parent directory traversal: ./node_modules/oxfmt/bin/oxfmt (2x)
+Comparing against health baseline: <CHECKOUT>/fallow-baselines/health.json
+
+Audit scope: 18 changed files vs 9cbbae2c857d5ce2915b0fe3f8953999c967d2c8 (61c5a43fe..HEAD)
+
+── Styling ────────────────────────────────────────
+✓ No issues in 18 changed files (6.46s)
+■ Metrics: dead code 0 · complexity 0 · duplication 0
+  31 styling candidates (run `fallow health --css` for detail)

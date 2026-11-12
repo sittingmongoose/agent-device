@@ -1,0 +1,13 @@
+{
+  "args": [
+    "simctl",
+    "spawn",
+    "6164BADC-D2E1-4455-A4DB-D9D2C73C1228",
+    "/private/tmp/pr4440-r2/observer-helper",
+    "rotate",
+    "landscape-right"
+  ],
+  "exitCode": 0,
+  "stdout": "",
+  "stderr": ""
+}

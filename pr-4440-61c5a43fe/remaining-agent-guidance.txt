@@ -1,0 +1,34 @@
+$ node --experimental-strip-types scripts/gate/run.ts agent-guidance
+[gate] agent-guidance: pnpm run check:agent-guidance
+$ node --experimental-strip-types scripts/node-test-tmpdir.ts --experimental-strip-types --test scripts/__tests__/agent-guidance-contract.test.ts
+✔ high-traffic guidance stays within its reviewed context budget (10.994343ms)
+✖ task guidance stays focused instead of growing another handbook (13.965172ms)
+✔ CONTEXT.md remains a glossary rather than an architecture or workflow document (4.404182ms)
+✔ AGENTS.md routes each shared primitive to a package that publishes it (10.944118ms)
+✔ the AGENTS.md task router points only at files that exist (5.194823ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 4
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 258.412821
+
+✖ failing tests:
+
+test at scripts/__tests__/agent-guidance-contract.test.ts:35:1
+✖ task guidance stays focused instead of growing another handbook (13.965172ms)
+  AssertionError [ERR_ASSERTION]: docs/agents is 40085 bytes; keep it at or below 40000 by deleting duplication before adding guidance
+      at TestContext.<anonymous> (file://<CHECKOUT>/scripts/__tests__/agent-guidance-contract.test.ts:51:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+[ELIFECYCLE] Command failed with exit code 1.
+[ELIFECYCLE] Command failed with exit code 1.

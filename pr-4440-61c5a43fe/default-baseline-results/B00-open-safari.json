@@ -1,0 +1,41 @@
+{
+  "exitCode": 0,
+  "startedAt": "2026-11-12T13:36:42.122Z",
+  "finishedAt": "2026-11-12T13:36:53.812Z",
+  "wallClockMs": 11686.079458,
+  "stdout": "{\n  \"success\": true,\n  \"data\": {\n    \"session\": \"pr4440-baseline\",\n    \"sessionStateDir\": \"/private/tmp/pr4440-r2/default-baseline/state/sessions/pr4440-baseline\",\n    \"runnerLogPath\": \"/private/tmp/pr4440-r2/default-baseline/state/sessions/pr4440-baseline/runner.log\",\n    \"requestLogPath\": \"/private/tmp/pr4440-r2/default-baseline/state/sessions/pr4440-baseline/requests/bf7d219583fd629d.ndjson\",\n    \"eventLogPath\": \"/private/tmp/pr4440-r2/default-baseline/state/sessions/pr4440-baseline/events.ndjson\",\n    \"appName\": \"com.apple.mobilesafari\",\n    \"appBundleId\": \"com.apple.mobilesafari\",\n    \"selection\": {\n      \"reason\": \"explicit-selector\",\n      \"source\": \"local\",\n      \"candidateCount\": 1,\n      \"bootOccurred\": false\n    },\n    \"startup\": {\n      \"durationMs\": 10640,\n      \"measuredAt\": \"2026-11-12T13:36:53.756Z\",\n      \"method\": \"open-command-roundtrip\",\n      \"appTarget\": \"com.apple.mobilesafari\",\n      \"appBundleId\": \"com.apple.mobilesafari\"\n    },\n    \"platform\": \"ios\",\n    \"target\": \"mobile\",\n    \"device\": \"pr4440-r2-owned\",\n    \"id\": \"6164BADC-D2E1-4455-A4DB-D9D2C73C1228\",\n    \"device_udid\": \"6164BADC-D2E1-4455-A4DB-D9D2C73C1228\",\n    \"ios_simulator_device_set\": null,\n    \"message\": \"Opened: com.apple.mobilesafari\"\n  }\n}\n",
+  "stderr": "[agent-device][diag] {\"ts\":\"2026-11-12T13:36:42.628Z\",\"level\":\"info\",\"phase\":\"daemon_startup\",\"session\":\"pr4440-baseline\",\"requestId\":\"bf7d219583fd629d\",\"command\":\"open\",\"durationMs\":9,\"data\":{\"requestId\":\"bf7d219583fd629d\",\"session\":\"pr4440-baseline\"}}\n[agent-device][diag] {\"ts\":\"2026-11-12T13:36:42.632Z\",\"level\":\"info\",\"phase\":\"daemon_request_prepare\",\"session\":\"pr4440-baseline\",\"requestId\":\"bf7d219583fd629d\",\"command\":\"open\",\"data\":{\"requestId\":\"bf7d219583fd629d\",\"command\":\"open\",\"session\":\"pr4440-baseline\"}}\n[agent-device][diag] {\"ts\":\"2026-11-12T13:36:53.767Z\",\"level\":\"info\",\"phase\":\"daemon_request\",\"session\":\"pr4440-baseline\",\"requestId\":\"bf7d219583fd629d\",\"command\":\"open\",\"durationMs\":11135,\"data\":{\"requestId\":\"bf7d219583fd629d\",\"command\":\"open\"}}\n",
+  "payload": {
+    "success": true,
+    "data": {
+      "session": "pr4440-baseline",
+      "sessionStateDir": "/private/tmp/pr4440-r2/default-baseline/state/sessions/pr4440-baseline",
+      "runnerLogPath": "/private/tmp/pr4440-r2/default-baseline/state/sessions/pr4440-baseline/runner.log",
+      "requestLogPath": "/private/tmp/pr4440-r2/default-baseline/state/sessions/pr4440-baseline/requests/bf7d219583fd629d.ndjson",
+      "eventLogPath": "/private/tmp/pr4440-r2/default-baseline/state/sessions/pr4440-baseline/events.ndjson",
+      "appName": "com.apple.mobilesafari",
+      "appBundleId": "com.apple.mobilesafari",
+      "selection": {
+        "reason": "explicit-selector",
+        "source": "local",
+        "candidateCount": 1,
+        "bootOccurred": false
+      },
+      "startup": {
+        "durationMs": 10640,
+        "measuredAt": "2026-11-12T13:36:53.756Z",
+        "method": "open-command-roundtrip",
+        "appTarget": "com.apple.mobilesafari",
+        "appBundleId": "com.apple.mobilesafari"
+      },
+      "platform": "ios",
+      "target": "mobile",
+      "device": "pr4440-r2-owned",
+      "id": "6164BADC-D2E1-4455-A4DB-D9D2C73C1228",
+      "device_udid": "6164BADC-D2E1-4455-A4DB-D9D2C73C1228",
+      "ios_simulator_device_set": null,
+      "message": "Opened: com.apple.mobilesafari"
+    }
+  },
+  "ok": true
+}

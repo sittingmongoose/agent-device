@@ -1,0 +1,24 @@
+{
+  "exitCode": 0,
+  "startedAt": "2026-11-12T13:37:41.276Z",
+  "finishedAt": "2026-11-12T13:37:45.210Z",
+  "wallClockMs": 3933.995415999998,
+  "stdout": "{\n  \"success\": true,\n  \"data\": {\n    \"action\": \"fold\",\n    \"pose\": \"open\",\n    \"hingeAngleDegrees\": 180,\n    \"screen\": {\n      \"display\": \"LCD\",\n      \"coordinateSpace\": \"native-panel\",\n      \"widthPt\": 466,\n      \"heightPt\": 678\n    },\n    \"message\": \"Folded to open (hinge 180\u00b0, LCD native panel 466x678pt, not snapshot coordinates); refs from before the pose change are stale\"\n  }\n}\n",
+  "stderr": "[agent-device][diag] {\"ts\":\"2026-11-12T13:37:41.484Z\",\"level\":\"info\",\"phase\":\"daemon_startup\",\"session\":\"pr4440-baseline\",\"requestId\":\"66434158712d5f22\",\"command\":\"fold\",\"durationMs\":7,\"data\":{\"requestId\":\"66434158712d5f22\",\"session\":\"pr4440-baseline\"}}\n[agent-device][diag] {\"ts\":\"2026-11-12T13:37:41.487Z\",\"level\":\"info\",\"phase\":\"daemon_request_prepare\",\"session\":\"pr4440-baseline\",\"requestId\":\"66434158712d5f22\",\"command\":\"fold\",\"data\":{\"requestId\":\"66434158712d5f22\",\"command\":\"fold\",\"session\":\"pr4440-baseline\"}}\n[agent-device][diag] {\"ts\":\"2026-11-12T13:37:45.195Z\",\"level\":\"info\",\"phase\":\"daemon_request\",\"session\":\"pr4440-baseline\",\"requestId\":\"66434158712d5f22\",\"command\":\"fold\",\"durationMs\":3708,\"data\":{\"requestId\":\"66434158712d5f22\",\"command\":\"fold\"}}\n",
+  "payload": {
+    "success": true,
+    "data": {
+      "action": "fold",
+      "pose": "open",
+      "hingeAngleDegrees": 180,
+      "screen": {
+        "display": "LCD",
+        "coordinateSpace": "native-panel",
+        "widthPt": 466,
+        "heightPt": 678
+      },
+      "message": "Folded to open (hinge 180\u00b0, LCD native panel 466x678pt, not snapshot coordinates); refs from before the pose change are stale"
+    }
+  },
+  "ok": true
+}

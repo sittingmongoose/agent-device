@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "data": {
+    "action": "fold",
+    "pose": "open",
+    "hingeAngleDegrees": 180,
+    "message": "Folded to open (hinge 180°); refs from before the pose change are stale"
+  }
+}

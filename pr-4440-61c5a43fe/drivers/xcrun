@@ -1,0 +1,42 @@
+#!/usr/bin/python3
+"""Transparent xcrun trace; preserve stdout, stderr and exit, including JSON files."""
+import datetime
+import json
+import os
+import signal
+import subprocess
+import sys
+import time
+
+args = sys.argv[1:]
+started = datetime.datetime.now(datetime.timezone.utc).isoformat()
+before = time.monotonic()
+process = subprocess.Popen(['/usr/bin/xcrun', *args], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+def forward(signum, _frame):
+    try:
+        process.send_signal(signum)
+    except ProcessLookupError:
+        pass
+signal.signal(signal.SIGTERM, forward)
+signal.signal(signal.SIGINT, forward)
+stdout, stderr = process.communicate()
+entry = {
+    'startedAt': started,
+    'finishedAt': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+    'durationMs': round((time.monotonic() - before) * 1000),
+    'args': args,
+    'exitCode': process.returncode,
+    'stdout': stdout.decode(errors='replace'),
+    'stderr': stderr.decode(errors='replace'),
+}
+if '--json-output' in args:
+    try:
+        with open(args[args.index('--json-output') + 1]) as source:
+            entry['payload'] = json.load(source)
+    except (OSError, ValueError):
+        pass
+with open(os.environ['PR4440_XCRUN_TRACE'], 'a') as trace:
+    trace.write(json.dumps(entry) + '\n')
+sys.stdout.buffer.write(stdout)
+sys.stderr.buffer.write(stderr)
+sys.exit(process.returncode if process.returncode >= 0 else 128 - process.returncode)

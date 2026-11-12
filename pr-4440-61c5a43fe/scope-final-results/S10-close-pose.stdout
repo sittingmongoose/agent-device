@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "data": {
+    "action": "fold",
+    "pose": "closed",
+    "hingeAngleDegrees": 0,
+    "message": "Folded to closed (hinge 0°); refs from before the pose change are stale"
+  }
+}
